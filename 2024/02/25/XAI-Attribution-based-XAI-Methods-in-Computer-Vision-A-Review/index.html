@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://example.com/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/XAI-1-1.png">
 <meta property="og:image" content="http://example.com/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/XAI-1-2.png">
 <meta property="article:published_time" content="2024-02-24T20:38:13.000Z">
-<meta property="article:modified_time" content="2024-02-24T20:51:02.101Z">
+<meta property="article:modified_time" content="2024-02-24T21:46:47.015Z">
 <meta property="article:author" content="Choi Munseok">
 <meta property="article:tag" content="XAI">
 <meta property="article:tag" content="Paper Review">
@@ -214,7 +214,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-02-25 05:38:13 / Updated at: 05:51:02" itemprop="dateCreated datePublished" datetime="2024-02-25T05:38:13+09:00">2024-02-25</time>
+      <time title="Post created: 2024-02-25 05:38:13 / Updated at: 06:46:47" itemprop="dateCreated datePublished" datetime="2024-02-25T05:38:13+09:00">2024-02-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,7 +263,7 @@
 </ul>
 <img src="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/XAI-1-2.png" class="" title="XAI-1-2.png">
 <p>이미지를 다루는 경우, 입력 차원은 상당히 커질 수 있습니다. 예를 들어서 224x224 의 RGB이미지를 생각해보면, 차원은 224 x 224 x 3 = 150528 차원입니다. 따라서 모델 예측을 설명하기 위해서 각 입력특성(이미지라면 input image의 픽셀들)에 대해 attribution을 할당합니다. 이를 통해 그들 각각이 모델의 예측에 기여한 바를 이해할 수 있습니다.  j번째 모델의 결과에 대해서, attribution 방법은 output y에 대한 각 input feature의 기여도를 </p>
-<p>( A^j = [A^j_1, \ldots, A^j_{D_{\text{in}}} ] \in \mathbb{R}^{D_{\text{in}}} )</p>
+<p>[ A^j = [A^j_1, \ldots, A^j_{D_{\text{in}}}] \in \mathbb{R}^{D_{\text{in}}} ]</p>
 <p>과 같이 표현할 수 있습니다. 이미지 분류 모델에서, 우리는 input image에 대한 단일 라벨만을 생성하므로, ( D_{\text{out}} = 1. ) 입니다. attribution은 따라서 input pixel이 예측된 클래스 라벨에 대한 공간적 구조의 기여가 됩니다. 이미지는 고유의 공간 구조를 가지고 있기 떄문에, 이러한 attribution은 일반적으로 입력 이미지 위에 그려진 열지도로 시각화되어 모델 에측에 대한 입력 특성의 기여도를 나타냅니다. 본 논문에서는 attribution-based 주요 세가지 카테고리를 다룹니다: gradient-based, perturbation-based, contrastive methods</p>
 
     </div>
