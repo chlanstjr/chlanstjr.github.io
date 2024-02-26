@@ -26,11 +26,19 @@
 <meta property="og:site_name" content="Ant&#39;s Quant Investing">
 <meta property="og:description" content="Chapter 9. Convolutional Networks 9.1. The histroy of NN(Neural Network), CNN(Convolutinoal Neural Network) (추후 추가 예정) 9.2. Convolutional Layer Fully Connected Layer(이하 FC)를 사용하여 이미지를 처리하는 경우를">
 <meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-1.png">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-2.png">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-3.png">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-4.png">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-5.png">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-6.png">
+<meta property="og:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-7.png">
 <meta property="article:published_time" content="2024-02-26T02:14:44.000Z">
-<meta property="article:modified_time" content="2024-02-26T02:28:22.679Z">
+<meta property="article:modified_time" content="2024-02-26T02:30:35.757Z">
 <meta property="article:author" content="Choi Munseok">
 <meta property="article:tag" content="Deep Learning">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-1.png">
 
 
 <link rel="canonical" href="http://example.com/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/">
@@ -212,7 +220,7 @@ Network)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" hre
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-02-26 11:14:44 / Updated at: 11:28:22" itemprop="dateCreated datePublished" datetime="2024-02-26T11:14:44+09:00">2024-02-26</time>
+      <time title="Post created: 2024-02-26 11:14:44 / Updated at: 11:30:35" itemprop="dateCreated datePublished" datetime="2024-02-26T11:14:44+09:00">2024-02-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -256,7 +264,7 @@ filter의 개수만큼 새로운 activation map을 도출할 수 있습니다. �
 가지고 전체 이미지에 convolution 연산을 수행한다고 요약할 수 있습니다.
 이런식으로 간단한 linear layer로 된 nural network를 만들 수 있습니다.
 그림1에서 해당 과정을 시각적으로 나타내고 있습니다.</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-1.png" class="" title="DL-9-1">
 <center>
 <small>그림1, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-33</small>
@@ -284,7 +292,7 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
 수 있는지를 나타내는 것입니다. 이미지가 필터와 비슷하게 생겼으면 출력
 값은 큰 값을 가지게 됩니다. 시각화는 역전파를 통해 해볼수 있습니다.(이를
 자세히 다루는 내용은 추후 업데이트 하겠습니다.)</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-2.png" class="" title="DL-9-2">
 <center>
 <small>그림2, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-37</small>
@@ -296,7 +304,7 @@ Lecture 5-37</small>
 위치게서 이 필터가 크게 반응하는지를 보여줍니다. 우리가 이걸
 Convolution이라고 부르는 이유는 위에 언급된 것과 같이 두 신호 사이에
 cov를 하는 것과 유사하기 때문입니다.</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-3.png" class="" title="DL-9-3">
 <center>
 <small>그림3, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-38</small>
@@ -306,7 +314,7 @@ Lecture 5-38</small>
 합니다. 7x7 input과 3x3 filter를 가정할 때 stride는 1과 2가 될 수 있지만
 3은 될 수 없습니다. 공간에 알맞게 슬라이딩이 진행되지 않기 때문입니다.
 그림4를 보면서 찬찬히 생각해보시면 됩니다.</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-4.png" class="" title="DL-9-4">
 <center>
 <small>그림4, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-51</small>
@@ -320,7 +328,7 @@ N이 입력의 차원(그림3에서는 7), F가 필터 사이즈(그림3에서�
 zero padding을 그림3과 같이 적용할 수 있습니다. Output size를 정의하는
 식에서 N이 N+2가 되었으므로, stride가 1일 때 (9-3) / 1+1로 output size가
 input size와 같아지게 됩니다.</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-5.png" class="" title="DL-9-5">
 <center>
 <small>그림5, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-54</small>
@@ -351,7 +359,7 @@ size는 보존됩니다. 다음 식으로 유도됩니다. (32+2<em>2-5) / 1+1 �
 pooling은 그 지역이 어디든, 어떤 신호에 "얼마나" 그 필터가
 활성화되었는지를 알려줍니다.(현재 필터와 뉴런을 혼용해서 쓰고
 있습니다.)</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-6.png" class="" title="DL-9-6">
 <center>
 <small>그림6, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-73</small>
@@ -359,7 +367,7 @@ Lecture 5-73</small>
 <h2 id="cnn-backpropagation">9.3. CNN Backpropagation</h2>
 <p>CNN구조를 적용한 LeNet의 전체 구조는 그림5와 같습니다. 전체적인
 흐름을 한눈에 확인할 수 있습니다.</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-7.png" class="" title="DL-9-7">
 <center>
 <small>그림7, Source :  Gradient-Based Learning Applied to Document
 Recognition(Yann LeCunn et al., 1988)</small>

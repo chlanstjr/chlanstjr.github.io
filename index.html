@@ -202,7 +202,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-02-26 11:14:44 / Updated at: 11:28:22" itemprop="dateCreated datePublished" datetime="2024-02-26T11:14:44+09:00">2024-02-26</time>
+      <time title="Post created: 2024-02-26 11:14:44 / Updated at: 11:30:35" itemprop="dateCreated datePublished" datetime="2024-02-26T11:14:44+09:00">2024-02-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -246,7 +246,7 @@ filter의 개수만큼 새로운 activation map을 도출할 수 있습니다. �
 가지고 전체 이미지에 convolution 연산을 수행한다고 요약할 수 있습니다.
 이런식으로 간단한 linear layer로 된 nural network를 만들 수 있습니다.
 그림1에서 해당 과정을 시각적으로 나타내고 있습니다.</p>
-
+<img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-1.png" class title="DL-9-1">
 <center>
 <small>그림1, Source : CS231n; Deep Learning for Computer Vision,
 Lecture 5-33</small>
@@ -266,14 +266,6 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
 때문입니다. 5x5 필터가 있다고 할 때, 한 뉴런의 "Receptive filed"가
 5x5라고 이해할 수 있는 것입니다. "Receptive filed"란 한 뉴런이 한 번에
 수용할 수 있는 영역을 의미합니다.</p>
-<p>Conv Layer를 계층적으로 쌓아서 단순한 특징들을 뽑고, 그것을 또
-조합해서 더 복잡한 특징으로 활용하는 식으로 활용합니다. 계층적 구조를
-설계하고 역전파로 학습시키는 과정으로 필터를 학습시킵니다. 그림2는 각
-그리드의 요소가 하나의 필터인데 이를 시각화 시킨 것입니다. 시각화 시킨
-필터의 모습은 바로 이미지가 어떻게 생겨야 해당 필터의 활성을 최대화 시킬
-수 있는지를 나타내는 것입니다. 이미지가 필터와 비슷하게 생겼으면 출력
-값은 큰 값을 가지게 됩니다. 시각화는 역전파를 통해 해볼수 있습니다.(이를
-자세히 다루는 내용은 추후 업데이트 하겠습니다.)</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/#more" rel="contents">
