@@ -19,36 +19,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1. Fully Convolutional Networks 1.1. FCN FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서">
+    <meta name="description" content="1. Markowitz and Mean-Variance framework 1.1. Model description   source : Index Fund Advisors   1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[XAI] Gradient-Based Methods">
-<meta property="og:url" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/index.html">
+<meta property="og:title" content="[Asset Allocation] MVO(Mean-Variance Optimization)">
+<meta property="og:url" content="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/index.html">
 <meta property="og:site_name" content="Ant&#39;s Quant Investing">
-<meta property="og:description" content="1. Fully Convolutional Networks 1.1. FCN FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서">
+<meta property="og:description" content="1. Markowitz and Mean-Variance framework 1.1. Model description   source : Index Fund Advisors   1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-3.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-4.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-5.png">
-<meta property="article:published_time" content="2024-02-25T07:31:05.000Z">
-<meta property="article:modified_time" content="2024-02-25T07:36:02.789Z">
+<meta property="og:image" content="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png">
+<meta property="article:published_time" content="2024-03-11T05:13:26.000Z">
+<meta property="article:modified_time" content="2024-03-11T05:48:44.408Z">
 <meta property="article:author" content="Choi Munseok">
-<meta property="article:tag" content="XAI">
-<meta property="article:tag" content="Paper Review">
-<meta property="article:tag" content="Computer Vision">
+<meta property="article:tag" content="Quant">
+<meta property="article:tag" content="Asset Allocation">
+<meta property="article:tag" content="Markowitz">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png">
+<meta name="twitter:image" content="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png">
 
 
-<link rel="canonical" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+<link rel="canonical" href="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/02/25/XAI-Gradient-Based-Methods/","path":"2024/02/25/XAI-Gradient-Based-Methods/","title":"[XAI] Gradient-Based Methods"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/","path":"2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/","title":"[Asset Allocation] MVO(Mean-Variance Optimization)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[XAI] Gradient-Based Methods | Ant's Quant Investing</title>
+<title>[Asset Allocation] MVO(Mean-Variance Optimization) | Ant's Quant Investing</title>
   
 
 
@@ -125,8 +121,10 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fully-convolutional-networks"><span class="nav-number">1.</span> <span class="nav-text">1. Fully Convolutional
-Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fcn"><span class="nav-number">1.1.</span> <span class="nav-text">1.1. FCN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deconvolution"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Deconvolution</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markowitz-and-mean-variance-framework"><span class="nav-number">1.</span> <span class="nav-text">1. Markowitz and
+Mean-Variance framework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#model-description"><span class="nav-number">1.1.</span> <span class="nav-text">1.1. Model description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#utility-functions-and-optimization-problem"><span class="nav-number">1.2.</span> <span class="nav-text">1.2. Utility
+functions and optimization problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markowitzs-limitations-and-imporovement-possibilities"><span class="nav-number">1.3.</span> <span class="nav-text">1.3.
+Markowitz&#39;s limitations and imporovement possibilities</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#capital-market-theorycmt"><span class="nav-number">2.</span> <span class="nav-text">2. Capital Market Theory(CMT)</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -190,7 +188,7 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
@@ -203,12 +201,12 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[XAI] Gradient-Based Methods | Ant's Quant Investing">
+      <meta itemprop="name" content="[Asset Allocation] MVO(Mean-Variance Optimization) | Ant's Quant Investing">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [XAI] Gradient-Based Methods
+          [Asset Allocation] MVO(Mean-Variance Optimization)
         </h1>
 
         <div class="post-meta-container">
@@ -220,7 +218,7 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-02-25 16:31:05 / Updated at: 16:36:02" itemprop="dateCreated datePublished" datetime="2024-02-25T16:31:05+09:00">2024-02-25</time>
+      <time title="Post created: 2024-03-11 14:13:26 / Updated at: 14:48:44" itemprop="dateCreated datePublished" datetime="2024-03-11T14:13:26+09:00">2024-03-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -228,15 +226,7 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/" itemprop="url" rel="index"><span itemprop="name">XAI</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/" itemprop="url" rel="index"><span itemprop="name">Paper Review</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+          <a href="/categories/Quant/" itemprop="url" rel="index"><span itemprop="name">Quant</span></a>
         </span>
     </span>
 
@@ -249,50 +239,47 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="fully-convolutional-networks">1. Fully Convolutional
-Networks</h1>
-<h2 id="fcn">1.1. FCN</h2>
-<p>FCN(Fully Convolutional Networks for Semantic Segmentation)은
-Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic
-Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당
-용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을
-뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서
-우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰
-변형시킨 것이다.</p>
-<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로
-구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가
-사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치
-고정 → 바로 앞 Feature Map 크기 고정 → …. → Input Image 크기 고정)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png" class="" title="XAI-2-1.png">
-<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체.
-마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로
-변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지
-내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력
-Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에
-가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지
-않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을
-처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는
-있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한
-이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게
-된다.</p>
-<h2 id="deconvolution">1.2 Deconvolution</h2>
-<p>Bilinear Interpolation(선형 보간)</p>
-<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에
-위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는
-방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png" class="" title="XAI-2-2.png">
-<p>이 외에도 Backwards convolution, Unpooling, Shift and stitch 등의
-방법이 있다. FCN에서는 Bilinear interpolation과 Backwards convolution 두
-가지 방법을 사용하여 Coarse Feature map으로부터 Dense prediction을
-구했다.</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-3.png" class="" title="XAI-2-3.png">
-<p>하지만, 근본적으로 feature map의 크기가 너무 작기 때문에 예측된 dense
-map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling
-과정이다)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-4.png" class="" title="XAI-2-4.png">
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-5.png" class="" title="XAI-2-5.png">
-<p>따라서 얕은층의 정보를 결합하는 방식으로 품질을 개선하였다. 실제 성능
-지표에서도 FCN-32s &gt; FCN-16s &gt; FCN-8s 순으로 결과가 나아진다.</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="markowitz-and-mean-variance-framework">1. Markowitz and
+Mean-Variance framework</h1>
+<h2 id="model-description">1.1. Model description</h2>
+<img src="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png" class="" title="MVO_1_1">
+<center>
+<small>source : Index Fund Advisors</small>
+</center>
+<ul>
+<li>1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는
+Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여
+구성되었음. (다양화와 미래에 대한 직관의 전반적 개념을 지지하는 기준을
+따라 포트폴리오를 생성) 전형적인 Naive 전략은 “1/N” 자산 배분임.(N은
+자산의 수)</li>
+<li>포트폴리오 이론에 대한 몇 가지 기본적이고 일반적인 개념은 다음과
+같음. (1) 기본 가정은 투자자가 주어진 위험 수준에 대해 전체 투자
+집합에서 수익을 극대화 하는 것. (2) 투자자가 기본적으로 위험 회피적(Risk
+averse)이라고 가정.(동일한 수익률을 가진 두 자산 사이에서 선택할 때,
+그들은 더 낮은 위험 수준의 자산을 선택할 것)</li>
+<li>자산배분의 여러모델은 1952년 해리 마코위츠(Harry Markowitz)의 현대
+포트폴리오 이론(Mordern Portfolio Theory, MPT)를 기반으로 함. 해당
+이론은 투자자 행동에 대한 여러 가정을 바탕으로함. (1) 투자자는 각 투자
+대안을 일정 기간 동안의 기대 수익률의 확률 분포로 간주함. (2) 투자자는
+한 기간 동안의 기대 효용을 극대화하고, 효용 곡선은 부의 한계 효용 감소를
+보여줌. (3) 투자자는 기대 수익률의 변동성을 바탕으로 포트폴리오의 위험을
+평가함. (4) 투자자는 기대 수익률과 위험을 기반으로 결정을 내리므로 효용
+곡선은 오직 이들의 함수임. (5) 주어진 위험 수준에 대해 투자자는 낮은
+수익보다는 높은 수익을 선호하며, 마찬가지로 기대 수익률의 주어진 수준에
+대해 투자자는 더 많은 위험보다 적은 위험을 선호.</li>
+<li>일반적으로 MPT는 자산의 다각화를 통한 투자 위험의 동시 최소화와 기대
+수익률의 최대화를 바탕으로 투자 포트폴리오의 선택 및 구성을 위한 투자
+프레임워크임. 마코위츠는 MPT를 수행하기 위해 quantitative model인
+MVO(Mean-Variance-Optimization을 도입) 최적화 과정에서 고려된 요소는
+다음과 같음. (1) expected returns of the assets(for asset i, $𝜇_{})</li>
+</ul>
+<h2 id="utility-functions-and-optimization-problem">1.2. Utility
+functions and optimization problem</h2>
+<h2 id="markowitzs-limitations-and-imporovement-possibilities">1.3.
+Markowitz's limitations and imporovement possibilities</h2>
+<h1 id="capital-market-theorycmt">2. Capital Market Theory(CMT)</h1>
+<p>(추후 추가) # 3. Capital Asset Pricing Model(CAP) (추후 추가) ## 3.1.
+CAPM limitations (추후 추가)</p>
 
     </div>
 
@@ -339,23 +326,20 @@ map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling
 </div>
 
           <div class="post-tags">
-              <a href="/tags/XAI/" rel="tag"><i class="fa fa-tag"></i> XAI</a>
-              <a href="/tags/Paper-Review/" rel="tag"><i class="fa fa-tag"></i> Paper Review</a>
-              <a href="/tags/Computer-Vision/" rel="tag"><i class="fa fa-tag"></i> Computer Vision</a>
+              <a href="/tags/Quant/" rel="tag"><i class="fa fa-tag"></i> Quant</a>
+              <a href="/tags/Asset-Allocation/" rel="tag"><i class="fa fa-tag"></i> Asset Allocation</a>
+              <a href="/tags/Markowitz/" rel="tag"><i class="fa fa-tag"></i> Markowitz</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/" rel="prev" title="[XAI] Attribution-based XAI Methods in Computer Vision: A Review">
-                  <i class="fa fa-angle-left"></i> [XAI] Attribution-based XAI Methods in Computer Vision: A Review
+                <a href="/2024/03/09/Paper-Review-XCM-An-Explainable-Convolutional-Neural-Network-for-Multivariate-Time-Series-Classification/" rel="prev" title="[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification">
+                  <i class="fa fa-angle-left"></i> [Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/" rel="next" title="[Deep Learning] Chapter9. Convolutional Networks">
-                  [Deep Learning] Chapter9. Convolutional Networks <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
