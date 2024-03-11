@@ -204,7 +204,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-03-11 14:13:26 / Updated at: 14:51:21" itemprop="dateCreated datePublished" datetime="2024-03-11T14:13:26+09:00">2024-03-11</time>
+      <time title="Post created: 2024-03-11 14:13:26 / Updated at: 15:12:05" itemprop="dateCreated datePublished" datetime="2024-03-11T14:13:26+09:00">2024-03-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,16 +258,26 @@ averse)이라고 가정.(동일한 수익률을 가진 두 자산 사이에서 �
 수익률의 최대화를 바탕으로 투자 포트폴리오의 선택 및 구성을 위한 투자
 프레임워크임. 마코위츠는 MPT를 수행하기 위해 quantitative model인
 MVO(Mean-Variance-Optimization을 도입) 최적화 과정에서 고려된 요소는
-다음과 같음. (1) expected returns of the assets(for asset i, $𝜇_{})</li>
+다음과 같음. (1)expected returns of the assets(for asset i, <span class="math inline">\(\mu_i\)</span>) (2)risk of assets, measured by the
+variance of the expected returns(for asset i, <span class="math inline">\(\sigma_i^2\)</span>)</li>
+<li>투자자는 위험이 높을 경우 더 높은 수익률을 요구함.(반대의 경우도
+마찬가지) 따라서 MPT 포트폴리오를 생성할 때 Risk-Return 상충
+관계(trade-off) 상충 관계에 직면하고 있음.</li>
+<li>자산의 기대 수익률(expected returns)을 구하는 것은 마코비츠 모델에서
+첫번째 단계임. 이는 "가능한 수익의 확률 분포의 평균"으로 정의될 수 있음.
+간단히 말해서, 정해진 기간 동안 자산 수익의 역사적 평균임. 따라서
+포트폴리오의 기대 수익률은 개별 기대 수익률의 가중평균임. <span class="math display">\[
+E(R_p) = \sum_{i=1}^{n} w_i \cdot \mu_i
+\]</span></li>
 </ul>
 <h2 id="utility-functions-and-optimization-problem">1.2. Utility
 functions and optimization problem</h2>
 <h2 id="markowitzs-limitations-and-imporovement-possibilities">1.3.
 Markowitz's limitations and imporovement possibilities</h2>
 <h1 id="capital-market-theorycmt">2. Capital Market Theory(CMT)</h1>
-<p>(추후 추가) # 3. Capital Asset Pricing Model(CAP) (추후 추가) ## 3.1.
-CAPM limitations (추후 추가)</p>
-
+<p>(추후 추가)</p>
+<h1 id="capital-asset-pricing-modelcap">3. Capital Asset Pricing
+Model(CAP)</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/#more" rel="contents">
