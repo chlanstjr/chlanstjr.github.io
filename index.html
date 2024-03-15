@@ -204,7 +204,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-03-13 12:54:57 / Updated at: 13:16:41" itemprop="dateCreated datePublished" datetime="2024-03-13T12:54:57+09:00">2024-03-13</time>
+      <time title="Post created: 2024-03-13 12:54:57 / Updated at: 20:13:06" itemprop="dateCreated datePublished" datetime="2024-03-13T12:54:57+09:00">2024-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -324,7 +324,7 @@ Normality</h2>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-13 13:05:27" itemprop="dateModified" datetime="2024-03-13T13:05:27+09:00">2024-03-13</time>
+      <time title="Updated at: 2024-03-13 20:57:55" itemprop="dateModified" datetime="2024-03-13T20:57:55+09:00">2024-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -406,7 +406,15 @@ E(R_p) = \sum_{i=1}^{n} w_i \cdot \mu_i
 \sigma_j
 \]</span></li>
 <li>표준편차는 분산의 제곱근으로 정의됨. 위 식을 이해하기 위해서는
-공분산과 상관관계 개념에 대한</li>
+공분산과 상관관계 개념에 대한 이해가 선행됨. 공분산은 두 변수가 시간에
+따라 각각의 평균값에 비해 함께 움직이는 절대적인 척도임. 두 자산<span class="math inline">\(i\)</span>와 <span class="math inline">\(j\)</span>에 대하여, 수익률의 공분산을 다음과 같이
+정의할 수 있음: <span class="math display">\[
+Cov_{ij} = E\{[R_i - E(R_i)][R_j - E(R_j)]\}
+\]</span> 공분산은 두 개별 수익률 지수의 변동성에 의해 영향을 받기
+때문에, 이를 다음과 같이 표준화해줌. <span class="math display">\[
+\rho_{ij} = \frac{Cov_ij}{\sigma_j \sigma_j}
+\]</span> 위 식은 상관계수이며, 이는 -1과 +1사이에서만 변할 수
+있음.</li>
 </ul>
 <h2 id="utility-functions-and-optimization-problem">1.2. Utility
 functions and optimization problem</h2>
