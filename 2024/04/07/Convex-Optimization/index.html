@@ -19,36 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1. Fully Convolutional Networks1.1. FCNFCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는">
+    <meta name="description" content="Portfolio Optimization안녕하세요 최문석입니다.현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 저장소를 제작중입니다.  해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정리하였습니다.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[XAI] Gradient-Based Methods">
-<meta property="og:url" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/index.html">
+<meta property="og:title" content="Portfolio Optimization">
+<meta property="og:url" content="http://example.com/2024/04/07/Convex-Optimization/index.html">
 <meta property="og:site_name" content="Ant&#39;s Quant Investing">
-<meta property="og:description" content="1. Fully Convolutional Networks1.1. FCNFCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는">
+<meta property="og:description" content="Portfolio Optimization안녕하세요 최문석입니다.현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 저장소를 제작중입니다.  해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정리하였습니다.">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-3.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-4.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-5.png">
-<meta property="article:published_time" content="2024-02-25T07:31:05.000Z">
-<meta property="article:modified_time" content="2024-03-11T05:51:29.305Z">
+<meta property="article:published_time" content="2024-04-07T06:49:58.000Z">
+<meta property="article:modified_time" content="2024-04-07T06:56:03.239Z">
 <meta property="article:author" content="Choi Munseok">
-<meta property="article:tag" content="XAI">
-<meta property="article:tag" content="Paper Review">
-<meta property="article:tag" content="Computer Vision">
+<meta property="article:tag" content="Quant">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png">
 
 
-<link rel="canonical" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+<link rel="canonical" href="http://example.com/2024/04/07/Convex-Optimization/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/02/25/XAI-Gradient-Based-Methods/","path":"2024/02/25/XAI-Gradient-Based-Methods/","title":"[XAI] Gradient-Based Methods"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/04/07/Convex-Optimization/","path":"2024/04/07/Convex-Optimization/","title":"Portfolio Optimization"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[XAI] Gradient-Based Methods | Ant's Quant Investing</title>
+<title>Portfolio Optimization | Ant's Quant Investing</title>
   
 
 
@@ -125,7 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Fully-Convolutional-Networks"><span class="nav-number">1.</span> <span class="nav-text">1. Fully Convolutional Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-FCN"><span class="nav-number">1.1.</span> <span class="nav-text">1.1. FCN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Deconvolution"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Deconvolution</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Portfolio-Optimization"><span class="nav-number">1.</span> <span class="nav-text">Portfolio Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Convex-Optimization"><span class="nav-number">1.1.</span> <span class="nav-text">1. Convex Optimization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Optimization-Techniques-in-Finance"><span class="nav-number">1.2.</span> <span class="nav-text">2. Optimization Techniques in Finance</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,7 +181,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/07/Convex-Optimization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
@@ -202,12 +194,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[XAI] Gradient-Based Methods | Ant's Quant Investing">
+      <meta itemprop="name" content="Portfolio Optimization | Ant's Quant Investing">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [XAI] Gradient-Based Methods
+          Portfolio Optimization
         </h1>
 
         <div class="post-meta-container">
@@ -217,15 +209,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
+      
 
-      <time title="Post created: 2024-02-25 16:31:05" itemprop="dateCreated datePublished" datetime="2024-02-25T16:31:05+09:00">2024-02-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-11 14:51:29" itemprop="dateModified" datetime="2024-03-11T14:51:29+09:00">2024-03-11</time>
+      <time title="Post created: 2024-04-07 15:49:58 / Updated at: 15:56:03" itemprop="dateCreated datePublished" datetime="2024-04-07T15:49:58+09:00">2024-04-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -233,15 +219,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/" itemprop="url" rel="index"><span itemprop="name">XAI</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/" itemprop="url" rel="index"><span itemprop="name">Paper Review</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+          <a href="/categories/Quant/" itemprop="url" rel="index"><span itemprop="name">Quant</span></a>
         </span>
     </span>
 
@@ -254,19 +232,22 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="1-Fully-Convolutional-Networks"><a href="#1-Fully-Convolutional-Networks" class="headerlink" title="1. Fully Convolutional Networks"></a>1. Fully Convolutional Networks</h1><h2 id="1-1-FCN"><a href="#1-1-FCN" class="headerlink" title="1.1. FCN"></a>1.1. FCN</h2><p>FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을 뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서 우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.</p>
-<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로 구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가 사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치 고정 → 바로 앞 Feature Map 크기 고정 → …. → Input Image 크기 고정)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png" class="" title="XAI-2-1.png">
-<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체. 마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로 변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지 내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력 Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에 가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지 않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을 처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는 있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한 이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게 된다.</p>
-<h2 id="1-2-Deconvolution"><a href="#1-2-Deconvolution" class="headerlink" title="1.2 Deconvolution"></a>1.2 Deconvolution</h2><p>Bilinear Interpolation(선형 보간)</p>
-<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에 위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는 방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png" class="" title="XAI-2-2.png">
-<p>이 외에도 Backwards convolution, Unpooling, Shift and stitch 등의 방법이 있다. FCN에서는 Bilinear interpolation과 Backwards convolution 두 가지 방법을 사용하여 Coarse Feature map으로부터 Dense prediction을 구했다. </p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-3.png" class="" title="XAI-2-3.png">
-<p>하지만, 근본적으로 feature map의 크기가 너무 작기 때문에 예측된 dense map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling 과정이다)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-4.png" class="" title="XAI-2-4.png">
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-5.png" class="" title="XAI-2-5.png">
-<p>따라서 얕은층의 정보를 결합하는 방식으로 품질을 개선하였다. 실제 성능 지표에서도 FCN-32s &gt; FCN-16s &gt; FCN-8s 순으로 결과가 나아진다.</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="Portfolio-Optimization"><a href="#Portfolio-Optimization" class="headerlink" title="Portfolio Optimization"></a>Portfolio Optimization</h1><p>안녕하세요 최문석입니다.<br>현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 <a target="_blank" rel="noopener" href="https://github.com/DART-KNU/Portfolio-Optimization">저장소</a>를 제작중입니다. </p>
+<p>해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정리하였습니다. 특히 ‘EE364A’강의 번역본이 저장되어있으니 참고바랍니다. 해당 내용을 공부하기 전에, 선형대수학과 미적분학에 대한 공부를 먼저하시는 것이 이해하시기 편할 것 같습니다. 해당 저장소를 만들기 위해 참고한 자료와 서적은 아래와 같습니다.</p>
+<h2 id="1-Convex-Optimization"><a href="#1-Convex-Optimization" class="headerlink" title="1. Convex Optimization"></a>1. Convex Optimization</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLoROMvodv4rMJqxxviPa4AmDClvcbHi6h">EE364A Convex Optimization I Video</a></li>
+<li><a target="_blank" rel="noopener" href="https://stanford.edu/~boyd/cvxbook/">EE364A Convex Optimization Textbook&amp;Slides</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cvxpy.org/#">CVXPY</a></li>
+</ul>
+<h2 id="2-Optimization-Techniques-in-Finance"><a href="#2-Optimization-Techniques-in-Finance" class="headerlink" title="2. Optimization Techniques in Finance"></a>2. Optimization Techniques in Finance</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture1_2019.pdf">Optimization Techniques in Finance - 1. Unconstraint optimization problems</a></li>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture2_2019.pdf">Optimization Techniques in Finance - 2. Constraint optimization and Lagrange multipliers</a></li>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture3_2019.pdf">Optimization Techniques in Finance - 3. Linear Programming</a></li>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture4_2019.pdf">Optimization Techniques in Finance - 4. Convex Optimization I</a></li>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture5_2019.pdf">Optimization Techniques in Finance - 5. Convex Optimization II</a></li>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture6_2019.pdf">Optimization Techniques in Finance - 6. Large scale optimization methods and machine learning. I</a></li>
+<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture7_2019.pdf">Optimization Techniques in Finance - 7. Large scale optimization methods and machine learning. II</a></li>
+</ul>
 
     </div>
 
@@ -313,23 +294,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/XAI/" rel="tag"><i class="fa fa-tag"></i> XAI</a>
-              <a href="/tags/Paper-Review/" rel="tag"><i class="fa fa-tag"></i> Paper Review</a>
-              <a href="/tags/Computer-Vision/" rel="tag"><i class="fa fa-tag"></i> Computer Vision</a>
+              <a href="/tags/Quant/" rel="tag"><i class="fa fa-tag"></i> Quant</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/" rel="prev" title="[XAI] Attribution-based XAI Methods in Computer Vision: A Review">
-                  <i class="fa fa-angle-left"></i> [XAI] Attribution-based XAI Methods in Computer Vision: A Review
+                <a href="/2024/03/13/Log-Returns/" rel="prev" title="Log Returns">
+                  <i class="fa fa-angle-left"></i> Log Returns
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/" rel="next" title="[Deep Learning] Chapter9. Convolutional Networks">
-                  [Deep Learning] Chapter9. Convolutional Networks <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
