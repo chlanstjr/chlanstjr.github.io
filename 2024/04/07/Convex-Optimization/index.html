@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Portfolio Optimization안녕하세요 최문석입니다.현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 저장소를 제작중입니다.  해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정리하였습니다.">
+    <meta name="description" content="Portfolio Optimization 안녕하세요 최문석입니다. 현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 저장소를 제작중입니다. 해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Portfolio Optimization">
 <meta property="og:url" content="http://example.com/2024/04/07/Convex-Optimization/index.html">
-<meta property="og:site_name" content="Ant&#39;s Quant Investing">
-<meta property="og:description" content="Portfolio Optimization안녕하세요 최문석입니다.현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 저장소를 제작중입니다.  해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정리하였습니다.">
+<meta property="og:site_name" content="계량투자 연구실">
+<meta property="og:description" content="Portfolio Optimization 안녕하세요 최문석입니다. 현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 저장소를 제작중입니다. 해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2024-04-07T06:49:58.000Z">
 <meta property="article:modified_time" content="2024-04-07T06:56:03.239Z">
@@ -40,7 +40,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/04/07/Convex-Optimization/","path":"2024/04/07/Convex-Optimization/","title":"Portfolio Optimization"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Portfolio Optimization | Ant's Quant Investing</title>
+<title>Portfolio Optimization | 계량투자 연구실</title>
   
 
 
@@ -77,10 +77,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Ant's Quant Investing</p>
+      <p class="site-title">계량투자 연구실</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Artificial Intelligence</p>
+      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Machine Learning</p>
   </div>
 
   <div class="site-nav-right">
@@ -117,7 +117,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Portfolio-Optimization"><span class="nav-number">1.</span> <span class="nav-text">Portfolio Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Convex-Optimization"><span class="nav-number">1.1.</span> <span class="nav-text">1. Convex Optimization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Optimization-Techniques-in-Finance"><span class="nav-number">1.2.</span> <span class="nav-text">2. Optimization Techniques in Finance</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#portfolio-optimization"><span class="nav-number">1.</span> <span class="nav-text">Portfolio Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#convex-optimization"><span class="nav-number">1.1.</span> <span class="nav-text">1. Convex Optimization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#optimization-techniques-in-finance"><span class="nav-number">1.2.</span> <span class="nav-text">2. Optimization Techniques
+in Finance</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,12 +190,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ant's Quant Investing">
+      <meta itemprop="name" content="계량투자 연구실">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Portfolio Optimization | Ant's Quant Investing">
+      <meta itemprop="name" content="Portfolio Optimization | 계량투자 연구실">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -232,21 +233,53 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Portfolio-Optimization"><a href="#Portfolio-Optimization" class="headerlink" title="Portfolio Optimization"></a>Portfolio Optimization</h1><p>안녕하세요 최문석입니다.<br>현재 Portfolio Optimization 관련 수학적 개념을 정리하고 구현하는 <a target="_blank" rel="noopener" href="https://github.com/DART-KNU/Portfolio-Optimization">저장소</a>를 제작중입니다. </p>
-<p>해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기 자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화 문제를 풀기위한 개념과 코드를 정리하였습니다. 특히 ‘EE364A’강의 번역본이 저장되어있으니 참고바랍니다. 해당 내용을 공부하기 전에, 선형대수학과 미적분학에 대한 공부를 먼저하시는 것이 이해하시기 편할 것 같습니다. 해당 저장소를 만들기 위해 참고한 자료와 서적은 아래와 같습니다.</p>
-<h2 id="1-Convex-Optimization"><a href="#1-Convex-Optimization" class="headerlink" title="1. Convex Optimization"></a>1. Convex Optimization</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLoROMvodv4rMJqxxviPa4AmDClvcbHi6h">EE364A Convex Optimization I Video</a></li>
-<li><a target="_blank" rel="noopener" href="https://stanford.edu/~boyd/cvxbook/">EE364A Convex Optimization Textbook&amp;Slides</a></li>
+    <div class="post-body" itemprop="articleBody"><h1 id="portfolio-optimization">Portfolio Optimization</h1>
+<p>안녕하세요 최문석입니다. 현재 Portfolio Optimization 관련 수학적
+개념을 정리하고 구현하는 <a
+target="_blank" rel="noopener" href="https://github.com/DART-KNU/Portfolio-Optimization">저장소</a>를
+제작중입니다.</p>
+<p>해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기
+자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화
+문제를 풀기위한 개념과 코드를 정리하였습니다. 특히 'EE364A'강의 번역본이
+저장되어있으니 참고바랍니다. 해당 내용을 공부하기 전에, 선형대수학과
+미적분학에 대한 공부를 먼저하시는 것이 이해하시기 편할 것 같습니다. 해당
+저장소를 만들기 위해 참고한 자료와 서적은 아래와 같습니다.</p>
+<h2 id="convex-optimization">1. Convex Optimization</h2>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLoROMvodv4rMJqxxviPa4AmDClvcbHi6h">EE364A
+Convex Optimization I Video</a></li>
+<li><a target="_blank" rel="noopener" href="https://stanford.edu/~boyd/cvxbook/">EE364A Convex
+Optimization Textbook&amp;Slides</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.cvxpy.org/#">CVXPY</a></li>
 </ul>
-<h2 id="2-Optimization-Techniques-in-Finance"><a href="#2-Optimization-Techniques-in-Finance" class="headerlink" title="2. Optimization Techniques in Finance"></a>2. Optimization Techniques in Finance</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture1_2019.pdf">Optimization Techniques in Finance - 1. Unconstraint optimization problems</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture2_2019.pdf">Optimization Techniques in Finance - 2. Constraint optimization and Lagrange multipliers</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture3_2019.pdf">Optimization Techniques in Finance - 3. Linear Programming</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture4_2019.pdf">Optimization Techniques in Finance - 4. Convex Optimization I</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture5_2019.pdf">Optimization Techniques in Finance - 5. Convex Optimization II</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture6_2019.pdf">Optimization Techniques in Finance - 6. Large scale optimization methods and machine learning. I</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture7_2019.pdf">Optimization Techniques in Finance - 7. Large scale optimization methods and machine learning. II</a></li>
+<h2 id="optimization-techniques-in-finance">2. Optimization Techniques
+in Finance</h2>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture1_2019.pdf">Optimization
+Techniques in Finance - 1. Unconstraint optimization problems</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture2_2019.pdf">Optimization
+Techniques in Finance - 2. Constraint optimization and Lagrange
+multipliers</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture3_2019.pdf">Optimization
+Techniques in Finance - 3. Linear Programming</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture4_2019.pdf">Optimization
+Techniques in Finance - 4. Convex Optimization I</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture5_2019.pdf">Optimization
+Techniques in Finance - 5. Convex Optimization II</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture6_2019.pdf">Optimization
+Techniques in Finance - 6. Large scale optimization methods and machine
+learning. I</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture7_2019.pdf">Optimization
+Techniques in Finance - 7. Large scale optimization methods and machine
+learning. II</a></li>
 </ul>
 
     </div>

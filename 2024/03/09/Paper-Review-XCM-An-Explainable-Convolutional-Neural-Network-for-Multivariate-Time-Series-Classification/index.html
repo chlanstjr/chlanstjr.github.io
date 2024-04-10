@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Abstract 현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근 방법. 이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기 때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의 사용을 방해할 수 있습니다. 본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인 XCM을 소개함">
+    <meta name="description" content="Abstract  현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근 방법. 이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기 때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의 사용을 방해할 수 있습니다. 본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification">
 <meta property="og:url" content="http://example.com/2024/03/09/Paper-Review-XCM-An-Explainable-Convolutional-Neural-Network-for-Multivariate-Time-Series-Classification/index.html">
-<meta property="og:site_name" content="Ant&#39;s Quant Investing">
-<meta property="og:description" content="Abstract 현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근 방법. 이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기 때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의 사용을 방해할 수 있습니다. 본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인 XCM을 소개함">
+<meta property="og:site_name" content="계량투자 연구실">
+<meta property="og:description" content="Abstract  현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근 방법. 이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기 때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의 사용을 방해할 수 있습니다. 본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2024-03-09T05:16:14.000Z">
 <meta property="article:modified_time" content="2024-03-11T05:51:25.993Z">
@@ -39,7 +39,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/03/09/Paper-Review-XCM-An-Explainable-Convolutional-Neural-Network-for-Multivariate-Time-Series-Classification/","path":"2024/03/09/Paper-Review-XCM-An-Explainable-Convolutional-Neural-Network-for-Multivariate-Time-Series-Classification/","title":"[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification | Ant's Quant Investing</title>
+<title>[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification | 계량투자 연구실</title>
   
 
 
@@ -76,10 +76,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Ant's Quant Investing</p>
+      <p class="site-title">계량투자 연구실</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Artificial Intelligence</p>
+      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Machine Learning</p>
   </div>
 
   <div class="site-nav-right">
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,12 +188,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ant's Quant Investing">
+      <meta itemprop="name" content="계량투자 연구실">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification | Ant's Quant Investing">
+      <meta itemprop="name" content="[Paper Review] XCM : An Explainable Convolutional Neural Network for Multivariate Time Series Classification | 계량투자 연구실">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -228,24 +228,64 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><ul>
-<li>현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근 방법.</li>
-<li>이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기 때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의 사용을 방해할 수 있습니다.</li>
-<li>본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인 XCM을 소개함</li>
-<li>XCM은 입력 데이터에서 관찰된 변수와 시간에 대한 정보를 직접 추출하는 새로운 컴팩트 컨볼루션 신경망임.(따라서 XCM 아키텍처는 대형 및 소형 데이터셋 모두에서 좋은 일반화 능력을 가능하게함)</li>
-<li>(Gradient-Weighted Class Activation Mapping)을 통해 신뢰할 수 있는 사후 모델 특정 설명 가능성 방법의 전체 활용을 허용함으로써 예측에 중요한 입력 데이터의 관찰된 변수와 타임스탬프를 정확히 식별함.</li>
+    <div class="post-body" itemprop="articleBody"><h1 id="abstract">Abstract</h1>
+<ul>
+<li>현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근
+방법.</li>
+<li>이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기
+때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의
+사용을 방해할 수 있습니다.</li>
+<li>본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인 XCM을
+소개함</li>
+<li>XCM은 입력 데이터에서 관찰된 변수와 시간에 대한 정보를 직접 추출하는
+새로운 컴팩트 컨볼루션 신경망임.(따라서 XCM 아키텍처는 대형 및 소형
+데이터셋 모두에서 좋은 일반화 능력을 가능하게함)</li>
+<li>(Gradient-Weighted Class Activation Mapping)을 통해 신뢰할 수 있는
+사후 모델 특정 설명 가능성 방법의 전체 활용을 허용함으로써 예측에 중요한
+입력 데이터의 관찰된 변수와 타임스탬프를 정확히 식별함.</li>
 </ul>
-<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><ul>
-<li>다변량 시계열 데이터의 주목할 만한 가용성에 따라, 다양한 응용분야(금융, 건강 관리, 모빌리티, 자연 재해 등)에서 MTS 분석이 필수 절차가 되어 있음.</li>
-<li>일련의 센서에 의해 동시에 기록되는 공진하는 시계열 집합이 있을때, 이를 MTS라고 합니다. 본 논문에서는 MTS와 그 라벨 사이의 관계를 학습하는 MTS 분류 문제를 다룹니다.</li>
-<li>평균적으로 가장 정확한 MTS 분류기는 딥러닝 접근법인 LSTM-FCN입니다. MLSTMFCN은 장단기 기억(LSTM) 블록과 세 개의 컨볼루션 서브 블록으로 구성된 컨볼루션 신경망(CNN) 블록의 연결로 이루어져 있음.</li>
-<li>But, MLSTM-FCN은 큰 데이터셋에서만 두 번쨰로 좋은 MTS 분류기를 능가함. 해당 딥러닝 접근법은 훈련 가능한 매개변수가 많아 소규모 데이터셋에서의 성능 저하를 불러 일으키는 것으로 생각됨.</li>
-<li>또한 많은 응용 프로그램에서 기계 학습 방법의 채택은 그들의 예측 성능에만 의존 불가능. 유럽 연학의 일반 데이터 보호 규정(GDPR)은 자동화된 의사 결정이 개인에게 “법적 효과”를 가지거나 유사하게 “중대하게 영향”을 미칠 때 “관련 로직의 의미 있는 설명”을 얻을 수 있는 권리를 모든 개인에게 도입.</li>
-<li>MLSTM-FCN이나 WEASEL-MUSE는 사후 비특정 설명 가능성 방법에만 의존하기 떄문에 완벽하게 신뢰할 수 있는 설명을 제공할 수 없음.</li>
-<li>따라서 본 연구에서는 대규모 및 소규모 데이터셋 모두에서 잘 수행되며 신뢰할 수 있는 설명을 제공하는 새로운 컴팩트(매개변수 수 측면)하고 설명 가능한 딥러닝 접근 방식을 MTS 분류를 위해 제안.</li>
-<li>CNN과 그래디언트 가중치 클래스 활성화 매핑 - Grad-CAM과 같은 사후 모델 특정 중요도 방법은 컴팩트한 아키텍처를 유지하면서 신뢰할 수 있는 설명을 가능하게 할 잠재력을 가짐.</li>
-<li>MTEX-CNN은 2D 및 1D Conv filter를 순차적으로 사용하여 관찰된 변수와 시간에 대한 정보, 즉 핵심 MTS 정보를 추출하는 것을 제안함. But, 첫 단계의 출력 기능에서 추출된 시간과 관련된 기능은 입력 데이터로부터의 타이밍 정보를 완전히 통합 X(최신 MTS 분류기와 비교하여 성능이 떨어짐) 또한 상당한 매개변수의 수는 소규모 데이터셋에서의 일반화 능력에 영향을 미침. 마지막으로, MTEX-CNN은 Grad-CAM을 적용할 때 피쳐 맵에서 업샘플링 과정을 요구하는데, 이는 예측에 중요한 입력 데이터 영역의 정확한 식별을 이끌어내지 못할수도.</li>
-<li>따라서, 본 연구에서는 MTS 분류를 위한 새로운 신뢰 가능한 설명 가능한 CNN 방법(XCM)을 제안함. 이는 MTEX-CNN을 세 가지 중요한 방법으로 개선함. (1) 관찰된 변수와 타임 스탬프에 대한 정보를 입력 데이터로부터 직접적이고 병렬적으로 추출함으로써 기능을 생성함. (2) 매개변수 측면에서 컴팩트한 아키텍처를 채택하여 일반화 능력을 향상시킴. (3) 업샘플링 과정을 피함으로써 예측에 중요한 입력 데이터의 관찰된 변수와 타임 스탬프를 정확하게 식별가능.</li>
+<h1 id="introduction">1. Introduction</h1>
+<ul>
+<li>다변량 시계열 데이터의 주목할 만한 가용성에 따라, 다양한
+응용분야(금융, 건강 관리, 모빌리티, 자연 재해 등)에서 MTS 분석이 필수
+절차가 되어 있음.</li>
+<li>일련의 센서에 의해 동시에 기록되는 공진하는 시계열 집합이 있을때,
+이를 MTS라고 합니다. 본 논문에서는 MTS와 그 라벨 사이의 관계를 학습하는
+MTS 분류 문제를 다룹니다.</li>
+<li>평균적으로 가장 정확한 MTS 분류기는 딥러닝 접근법인 LSTM-FCN입니다.
+MLSTMFCN은 장단기 기억(LSTM) 블록과 세 개의 컨볼루션 서브 블록으로
+구성된 컨볼루션 신경망(CNN) 블록의 연결로 이루어져 있음.</li>
+<li>But, MLSTM-FCN은 큰 데이터셋에서만 두 번쨰로 좋은 MTS 분류기를
+능가함. 해당 딥러닝 접근법은 훈련 가능한 매개변수가 많아 소규모
+데이터셋에서의 성능 저하를 불러 일으키는 것으로 생각됨.</li>
+<li>또한 많은 응용 프로그램에서 기계 학습 방법의 채택은 그들의 예측
+성능에만 의존 불가능. 유럽 연학의 일반 데이터 보호 규정(GDPR)은 자동화된
+의사 결정이 개인에게 “법적 효과”를 가지거나 유사하게 “중대하게 영향”을
+미칠 때 “관련 로직의 의미 있는 설명”을 얻을 수 있는 권리를 모든 개인에게
+도입.</li>
+<li>MLSTM-FCN이나 WEASEL-MUSE는 사후 비특정 설명 가능성 방법에만
+의존하기 떄문에 완벽하게 신뢰할 수 있는 설명을 제공할 수 없음.</li>
+<li>따라서 본 연구에서는 대규모 및 소규모 데이터셋 모두에서 잘 수행되며
+신뢰할 수 있는 설명을 제공하는 새로운 컴팩트(매개변수 수 측면)하고 설명
+가능한 딥러닝 접근 방식을 MTS 분류를 위해 제안.</li>
+<li>CNN과 그래디언트 가중치 클래스 활성화 매핑 - Grad-CAM과 같은 사후
+모델 특정 중요도 방법은 컴팩트한 아키텍처를 유지하면서 신뢰할 수 있는
+설명을 가능하게 할 잠재력을 가짐.</li>
+<li>MTEX-CNN은 2D 및 1D Conv filter를 순차적으로 사용하여 관찰된 변수와
+시간에 대한 정보, 즉 핵심 MTS 정보를 추출하는 것을 제안함. But, 첫
+단계의 출력 기능에서 추출된 시간과 관련된 기능은 입력 데이터로부터의
+타이밍 정보를 완전히 통합 X(최신 MTS 분류기와 비교하여 성능이 떨어짐)
+또한 상당한 매개변수의 수는 소규모 데이터셋에서의 일반화 능력에 영향을
+미침. 마지막으로, MTEX-CNN은 Grad-CAM을 적용할 때 피쳐 맵에서 업샘플링
+과정을 요구하는데, 이는 예측에 중요한 입력 데이터 영역의 정확한 식별을
+이끌어내지 못할수도.</li>
+<li>따라서, 본 연구에서는 MTS 분류를 위한 새로운 신뢰 가능한 설명 가능한
+CNN 방법(XCM)을 제안함. 이는 MTEX-CNN을 세 가지 중요한 방법으로 개선함.
+(1) 관찰된 변수와 타임 스탬프에 대한 정보를 입력 데이터로부터 직접적이고
+병렬적으로 추출함으로써 기능을 생성함. (2) 매개변수 측면에서 컴팩트한
+아키텍처를 채택하여 일반화 능력을 향상시킴. (3) 업샘플링 과정을
+피함으로써 예측에 중요한 입력 데이터의 관찰된 변수와 타임 스탬프를
+정확하게 식별가능.</li>
 </ul>
 
     </div>

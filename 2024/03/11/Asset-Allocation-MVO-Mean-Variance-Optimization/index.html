@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1. Markowitz and Mean-Variance framework1.1. Model description source : Index Fund Advisors  1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래에 대한 직관의 전반적 개">
+    <meta name="description" content="1. Markowitz and Mean-Variance framework 1.1. Model description   source : Index Fund Advisors   1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Asset Allocation] MVO(Mean-Variance Optimization)">
 <meta property="og:url" content="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/index.html">
-<meta property="og:site_name" content="Ant&#39;s Quant Investing">
-<meta property="og:description" content="1. Markowitz and Mean-Variance framework1.1. Model description source : Index Fund Advisors  1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래에 대한 직관의 전반적 개">
+<meta property="og:site_name" content="계량투자 연구실">
+<meta property="og:description" content="1. Markowitz and Mean-Variance framework 1.1. Model description   source : Index Fund Advisors   1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png">
 <meta property="article:published_time" content="2024-03-11T05:13:26.000Z">
@@ -44,7 +44,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/","path":"2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/","title":"[Asset Allocation] MVO(Mean-Variance Optimization)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[Asset Allocation] MVO(Mean-Variance Optimization) | Ant's Quant Investing</title>
+<title>[Asset Allocation] MVO(Mean-Variance Optimization) | 계량투자 연구실</title>
   
 
 
@@ -81,10 +81,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Ant's Quant Investing</p>
+      <p class="site-title">계량투자 연구실</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Artificial Intelligence</p>
+      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Machine Learning</p>
   </div>
 
   <div class="site-nav-right">
@@ -121,7 +121,11 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Markowitz-and-Mean-Variance-framework"><span class="nav-number">1.</span> <span class="nav-text">1. Markowitz and Mean-Variance framework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Model-description"><span class="nav-number">1.1.</span> <span class="nav-text">1.1. Model description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Utility-functions-and-optimization-problem"><span class="nav-number">1.2.</span> <span class="nav-text">1.2. Utility functions and optimization problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Markowitz%E2%80%99s-limitations-and-imporovement-possibilities"><span class="nav-number">1.3.</span> <span class="nav-text">1.3. Markowitz’s limitations and imporovement possibilities</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Capital-Market-Theory-CMT"><span class="nav-number">2.</span> <span class="nav-text">2. Capital Market Theory(CMT)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Capital-Asset-Pricing-Model-CAP"><span class="nav-number">3.</span> <span class="nav-text">3. Capital Asset Pricing Model(CAP)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-CAPM-limitations"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. CAPM limitations</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markowitz-and-mean-variance-framework"><span class="nav-number">1.</span> <span class="nav-text">1. Markowitz and
+Mean-Variance framework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#model-description"><span class="nav-number">1.1.</span> <span class="nav-text">1.1. Model description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#utility-functions-and-optimization-problem"><span class="nav-number">1.2.</span> <span class="nav-text">1.2. Utility
+functions and optimization problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#markowitzs-limitations-and-imporovement-possibilities"><span class="nav-number">1.3.</span> <span class="nav-text">1.3.
+Markowitz&#39;s limitations and imporovement possibilities</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#capital-market-theorycmt"><span class="nav-number">2.</span> <span class="nav-text">2. Capital Market Theory(CMT)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#capital-asset-pricing-modelcap"><span class="nav-number">3.</span> <span class="nav-text">3. Capital Asset Pricing
+Model(CAP)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#capm-limitations"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. CAPM limitations</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -193,12 +197,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ant's Quant Investing">
+      <meta itemprop="name" content="계량투자 연구실">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[Asset Allocation] MVO(Mean-Variance Optimization) | Ant's Quant Investing">
+      <meta itemprop="name" content="[Asset Allocation] MVO(Mean-Variance Optimization) | 계량투자 연구실">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -242,26 +246,92 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="1-Markowitz-and-Mean-Variance-framework"><a href="#1-Markowitz-and-Mean-Variance-framework" class="headerlink" title="1. Markowitz and Mean-Variance framework"></a>1. Markowitz and Mean-Variance framework</h1><h2 id="1-1-Model-description"><a href="#1-1-Model-description" class="headerlink" title="1.1. Model description"></a>1.1. Model description</h2><img src="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png" class="" title="MVO_1_1">
-<p><center><small>source : Index Fund Advisors</small></center></p>
+    <div class="post-body" itemprop="articleBody"><h1 id="markowitz-and-mean-variance-framework">1. Markowitz and
+Mean-Variance framework</h1>
+<h2 id="model-description">1.1. Model description</h2>
+<img src="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png" class="" title="MVO_1_1">
+<center>
+<small>source : Index Fund Advisors</small>
+</center>
 <ul>
-<li>1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는 Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여 구성되었음. (다양화와 미래에 대한 직관의 전반적 개념을 지지하는 기준을 따라 포트폴리오를 생성) 전형적인 Naive 전략은 “1/N” 자산 배분임.(N은 자산의 수)</li>
-<li>포트폴리오 이론에 대한 몇 가지 기본적이고 일반적인 개념은 다음과 같음. (1) <strong>기본 가정은 투자자가 주어진 위험 수준에 대해 전체 투자 집합에서 수익을 극대화 하는 것.</strong> (2) <strong>투자자가 기본적으로 위험 회피적(Risk averse)이라고 가정.</strong>(동일한 수익률을 가진 두 자산 사이에서 선택할 때, 그들은 더 낮은 위험 수준의 자산을 선택할 것)</li>
-<li>자산배분의 여러모델은 1952년 해리 마코위츠(Harry Markowitz)의 현대 포트폴리오 이론(Mordern Portfolio Theory, MPT)를 기반으로 함. 해당 이론은 투자자 행동에 대한 여러 가정을 바탕으로함. (1) 투자자는 각 투자 대안을 일정 기간 동안의 기대 수익률의 확률 분포로 간주함. (2) 투자자는 한 기간 동안의 기대 효용을 극대화하고, 효용 곡선은 부의 한계 효용 감소를 보여줌. (3) 투자자는 기대 수익률의 변동성을 바탕으로 포트폴리오의 위험을 평가함. (4) 투자자는 기대 수익률과 위험을 기반으로 결정을 내리므로 효용 곡선은 오직 이들의 함수임. (5) 주어진 위험 수준에 대해 투자자는 낮은 수익보다는 높은 수익을 선호하며, 마찬가지로 기대 수익률의 주어진 수준에 대해 투자자는 더 많은 위험보다 적은 위험을 선호.</li>
-<li>일반적으로 MPT는 자산의 다각화를 통한 투자 위험의 동시 최소화와 기대 수익률의 최대화를 바탕으로 투자 포트폴리오의 선택 및 구성을 위한 투자 프레임워크임. 마코위츠는 MPT를 수행하기 위해 quantitative model인 MVO(Mean-Variance-Optimization을 도입) 최적화 과정에서 고려된 요소는 다음과 같음. (1)expected returns of the assets(for asset i, $\mu_i$) (2)risk of assets, measured by the variance of the expected returns(for asset i, $\sigma_i^2$)</li>
-<li>투자자는 위험이 높을 경우 더 높은 수익률을 요구함.(반대의 경우도 마찬가지) 따라서 MPT 포트폴리오를 생성할 때 <strong>Risk-Return 상충 관계(trade-off)</strong>에 직면하고 있음.</li>
-<li>자산의 기대 수익률(expected returns)을 구하는 것은 마코비츠 모델에서 첫 번째 단계임. 이는 “가능한 수익의 확률 분포의 평균”으로 정의될 수 있음. 간단히 말해서, 정해진 기간 동안 자산 수익의 역사적 평균임. 따라서 포트폴리오의 기대 수익률은 개별 기대 수익률의 가중평균임.<script type="math/tex; mode=display">
-E(R_p) = \sum_{i=1}^{n} w_i \cdot \mu_i</script></li>
-<li>두 번째 단계는 <strong>자산의 위험을 제거하는 것임.</strong> 증권의 위험은 기본적으로 두 가지 요소, 즉 체계적 위험과 비체계적 위험으로 나눌 수 있음. 전자는 모든 증권에 영향을 미치는 위험으로, 제거할 수 없음(인플레이션, 이자율, 실업 수준). 후자는 특정 자산이나 좁은 범위의 자산에만 영향을 미치는 위험 요소에 의해 결정되므로, 포트폴리오 내에서 증권의 다양화를 통해 줄일수 있음(회사의 신용등급, 기업에 대한 부정적인 보도 자료 등).</li>
-<li>위험을 측정하는 가장 흔한 두가지 방법은 분산과 표준편차임.분산은 “자산 기대 수익률의 제곱편차”로 정의됩니다. 포트폴리에의 분산은 항상 개별 자산 분산의 단순 가중 평균보다 낮다. 이는 포트폴리오에 많은 자산이 함꼐 보유될 떄 가치가 감소하는 자산이 종종 가치가 증가하는 자산에 의해 상쇄되어 위험이 줄어들기 떄문임.<script type="math/tex; mode=display">
-\sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \rho_{ij} \sigma_i \sigma_j</script></li>
-<li>표준편차는 분산의 제곱근으로 정의됨. 위 식을 이해하기 위해서는 공분산과 상관관계 개념에 대한 이해가 선행됨. 공분산은 두 변수가 시간에 따라 각각의 평균값에 비해 함께 움직이는 절대적인 척도임. 두 자산$i$와 $j$에 대하여, 수익률의 공분산을 다음과 같이 정의할 수 있음: <script type="math/tex; mode=display">
-Cov_{ij} = E\{[R_i - E(R_i)][R_j - E(R_j)]\}</script>공분산은 두 개별 수익률 지수의 변동성에 의해 영향을 받기 때문에, 이를 다음과 같이 표준화해줌.<script type="math/tex; mode=display">
-\rho_{ij} = \frac{Cov_ij}{\sigma_j \sigma_j}</script>위 식은 상관계수이며, 이는 -1과 +1사이에서만 변할 수 있음.</li>
+<li>1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는
+Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여
+구성되었음. (다양화와 미래에 대한 직관의 전반적 개념을 지지하는 기준을
+따라 포트폴리오를 생성) 전형적인 Naive 전략은 “1/N” 자산 배분임.(N은
+자산의 수)</li>
+<li>포트폴리오 이론에 대한 몇 가지 기본적이고 일반적인 개념은 다음과
+같음. (1) <strong>기본 가정은 투자자가 주어진 위험 수준에 대해 전체 투자
+집합에서 수익을 극대화 하는 것.</strong> (2) <strong>투자자가 기본적으로
+위험 회피적(Risk averse)이라고 가정.</strong>(동일한 수익률을 가진 두
+자산 사이에서 선택할 때, 그들은 더 낮은 위험 수준의 자산을 선택할
+것)</li>
+<li>자산배분의 여러모델은 1952년 해리 마코위츠(Harry Markowitz)의 현대
+포트폴리오 이론(Mordern Portfolio Theory, MPT)를 기반으로 함. 해당
+이론은 투자자 행동에 대한 여러 가정을 바탕으로함. (1) 투자자는 각 투자
+대안을 일정 기간 동안의 기대 수익률의 확률 분포로 간주함. (2) 투자자는
+한 기간 동안의 기대 효용을 극대화하고, 효용 곡선은 부의 한계 효용 감소를
+보여줌. (3) 투자자는 기대 수익률의 변동성을 바탕으로 포트폴리오의 위험을
+평가함. (4) 투자자는 기대 수익률과 위험을 기반으로 결정을 내리므로 효용
+곡선은 오직 이들의 함수임. (5) 주어진 위험 수준에 대해 투자자는 낮은
+수익보다는 높은 수익을 선호하며, 마찬가지로 기대 수익률의 주어진 수준에
+대해 투자자는 더 많은 위험보다 적은 위험을 선호.</li>
+<li>일반적으로 MPT는 자산의 다각화를 통한 투자 위험의 동시 최소화와 기대
+수익률의 최대화를 바탕으로 투자 포트폴리오의 선택 및 구성을 위한 투자
+프레임워크임. 마코위츠는 MPT를 수행하기 위해 quantitative model인
+MVO(Mean-Variance-Optimization을 도입) 최적화 과정에서 고려된 요소는
+다음과 같음. (1)expected returns of the assets(for asset i, <span
+class="math inline">\(\mu_i\)</span>) (2)risk of assets, measured by the
+variance of the expected returns(for asset i, <span
+class="math inline">\(\sigma_i^2\)</span>)</li>
+<li>투자자는 위험이 높을 경우 더 높은 수익률을 요구함.(반대의 경우도
+마찬가지) 따라서 MPT 포트폴리오를 생성할 때 <strong>Risk-Return 상충
+관계(trade-off)</strong>에 직면하고 있음.</li>
+<li>자산의 기대 수익률(expected returns)을 구하는 것은 마코비츠 모델에서
+첫 번째 단계임. 이는 "가능한 수익의 확률 분포의 평균"으로 정의될 수
+있음. 간단히 말해서, 정해진 기간 동안 자산 수익의 역사적 평균임. 따라서
+포트폴리오의 기대 수익률은 개별 기대 수익률의 가중평균임. <span
+class="math display">\[
+E(R_p) = \sum_{i=1}^{n} w_i \cdot \mu_i
+\]</span></li>
+<li>두 번째 단계는 <strong>자산의 위험을 제거하는 것임.</strong> 증권의
+위험은 기본적으로 두 가지 요소, 즉 체계적 위험과 비체계적 위험으로 나눌
+수 있음. 전자는 모든 증권에 영향을 미치는 위험으로, 제거할 수
+없음(인플레이션, 이자율, 실업 수준). 후자는 특정 자산이나 좁은 범위의
+자산에만 영향을 미치는 위험 요소에 의해 결정되므로, 포트폴리오 내에서
+증권의 다양화를 통해 줄일수 있음(회사의 신용등급, 기업에 대한 부정적인
+보도 자료 등).</li>
+<li>위험을 측정하는 가장 흔한 두가지 방법은 분산과 표준편차임.분산은
+"자산 기대 수익률의 제곱편차"로 정의됩니다. 포트폴리에의 분산은 항상
+개별 자산 분산의 단순 가중 평균보다 낮다. 이는 포트폴리오에 많은 자산이
+함꼐 보유될 떄 가치가 감소하는 자산이 종종 가치가 증가하는 자산에 의해
+상쇄되어 위험이 줄어들기 떄문임. <span class="math display">\[
+\sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \rho_{ij} \sigma_i
+\sigma_j
+\]</span></li>
+<li>표준편차는 분산의 제곱근으로 정의됨. 위 식을 이해하기 위해서는
+공분산과 상관관계 개념에 대한 이해가 선행됨. 공분산은 두 변수가 시간에
+따라 각각의 평균값에 비해 함께 움직이는 절대적인 척도임. 두 자산<span
+class="math inline">\(i\)</span>와 <span
+class="math inline">\(j\)</span>에 대하여, 수익률의 공분산을 다음과 같이
+정의할 수 있음: <span class="math display">\[
+Cov_{ij} = E\{[R_i - E(R_i)][R_j - E(R_j)]\}
+\]</span> 공분산은 두 개별 수익률 지수의 변동성에 의해 영향을 받기
+때문에, 이를 다음과 같이 표준화해줌. <span class="math display">\[
+\rho_{ij} = \frac{Cov_ij}{\sigma_j \sigma_j}
+\]</span> 위 식은 상관계수이며, 이는 -1과 +1사이에서만 변할 수
+있음.</li>
 </ul>
-<h2 id="1-2-Utility-functions-and-optimization-problem"><a href="#1-2-Utility-functions-and-optimization-problem" class="headerlink" title="1.2. Utility functions and optimization problem"></a>1.2. Utility functions and optimization problem</h2><h2 id="1-3-Markowitz’s-limitations-and-imporovement-possibilities"><a href="#1-3-Markowitz’s-limitations-and-imporovement-possibilities" class="headerlink" title="1.3. Markowitz’s limitations and imporovement possibilities"></a>1.3. Markowitz’s limitations and imporovement possibilities</h2><h1 id="2-Capital-Market-Theory-CMT"><a href="#2-Capital-Market-Theory-CMT" class="headerlink" title="2. Capital Market Theory(CMT)"></a>2. Capital Market Theory(CMT)</h1><p>(추후 추가)</p>
-<h1 id="3-Capital-Asset-Pricing-Model-CAP"><a href="#3-Capital-Asset-Pricing-Model-CAP" class="headerlink" title="3. Capital Asset Pricing Model(CAP)"></a>3. Capital Asset Pricing Model(CAP)</h1><p>(추후 추가)</p>
-<h2 id="3-1-CAPM-limitations"><a href="#3-1-CAPM-limitations" class="headerlink" title="3.1. CAPM limitations"></a>3.1. CAPM limitations</h2><p>(추후 추가)</p>
+<h2 id="utility-functions-and-optimization-problem">1.2. Utility
+functions and optimization problem</h2>
+<h2 id="markowitzs-limitations-and-imporovement-possibilities">1.3.
+Markowitz's limitations and imporovement possibilities</h2>
+<h1 id="capital-market-theorycmt">2. Capital Market Theory(CMT)</h1>
+<p>(추후 추가)</p>
+<h1 id="capital-asset-pricing-modelcap">3. Capital Asset Pricing
+Model(CAP)</h1>
+<p>(추후 추가)</p>
+<h2 id="capm-limitations">3.1. CAPM limitations</h2>
+<p>(추후 추가)</p>
 
     </div>
 
