@@ -19,28 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Choi Munseok KyungPook National Unviersity, Korea Major in Food &amp; Resource Economics, B.S Bouble Major in Computer Science &amp; Engineering, B.S">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+    <meta name="description" content="1. Manual Searh 2. Grid Search 3. Random Search 4. Bayesian Optimization(BO) 5. Hyperband(HB) 6. Bayesian Optimization Hyperband(BOHB) 7. Reference [1] Grid Search, Random Search, Genetic Algo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hyperparameter Optimization">
+<meta property="og:url" content="http://example.com/2024/04/10/Hyperparameter-Optimization/index.html">
 <meta property="og:site_name" content="금융공학 실험실">
-<meta property="og:description" content="Choi Munseok KyungPook National Unviersity, Korea Major in Food &amp; Resource Economics, B.S Bouble Major in Computer Science &amp; Engineering, B.S">
+<meta property="og:description" content="1. Manual Searh 2. Grid Search 3. Random Search 4. Bayesian Optimization(BO) 5. Hyperband(HB) 6. Bayesian Optimization Hyperband(BOHB) 7. Reference [1] Grid Search, Random Search, Genetic Algo">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2024-02-12T13:07:34.000Z">
-<meta property="article:modified_time" content="2024-02-12T13:23:03.328Z">
+<meta property="article:published_time" content="2024-04-10T11:57:26.000Z">
+<meta property="article:modified_time" content="2024-04-10T12:05:35.364Z">
 <meta property="article:author" content="Choi Munseok">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/about/">
+<link rel="canonical" href="http://example.com/2024/04/10/Hyperparameter-Optimization/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"ko","comments":true,"permalink":"http://example.com/about/index.html","path":"about/index.html","title":"about"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/04/10/Hyperparameter-Optimization/","path":"2024/04/10/Hyperparameter-Optimization/","title":"Hyperparameter Optimization"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>about | 금융공학 실험실
-</title>
+<title>Hyperparameter Optimization | 금융공학 실험실</title>
   
 
 
@@ -117,7 +116,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#choi-munseok"><span class="nav-number">1.</span> <span class="nav-text">Choi Munseok</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#manual-searh"><span class="nav-number">1.</span> <span class="nav-text">1. Manual Searh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#grid-search"><span class="nav-number">2.</span> <span class="nav-text">2. Grid Search</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#random-search"><span class="nav-number">3.</span> <span class="nav-text">3. Random Search</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bayesian-optimizationbo"><span class="nav-number">4.</span> <span class="nav-text">4. Bayesian Optimization(BO)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hyperbandhb"><span class="nav-number">5.</span> <span class="nav-text">5. Hyperband(HB)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bayesian-optimization-hyperbandbohb"><span class="nav-number">6.</span> <span class="nav-text">6. Bayesian Optimization
+Hyperband(BOHB)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number">7.</span> <span class="nav-text">7. Reference</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -170,38 +170,144 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="ko"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">about
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/10/Hyperparameter-Optimization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
+      <meta itemprop="name" content="Choi Munseok">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hyperparameter Optimization | 금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hyperparameter Optimization
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2024-04-10 20:57:26 / Updated at: 21:05:35" itemprop="dateCreated datePublished" datetime="2024-04-10T20:57:26+09:00">2024-04-10</time>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          <h2 id="choi-munseok">Choi Munseok</h2>
-<p>KyungPook National Unviersity, Korea Major in Food &amp; Resource
-Economics, B.S Bouble Major in Computer Science &amp; Engineering,
-B.S</p>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="manual-searh">1. Manual Searh</h1>
+<h1 id="grid-search">2. Grid Search</h1>
+<h1 id="random-search">3. Random Search</h1>
+<h1 id="bayesian-optimizationbo">4. Bayesian Optimization(BO)</h1>
+<h1 id="hyperbandhb">5. Hyperband(HB)</h1>
+<h1 id="bayesian-optimization-hyperbandbohb">6. Bayesian Optimization
+Hyperband(BOHB)</h1>
+<h1 id="reference">7. Reference</h1>
+<p>[1] Grid Search, Random Search, Genetic Algorithm: A Big Comparison
+for NAS [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1912.06059">PDF</a>]<br />
+[2] A Tutorial on Bayesian Optimization [<a
+target="_blank" rel="noopener" href="https://arxiv.org/abs/1807.02811">PDF</a>]<br />
+[3] Hyperband: A Novel Bandit-Based Approach to Hyperparameter
+Optimization [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1603.06560">PDF</a>]<br />
+[4] Hyper-Paramter Optimization: A Review of Algorithms and Applications
+[<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2003.05689">PDF</a>]<br />
+[5] BOHB: Robust and Efficient Hyperparameter Optimization at Scale [<a
+target="_blank" rel="noopener" href="https://arxiv.org/abs/1807.01774">PDF</a>]</p>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.linkedin.com/in/munseok">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+
+            <span class="label">Linkedin</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/chlanstjr">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">Github</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="mailto:choicandoit0301@gmail.com">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-mail</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/04/07/Convex-Optimization/" rel="prev" title="Portfolio Optimization">
+                  <i class="fa fa-angle-left"></i> Portfolio Optimization
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/04/12/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1/" rel="next" title="은사님들께 배우는 인생교훈 1">
+                  은사님들께 배우는 인생교훈 1 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
