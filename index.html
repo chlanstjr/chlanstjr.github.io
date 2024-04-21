@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -174,6 +174,122 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
+      <meta itemprop="name" content="Choi Munseok">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/" class="post-title-link" itemprop="url">평균 분산 최적하의 기하적 해석</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2024-04-21 23:18:26" itemprop="dateCreated datePublished" datetime="2024-04-21T23:18:26+09:00">2024-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Updated at: 2024-04-22 01:55:46" itemprop="dateModified" datetime="2024-04-22T01:55:46+09:00">2024-04-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>해당 게시물은 평균 분산 최적화의 제 개인적인 기하학적
+해석입니다. 잘못된 부분이나 조언해주실 부분은 블로그 맨 아래쪽 연락처로
+연락주시면 감사하겠습니다.</strong></p>
+<h1 id="평균-분산-최적화와-제약조건">평균 분산 최적화와 제약조건</h1>
+<p>단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다.</p>
+<p><strong>m개의 위험자산</strong>: i = 1, 2, …, m</p>
+<p><strong>단일 기간 수익률</strong>: m-variate random vector <span class="math display">\[
+\mathbf{R} = \begin{bmatrix} R_1 \\ R_2 \\ \vdots \\ R_m \end{bmatrix}
+\]</span></p>
+<p><strong>평균과 분산/수익률의 공분산</strong>: <span class="math display">\[
+\mathbb{E}[\mathbf{R}] = \boldsymbol{\alpha} = \begin{bmatrix} \alpha_1
+\\ \vdots \\ \alpha_m \end{bmatrix}, \quad \text{Cov}[\mathbf{R}] =
+\Sigma = \begin{bmatrix} \Sigma_{1,1} &amp; \cdots &amp; \Sigma_{1,m} \\
+\vdots &amp; \ddots &amp; \vdots \\ \Sigma_{m,1} &amp; \cdots &amp;
+\Sigma_{m,m} \end{bmatrix}
+\]</span></p>
+<p><strong>포트폴리오</strong>: m-vector of weights indicating the
+fraction of portfolio wealth held in each asset <span class="math display">\[
+\mathbf{w} = (w_1, \ldots, w_m) \text{ with } \sum_{i=1}^{m} w_i = 1
+\]</span></p>
+<p><strong>포트폴리오 수익률</strong>: <span class="math display">\[
+R_w = \mathbf{w}&#39;\mathbf{R}
+\]</span> 는 다음과 같은 확률 변수를 가집니다: <span class="math display">\[
+\alpha_w = \mathbb{E}[R_w] = \mathbf{w}&#39;\boldsymbol{\alpha}
+\]</span> <span class="math display">\[
+\sigma^2 = \text{var}[R_w] = \mathbf{w}&#39;\Sigma\mathbf{w}
+\]</span></p>
+<p>포트폴리오의 평균-분산 쌍인 <span class="math inline">\((\alpha_{\mathbf{w}},
+\sigma_{\mathbf{w}}^2)\)</span>을 사용하여 다양한 포트폴리오 <span class="math inline">\(\mathbf{w}\)</span>를 평가합니다. 이때 선호되는
+것은:</p>
+<ul>
+<li>더 높은 기대 수익률 <span class="math inline">\(\alpha_{\mathbf{w}}\)</span></li>
+<li>더 낮은 분산 <span class="math inline">\(\text{var}_{\mathbf{w}}\)</span></li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/18/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EA%B5%90%ED%9B%88-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -210,7 +326,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-04-19 21:22:29" itemprop="dateModified" datetime="2024-04-19T21:22:29+09:00">2024-04-19</time>
+      <time title="Updated at: 2024-04-19 21:22:43" itemprop="dateModified" datetime="2024-04-19T21:22:43+09:00">2024-04-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1292,139 +1408,6 @@ Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 �
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/25/XAI-Gradient-Based-Methods/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
-      <meta itemprop="name" content="Choi Munseok">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/" class="post-title-link" itemprop="url">[XAI] Attribution-based XAI Methods in Computer Vision: A Review</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2024-02-25 05:38:13" itemprop="dateCreated datePublished" datetime="2024-02-25T05:38:13+09:00">2024-02-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-11 14:51:27" itemprop="dateModified" datetime="2024-03-11T14:51:27+09:00">2024-03-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/" itemprop="url" rel="index"><span itemprop="name">XAI</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/" itemprop="url" rel="index"><span itemprop="name">Paper Review</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>해당 게시글은 컴퓨터 비전의 XAI 방법론에 대한 리뷰논문인
-“Attribution-based XAI Methods in Computer Vision: A Review(Kumar
-Abhishek, Deeksha Kamath, 2022)를 요약한 것입니다.</p>
-<h1 id="abstract">Abstract</h1>
-<ul>
-<li>Computer Vision을 위한 딥러닝 기반 방법은 지난 십년동안 놀라운
-성장을 이루었음.</li>
-<li>하지만, 이러한 딥러닝 기반 모델들의 의사 결정 과정은 상당히 불투명함
-→ 신뢰 부족</li>
-<li>따라서 설명가능한 AI(XAI) 방법은 이러한 블랙 박스 딥러닝 방법에 대한
-설명을 제공함으로써 해당 문제를 해결하려고 시도.</li>
-<li>본 논문에서는 Computer Vision에 대한 XAI 방법에 대한 포괄적인 조사를
-제공.</li>
-</ul>
-<h1 id="introduction">1. Introduction</h1>
-<ul>
-<li>공공 데이터셋, 컴퓨팅 리소스의 최적 활용, 최적화 → 지난 십년 간
-인공지능 알고리즘의 개발(특히 Vision)</li>
-<li>CNN은 컴퓨터 비전 응용 프로그램의 기반이 되었음, 하지만 블랙박스라는
-한계</li>
-<li>2018, 일반 데이터 보호 규성(GDPR)의 채택 → 기계 학습 알고리즘의
-효율성 뿐만 아니라 공정성과 투명성의 실천이 중요해짐</li>
-<li>해당 논문은 Computer Vision에서 CNN의 예측을 설명하는 속성
-기반(Attribition-based) XAI 방법에 초점을 맞춰 설명.</li>
-</ul>
-<img src="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/XAI-1-1.png" class title="XAI-1-1.png">
-<p>(해당 이미지를 선택한 이유는, 비균일한 배경, 조명, 그림자, 다중
-객체와 같은 여러 혼란 요소의 존재입니다.)</p>
-<h1 id="attribution-based-xai-methods">2. Attribution-based XAI
-Methods</h1>
-<ul>
-<li>F : X → Y 형태의 매개변수화된 깊은 신경망 모델을 생각해봅시다.</li>
-</ul>
-<img src="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/XAI-1-2.png" class title="XAI-1-2.png">
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
