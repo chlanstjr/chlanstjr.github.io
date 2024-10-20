@@ -19,36 +19,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1. Fully Convolutional Networks 1.1. FCN FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서">
+    <meta name="description" content="Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다. 1. FCNFCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[XAI] Gradient-Based Methods">
-<meta property="og:url" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/index.html">
+<meta property="og:title" content="[논문리뷰] Fully Convolutional Networks for Semantic Segmentation">
+<meta property="og:url" content="http://example.com/2024/02/25/[%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0]-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/index.html">
 <meta property="og:site_name" content="금융공학 실험실">
-<meta property="og:description" content="1. Fully Convolutional Networks 1.1. FCN FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서">
+<meta property="og:description" content="Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다. 1. FCNFCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentat">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-3.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-4.png">
-<meta property="og:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-5.png">
+<meta property="og:image" content="http://example.com/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png">
+<meta property="og:image" content="http://example.com/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png">
+<meta property="og:image" content="http://example.com/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-3.png">
+<meta property="og:image" content="http://example.com/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-4.png">
+<meta property="og:image" content="http://example.com/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-5.png">
 <meta property="article:published_time" content="2024-02-25T07:31:05.000Z">
-<meta property="article:modified_time" content="2024-03-11T05:51:29.305Z">
+<meta property="article:modified_time" content="2024-10-20T15:54:22.136Z">
 <meta property="article:author" content="Choi Munseok">
 <meta property="article:tag" content="XAI">
 <meta property="article:tag" content="Paper Review">
 <meta property="article:tag" content="Computer Vision">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png">
+<meta name="twitter:image" content="http://example.com/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png">
 
 
-<link rel="canonical" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+<link rel="canonical" href="http://example.com/2024/02/25/[%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0]-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/02/25/XAI-Gradient-Based-Methods/","path":"2024/02/25/XAI-Gradient-Based-Methods/","title":"[XAI] Gradient-Based Methods"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/02/25/[%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0]-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/","path":"2024/02/25/[논문리뷰]-Fully Convolutional Networks for Semantic-Segmentation/","title":"[논문리뷰] Fully Convolutional Networks for Semantic Segmentation"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[XAI] Gradient-Based Methods | 금융공학 실험실</title>
+<title>[논문리뷰] Fully Convolutional Networks for Semantic Segmentation | 금융공학 실험실</title>
   
 
 
@@ -133,8 +133,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fully-convolutional-networks"><span class="nav-number">1.</span> <span class="nav-text">1. Fully Convolutional
-Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fcn"><span class="nav-number">1.1.</span> <span class="nav-text">1.1. FCN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deconvolution"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Deconvolution</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-FCN"><span class="nav-number">1.</span> <span class="nav-text">1. FCN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Deconvolution"><span class="nav-number">2.</span> <span class="nav-text">2. Deconvolution</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -149,18 +148,18 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -198,7 +197,7 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/[%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0]-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
@@ -211,12 +210,12 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[XAI] Gradient-Based Methods | 금융공학 실험실">
+      <meta itemprop="name" content="[논문리뷰] Fully Convolutional Networks for Semantic Segmentation | 금융공학 실험실">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [XAI] Gradient-Based Methods
+          [논문리뷰] Fully Convolutional Networks for Semantic Segmentation
         </h1>
 
         <div class="post-meta-container">
@@ -234,7 +233,7 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-11 14:51:29" itemprop="dateModified" datetime="2024-03-11T14:51:29+09:00">2024-03-11</time>
+      <time title="Updated at: 2024-10-21 00:54:22" itemprop="dateModified" datetime="2024-10-21T00:54:22+09:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,8 +262,8 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2024/02/25/XAI-Gradient-Based-Methods/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/XAI-Gradient-Based-Methods/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/[논문리뷰]-Fully Convolutional Networks for Semantic-Segmentation/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -277,50 +276,20 @@ Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a cla
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="fully-convolutional-networks">1. Fully Convolutional
-Networks</h1>
-<h2 id="fcn">1.1. FCN</h2>
-<p>FCN(Fully Convolutional Networks for Semantic Segmentation)은
-Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic
-Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당
-용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을
-뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서
-우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰
-변형시킨 것이다.</p>
-<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로
-구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가
-사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치
-고정 → 바로 앞 Feature Map 크기 고정 → …. → Input Image 크기 고정)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png" class="" title="XAI-2-1.png">
-<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체.
-마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로
-변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지
-내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력
-Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에
-가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지
-않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을
-처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는
-있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한
-이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게
-된다.</p>
-<h2 id="deconvolution">1.2 Deconvolution</h2>
-<p>Bilinear Interpolation(선형 보간)</p>
-<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에
-위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는
-방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png" class="" title="XAI-2-2.png">
-<p>이 외에도 Backwards convolution, Unpooling, Shift and stitch 등의
-방법이 있다. FCN에서는 Bilinear interpolation과 Backwards convolution 두
-가지 방법을 사용하여 Coarse Feature map으로부터 Dense prediction을
-구했다.</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-3.png" class="" title="XAI-2-3.png">
-<p>하지만, 근본적으로 feature map의 크기가 너무 작기 때문에 예측된 dense
-map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling
-과정이다)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-4.png" class="" title="XAI-2-4.png">
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-5.png" class="" title="XAI-2-5.png">
-<p>따라서 얕은층의 정보를 결합하는 방식으로 품질을 개선하였다. 실제 성능
-지표에서도 FCN-32s &gt; FCN-16s &gt; FCN-8s 순으로 결과가 나아진다.</p>
+    <div class="post-body" itemprop="articleBody"><p>Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다.</p>
+<h1 id="1-FCN"><a href="#1-FCN" class="headerlink" title="1. FCN"></a>1. FCN</h1><p>FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을 뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서 우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.</p>
+<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로 구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가 사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치 고정 → 바로 앞 Feature Map 크기 고정 → … → Input Image 크기 고정)</p>
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png" class="" title="XAI-2-1.png">
+<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체. 마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로 변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지 내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력 Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에 가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지 않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을 처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는 있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한 이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게 된다.</p>
+<h1 id="2-Deconvolution"><a href="#2-Deconvolution" class="headerlink" title="2. Deconvolution"></a>2. Deconvolution</h1><p>Bilinear Interpolation(선형 보간)</p>
+<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에 위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는 방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png" class="" title="XAI-2-2.png">
+<p>이 외에도 Backwards convolution, Unpooling, Shift and stitch 등의 방법이 있다. FCN에서는 Bilinear interpolation과 Backwards convolution 두 가지 방법을 사용하여 Coarse Feature map으로부터 Dense prediction을 구했다. </p>
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-3.png" class="" title="XAI-2-3.png">
+<p>하지만, 근본적으로 feature map의 크기가 너무 작기 때문에 예측된 dense map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling 과정이다)</p>
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-4.png" class="" title="XAI-2-4.png">
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-5.png" class="" title="XAI-2-5.png">
+<p>따라서 얕은층의 정보를 결합하는 방식으로 품질을 개선하였다. 실제 성능 지표에서도 FCN-32s &gt; FCN-16s &gt; FCN-8s 순으로 결과가 나아진다.</p>
 
     </div>
 
@@ -376,8 +345,8 @@ map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/02/25/XAI-Attribution-based-XAI-Methods-in-Computer-Vision-A-Review/" rel="prev" title="[XAI] Attribution-based XAI Methods in Computer Vision: A Review">
-                  <i class="fa fa-angle-left"></i> [XAI] Attribution-based XAI Methods in Computer Vision: A Review
+                <a href="/2024/02/12/Deep-Learning-Chaper1-Introduction/" rel="prev" title="[Deep Learning] Chapter1. Introduction">
+                  <i class="fa fa-angle-left"></i> [Deep Learning] Chapter1. Introduction
                 </a>
             </div>
             <div class="post-nav-item">

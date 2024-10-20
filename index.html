@@ -134,18 +134,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -218,7 +218,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-04-22 16:30:45" itemprop="dateModified" datetime="2024-04-22T16:30:45+09:00">2024-04-22</time>
+      <time title="Updated at: 2024-10-21 00:54:17" itemprop="dateModified" datetime="2024-10-21T00:54:17+09:00">2024-10-21</time>
     </span>
 
   
@@ -245,557 +245,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>해당 게시물은 평균 분산 최적화의 제 개인적인 기하학적
-해석입니다.</strong></p>
-<h1 id="평균-분산-최적화와-제약조건">평균 분산 최적화와 제약조건</h1>
-<p>단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다.</p>
+          <p><strong>해당 게시물은 평균 분산 최적화의 제 개인적인 기하학적 해석입니다.</strong></p>
+<h1 id="평균-분산-최적화와-제약조건"><a href="#평균-분산-최적화와-제약조건" class="headerlink" title="평균 분산 최적화와 제약조건"></a>평균 분산 최적화와 제약조건</h1><p>단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다.</p>
 <p><strong>m개의 위험자산</strong>: i = 1, 2, …, m</p>
-<p><strong>단일 기간 수익률</strong>: m-variate random vector <span class="math display">\[
-\mathbf{R} = \begin{bmatrix} R_1 \\ R_2 \\ \vdots \\ R_m \end{bmatrix}
-\]</span></p>
-<p><strong>평균과 분산/수익률의 공분산</strong>: <span class="math display">\[
-\mathbb{E}[\mathbf{R}] = \boldsymbol{\alpha} = \begin{bmatrix} \alpha_1
-\\ \vdots \\ \alpha_m \end{bmatrix}, \quad \text{Cov}[\mathbf{R}] =
-\Sigma = \begin{bmatrix} \Sigma_{1,1} &amp; \cdots &amp; \Sigma_{1,m} \\
-\vdots &amp; \ddots &amp; \vdots \\ \Sigma_{m,1} &amp; \cdots &amp;
-\Sigma_{m,m} \end{bmatrix}
-\]</span></p>
-<p><strong>포트폴리오</strong>: m-vector of weights indicating the
-fraction of portfolio wealth held in each asset <span class="math display">\[
-\mathbf{w} = (w_1, \ldots, w_m) \text{ with } \sum_{i=1}^{m} w_i = 1
-\]</span></p>
-<p><strong>포트폴리오 수익률</strong>: <span class="math display">\[
-R_w = \mathbf{w}&#39;\mathbf{R}
-\]</span> 는 다음과 같은 확률 변수를 가집니다: <span class="math display">\[
-\alpha_w = \mathbb{E}[R_w] = \mathbf{w}&#39;\boldsymbol{\alpha}
-\]</span> <span class="math display">\[
-\sigma^2 = \text{var}[R_w] = \mathbf{w}&#39;\Sigma\mathbf{w}
-\]</span></p>
-<p>포트폴리오의 평균-분산 쌍인 <span class="math inline">\((\alpha_{\mathbf{w}},
-\sigma_{\mathbf{w}}^2)\)</span>을 사용하여 다양한 포트폴리오 <span class="math inline">\(\mathbf{w}\)</span>를 평가합니다. 이때 선호되는
-것은:</p>
-<ul>
-<li>더 높은 기대 수익률 <span class="math inline">\(\alpha_{\mathbf{w}}\)</span></li>
-<li>더 낮은 분산 <span class="math inline">\(\text{var}_{\mathbf{w}}\)</span></li>
-</ul>
+<p><strong>단일 기간 수익률</strong>: m-variate random vector</p>
+<script type="math/tex; mode=display">
+\mathbf{R} = \begin{bmatrix} R_1 \\ R_2 \\ \vdots \\ R_m \end{bmatrix}</script><p><strong>평균과 분산/수익률의 공분산</strong>:</p>
+<script type="math/tex; mode=display">
+\mathbb{E}[\mathbf{R}] = \boldsymbol{\alpha} = \begin{bmatrix} \alpha_1 \\ \vdots \\ \alpha_m \end{bmatrix}, \quad \text{Cov}[\mathbf{R}] = \Sigma = \begin{bmatrix} \Sigma_{1,1} & \cdots & \Sigma_{1,m} \\ \vdots & \ddots & \vdots \\ \Sigma_{m,1} & \cdots & \Sigma_{m,m} \end{bmatrix}</script><p><strong>포트폴리오</strong>: m-vector of weights indicating the fraction of portfolio wealth held in each asset</p>
+<script type="math/tex; mode=display">
+\mathbf{w} = (w_1, \ldots, w_m) \text{ with } \sum_{i=1}^{m} w_i = 1</script><p><strong>포트폴리오 수익률</strong>:</p>
+<script type="math/tex; mode=display">
+R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가집니다:</p>
+<script type="math/tex; mode=display">
+\alpha_w = \mathbb{E}[R_w] = \mathbf{w}'\boldsymbol{\alpha}</script><script type="math/tex; mode=display">
+\sigma^2 = \text{var}[R_w] = \mathbf{w}'\Sigma\mathbf{w}</script><p>포트폴리오의 평균-분산 쌍인 $(\alpha_{\mathbf{w}}, \sigma_{\mathbf{w}}^2)$을 사용하여 다양한 포트폴리오 $\mathbf{w}$를 평가합니다. 이때 선호되는 것은:</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/18/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EA%B5%90%ED%9B%88-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
-      <meta itemprop="name" content="Choi Munseok">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/18/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EA%B5%90%ED%9B%88-2/" class="post-title-link" itemprop="url">은사님들께 배우는 교훈 2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2024-04-18 03:04:15" itemprop="dateCreated datePublished" datetime="2024-04-18T03:04:15+09:00">2024-04-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-04-19 21:22:43" itemprop="dateModified" datetime="2024-04-19T21:22:43+09:00">2024-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%EA%B5%90%ED%9B%88/" itemprop="url" rel="index"><span itemprop="name">교훈</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2024/04/18/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EA%B5%90%ED%9B%88-2/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/04/18/은사님들께-배우는-교훈-2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="학부연구생">1. 학부연구생</h1>
-<p>경북대 컴퓨터 비전 관련 연구실에서 2달간 동계 학부연구생 과정을
-진행하였습니다. (1) Stanford University의 'CS231N: Deep Learning for
-Computer Vision'강의를 듣고 공부하여 관련 내용을 PT하였습니다. (2) 개인
-자율 프로젝트를 진행하였습니다.</p>
-<ul>
-<li>일의 사이즈를 보고 계획적으로 실행해라</li>
-<li>다 끝나지 못했더라고 진행한 부분까지 발표하면 된다. 다 못했더라도
-실패한 것이 아니다.</li>
-<li>논문 초반부에 이것저것 딴소리 많이 하지 마라. 용두사미가 된다.</li>
-<li>MAPE같은 정확도를 구할때는 5번 정도해서 평균을 써라. 같은
-parameter라도 매번 할때마다 결과가 다르니.</li>
-</ul>
-<h1 id="산학협력-프로젝트">2. 산학협력 프로젝트</h1>
-<p>한국 소재 모 산업용 보일러 회사와 산학협력 프로젝트를 진행하였습니다.
-모 기업의 연구원님께 저희 프로젝트를 PT하고 피드백을 받았습니다. "산업용
-보일러 효율 영향 인자 탐색"을 주제로 진행하였습니다. 프로젝트 내용은
-다음과 같습니다. (1) 보일러 데이터 -&gt; (2) PCA (가동 중단 효과 제거)
--&gt; (3) Random Forest Regressor 모델적합(베이지안 최적화로 parameter
-적합) -&gt; (4) SHAP사용 Feature importance 뽑기</p>
-<ul>
-<li>데이터 설명좀 자세히 해야됨.</li>
-<li>PCA 적용이 좀 이상한 것 같다. 그냥 가동 중단상태 근방으로는 데이터
-잘라 써라</li>
-<li>이상치 제거하고 학습시켜라. (데이터 만개 넘으니 큰 영향은
-없겠지만.)</li>
-<li>보고서 흑백으로 뽑는거 생각하고 그래프랑 표 만들것.</li>
-<li>인공지능은 나와있는거 쓰면되니까, 도메인 지식이 굉장히 중요함.</li>
-<li>모델 돌리는 하드웨어랑 소프트웨어 스팩 명시할 것.</li>
-<li>훈련과정에서도 성능 뽑을 것.(테스트랑 많이 차이나면 안되니)</li>
-</ul>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/18/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EA%B5%90%ED%9B%88-2/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/12/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
-      <meta itemprop="name" content="Choi Munseok">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/12/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1/" class="post-title-link" itemprop="url">은사님들께 배우는 교훈 1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2024-04-12 20:28:11" itemprop="dateCreated datePublished" datetime="2024-04-12T20:28:11+09:00">2024-04-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-04-19 21:20:45" itemprop="dateModified" datetime="2024-04-19T21:20:45+09:00">2024-04-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%EA%B5%90%ED%9B%88/" itemprop="url" rel="index"><span itemprop="name">교훈</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2024/04/12/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/04/12/은사님들께-배우는-인생교훈-1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <center>
-<strong>“사람들은 자신이 원하는 것에 관심이 많다. 영원히 관심이 많다.
-하지만 다른 사람 그 누구도 당신이 원하는 일에는 관심을 두지 않는다.
-당신을 제외한 모든 사람들은 당신과 같다. 우리 모두는 우리가 원하는
-일에만 관심이 있다. 따라서 세상에서 유일하게 다른 사람에게 영향을 미칠
-수 있는 방법은 다른 사람이 원하는 것에 대해 이야기하고, 어떻게 하면
-그것을 얻을 수 있을지 보여 주는 방법뿐이다.”</strong><br>
--데일카네기 인간관계론-
-</center>
-<p><br></p>
-<center>
-<strong>“성공의 비결이란 게 있다면, 다른 사람의 관점을 가지고 당신의
-관점뿐 아니라 그 사람의 관점에서 사물을 보는 능력이다.”</strong><br>
--헨리 포드-
-</center>
-<hr>
-<h2 id="등가교환">1. 등가교환</h2>
-<img src="/2024/04/12/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1/%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1-1.jpg" class title="인생교훈-1-1">
-<p>새로운 루트로 회사에 10억 벌어다주는데 연봉 1억 올려주지 않을 이유
-없다. 열심히 시키는 일만하고 '왜 내 연봉은 안오르지?'라고 생각한다면..
-당연하다! 시키는 일만 하니까. 열심히 하는거 좋다. 근데, 뭘 열심히
-할건데? <strong>세상은 등가교환이다.</strong></p>
-<p>저 열심히 했는데요!</p>
-<p>열심히 했어? 음.. 그래 어쩌라고.. 자기 일만 열심히 하면 자기 실력만
-늘지. 나한데 도움이 되는게 뭔데?</p>
-<p><strong>근본적인 질문 : 원하는게 있어? 나한데 뭘 해줄수
-있는데?</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/12/%EC%9D%80%EC%82%AC%EB%8B%98%EB%93%A4%EA%BB%98-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9D%B8%EC%83%9D%EA%B5%90%ED%9B%88-1/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/10/Hyperparameter-Optimization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
-      <meta itemprop="name" content="Choi Munseok">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/10/Hyperparameter-Optimization/" class="post-title-link" itemprop="url">Hyperparameter Optimization</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2024-04-10 20:57:26 / Updated at: 21:11:57" itemprop="dateCreated datePublished" datetime="2024-04-10T20:57:26+09:00">2024-04-10</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2024/04/10/Hyperparameter-Optimization/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/04/10/Hyperparameter-Optimization/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="manual-searh">1. Manual Searh</h1>
-<h1 id="grid-search">2. Grid Search</h1>
-<h1 id="random-search">3. Random Search</h1>
-<h1 id="bayesian-optimizationbo">4. Bayesian Optimization(BO)</h1>
-<h1 id="hyperbandhb">5. Hyperband(HB)</h1>
-<h1 id="bayesian-optimization-hyperbandbohb">6. Bayesian Optimization
-Hyperband(BOHB)</h1>
-<h1 id="reference">7. Reference</h1>
-<p>[1] Grid Search, Random Search, Genetic Algorithm: A Big Comparison
-for NAS [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1912.06059">PDF</a>]<br>
-[2] A Tutorial on Bayesian Optimization [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1807.02811">PDF</a>]<br>
-[3] Hyperband: A Novel Bandit-Based Approach to Hyperparameter
-Optimization [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1603.06560">PDF</a>]<br>
-[4] Hyper-Paramter Optimization: A Review of Algorithms and Applications
-[<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2003.05689">PDF</a>]<br>
-[5] BOHB: Robust and Efficient Hyperparameter Optimization at Scale [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1807.01774">PDF</a>]</p>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/10/Hyperparameter-Optimization/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/07/Convex-Optimization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
-      <meta itemprop="name" content="Choi Munseok">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/07/Convex-Optimization/" class="post-title-link" itemprop="url">Portfolio Optimization</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2024-04-07 15:49:58 / Updated at: 15:56:03" itemprop="dateCreated datePublished" datetime="2024-04-07T15:49:58+09:00">2024-04-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Quant/" itemprop="url" rel="index"><span itemprop="name">Quant</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2024/04/07/Convex-Optimization/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/04/07/Convex-Optimization/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="portfolio-optimization">Portfolio Optimization</h1>
-<p>안녕하세요 최문석입니다. 현재 Portfolio Optimization 관련 수학적
-개념을 정리하고 구현하는 <a target="_blank" rel="noopener" href="https://github.com/DART-KNU/Portfolio-Optimization">저장소</a>를
-제작중입니다.</p>
-<p>해당 저장소는 경북대학교 금융데이터 분석학회 DART의 24년도 1학기
-자산배분 논문 스터디의 일환입니다. 평균 분산 최적화 과정에서 최적화
-문제를 풀기위한 개념과 코드를 정리하였습니다. 특히 'EE364A'강의 번역본이
-저장되어있으니 참고바랍니다. 해당 내용을 공부하기 전에, 선형대수학과
-미적분학에 대한 공부를 먼저하시는 것이 이해하시기 편할 것 같습니다. 해당
-저장소를 만들기 위해 참고한 자료와 서적은 아래와 같습니다.</p>
-<h2 id="convex-optimization">1. Convex Optimization</h2>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLoROMvodv4rMJqxxviPa4AmDClvcbHi6h">EE364A
-Convex Optimization I Video</a></li>
-<li><a target="_blank" rel="noopener" href="https://stanford.edu/~boyd/cvxbook/">EE364A Convex
-Optimization Textbook&amp;Slides</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cvxpy.org/#">CVXPY</a></li>
-</ul>
-<h2 id="optimization-techniques-in-finance">2. Optimization Techniques
-in Finance</h2>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture1_2019.pdf">Optimization
-Techniques in Finance - 1. Unconstraint optimization problems</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture2_2019.pdf">Optimization
-Techniques in Finance - 2. Constraint optimization and Lagrange
-multipliers</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture3_2019.pdf">Optimization
-Techniques in Finance - 3. Linear Programming</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture4_2019.pdf">Optimization
-Techniques in Finance - 4. Convex Optimization I</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture5_2019.pdf">Optimization
-Techniques in Finance - 5. Convex Optimization II</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture6_2019.pdf">Optimization
-Techniques in Finance - 6. Large scale optimization methods and machine
-learning. I</a></li>
-<li><a target="_blank" rel="noopener" href="https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture7_2019.pdf">Optimization
-Techniques in Finance - 7. Large scale optimization methods and machine
-learning. II</a></li>
-</ul>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/07/Convex-Optimization/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
@@ -854,9 +321,15 @@ learning. II</a></li>
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2024-03-13 12:54:57 / Updated at: 20:13:06" itemprop="dateCreated datePublished" datetime="2024-03-13T12:54:57+09:00">2024-03-13</time>
+      <time title="Post created: 2024-03-13 12:54:57" itemprop="dateCreated datePublished" datetime="2024-03-13T12:54:57+09:00">2024-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Updated at: 2024-10-21 00:54:18" itemprop="dateModified" datetime="2024-10-21T00:54:18+09:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -892,221 +365,15 @@ learning. II</a></li>
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="log-returns">Log returns</h1>
-<p>금융 분야에서 로그 수익률을 사용하는 이유는 보통 3가지 입니다. 이번
-포스팅에서는 그 세가지 이유를 정리해보겠습니다. 우선 로그 수익률과
-일반적인 수익률은 다음과 같이 정의 됩니다. <span class="math display">\[단순 수익률 : r_t =
-\frac{P_t-P_{t-1}}{P_{t-1}}\]</span> <span class="math display">\[로그수익률 : z_t =
-\ln\left(\frac{P_t}{P_{t-1}}\right)\]</span></p>
-<h2 id="normal-returns">1. Normal returns</h2>
-<p>어떤 자산의 가격이 100원에서 130원이 되었다가 다시 100원으로 왔다고
-가정해봅시다. 100원에서 130원이 될 때는 단순 수익률이 +30%이지만,
-130원에서 100원이 될 때는 단순 수익률이 -30%가 아닌 -23%가 되는 문제가
-발생합니다. 이는 연속시간에 대한 복리효과 때문입니다. 로그 수익률은 이를
-보정하여 주가 변동 수익률의 합계가 최종 수익률과 같아지게 합니다. <span class="math display">\[\ln\left(\frac{P_{t-3}}{P_{t-2}}\right) +
-ln\left(\frac{P_{t-2}}{P_{t-1}}\right) +
-ln\left(\frac{P_{t-1}}{P_{t-0}}\right) =
-ln\left(\frac{P_{t-3}}{P_{t-0}}\right)\]</span></p>
-<h2 id="infinite-support-and-normality">2. Infinite support and
-Normality</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df = yf.download(<span class="string">&#x27;VTI&#x27;</span>, start=<span class="string">&quot;2013-01-01&quot;</span>)</span><br><span class="line">df[<span class="string">&#x27;Return&#x27;</span>] = df[<span class="string">&#x27;Adj Close&#x27;</span>].pct_change()</span><br><span class="line">df[<span class="string">&#x27;Log_Return&#x27;</span>] = np.log(df[<span class="string">&#x27;Adj Close&#x27;</span>] / df[<span class="string">&#x27;Adj Close&#x27;</span>].shift(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+          <h1 id="Log-returns"><a href="#Log-returns" class="headerlink" title="Log returns"></a>Log returns</h1><p> 금융 분야에서 로그 수익률을 사용하는 이유는 보통 3가지 입니다. 이번 포스팅에서는 그 세가지 이유를 정리해보겠습니다. 우선 로그 수익률과 일반적인 수익률은 다음과 같이 정의 됩니다.</p>
+<script type="math/tex; mode=display">단순 수익률 : r_t = \frac{P_t-P_{t-1}}{P_{t-1}}</script><script type="math/tex; mode=display">로그수익률 : z_t = \ln\left(\frac{P_t}{P_{t-1}}\right)</script><h2 id="1-Normal-returns"><a href="#1-Normal-returns" class="headerlink" title="1. Normal returns"></a>1. Normal returns</h2><p>어떤 자산의 가격이 100원에서 130원이 되었다가 다시 100원으로 왔다고 가정해봅시다. 100원에서 130원이 될 때는 단순 수익률이 +30%이지만, 130원에서 100원이 될 때는 단순 수익률이 -30%가 아닌 -23%가 되는 문제가 발생합니다. 이는 연속시간에 대한 복리효과 때문입니다. 로그 수익률은 이를 보정하여 주가 변동 수익률의 합계가 최종 수익률과 같아지게 합니다.</p>
+<script type="math/tex; mode=display">\ln\left(\frac{P_{t-3}}{P_{t-2}}\right) + ln\left(\frac{P_{t-2}}{P_{t-1}}\right) + ln\left(\frac{P_{t-1}}{P_{t-0}}\right) = ln\left(\frac{P_{t-3}}{P_{t-0}}\right)</script><h2 id="2-Infinite-support-and-Normality"><a href="#2-Infinite-support-and-Normality" class="headerlink" title="2. Infinite support and Normality"></a>2. Infinite support and Normality</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> yfinance <span class="keyword">as</span> yf</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df = yf.download(<span class="string">&#x27;VTI&#x27;</span>, start=<span class="string">&quot;2013-01-01&quot;</span>)</span><br><span class="line">df[<span class="string">&#x27;Return&#x27;</span>] = df[<span class="string">&#x27;Adj Close&#x27;</span>].pct_change()</span><br><span class="line">df[<span class="string">&#x27;Log_Return&#x27;</span>] = np.log(df[<span class="string">&#x27;Adj Close&#x27;</span>] / df[<span class="string">&#x27;Adj Close&#x27;</span>].shift(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> lognorm</span><br><span class="line"><span class="keyword">import</span> scipy.stats <span class="keyword">as</span> stats</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">5</span>))</span><br><span class="line">plt.hist(df[<span class="string">&#x27;Adj Close&#x27;</span>].dropna(), bins=<span class="number">200</span>, alpha=<span class="number">0.6</span>, color=<span class="string">&#x27;b&#x27;</span>, density=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 로그정규 분포의 파라미터 추정</span></span><br><span class="line">shape, loc, scale = stats.lognorm.fit(df[<span class="string">&#x27;Adj Close&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 추정된 파라미터를 사용하여 분포 객체 생성</span></span><br><span class="line">dist = stats.lognorm(shape, loc=loc, scale=scale)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 확률 밀도 함수를 그리기 위한 x 값 생성</span></span><br><span class="line">xmin, xmax = plt.xlim()</span><br><span class="line">x = np.linspace(xmin, xmax, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># PDF 계산 및 그래프에 표시</span></span><br><span class="line">pdf = dist.pdf(x)</span><br><span class="line">plt.plot(x, pdf, <span class="string">&#x27;r-&#x27;</span>, linewidth=<span class="number">2</span>, label=<span class="string">&#x27;Log-normal distribution&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">&#x27;Probability Distribution of Returns for VTI Price&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Daily Price&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Probability Density&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <img src="/2024/03/13/Log-Returns/LR-1-1.png" class title="LR_1_1">
-<p>로그 수익률에 대한 일반적인 주장은, 가격이 로그 정규 분포인 경우 로그
-수익률이 정규분포를 따른다는 것입니다. <span class="math inline">\(z_t=log(p_t)−log(p_{t−1})\)</span> 이므로, 로그
-수익률은 두 정규 확률 변수의 합이기 때문입니다.(제 개인적인 생각은,
-<span class="math inline">\(P_t\)</span>와 <span class="math inline">\(P_{t-1}\)</span>이 독립이 아니기 떄문에 말이
-안되는 것 같습니다.) 그렇다면, 가격이 로그 정규분포를 따른다고 가정하는
-것이 타당할까요? Vanguard Total Stock Market Index Fund ETF(VTI) 가격의
-히스토 그램을 최적의 로그 정규분포와 함께 표시했습니다. 로그 정규 분포가
-첫 번째 근사로 무리는 아니지만 데이터에 대한 좋은 모델은 아닌듯 합니다.
-</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">6</span>))</span><br><span class="line">sns.kdeplot(df[<span class="string">&#x27;Return&#x27;</span>].dropna(), bw_adjust=<span class="number">0.5</span>, color=<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Probability Distribution of Simple Returns for VTI&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Daily Return&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Probability Density&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>로그 수익률에 대한 일반적인 주장은, 가격이 로그 정규 분포인 경우 로그 수익률이 정규분포를 따른다는 것입니다. $z_t=log(p_t)−log(p_{t−1})$ 이므로, 로그 수익률은 두 정규 확률 변수의 합이기 때문입니다.(제 개인적인 생각은, $P_t$와 $P_{t-1}$이 독립이 아니기 떄문에 말이 안되는 것 같습니다.)<br>그렇다면, 가격이 로그 정규분포를 따른다고 가정하는 것이 타당할까요? Vanguard Total Stock Market Index Fund ETF(VTI) 가격의 히스토 그램을 최적의 로그 정규분포와 함께 표시했습니다. 로그 정규 분포가 첫 번째 근사로 무리는 아니지만 데이터에 대한 좋은 모델은 아닌듯 합니다.<br></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">6</span>))</span><br><span class="line">sns.kdeplot(df[<span class="string">&#x27;Return&#x27;</span>].dropna(), bw_adjust=<span class="number">0.5</span>, color=<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Probability Distribution of Simple Returns for VTI&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Daily Return&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Probability Density&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/03/13/Log-Returns/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
-      <meta itemprop="name" content="Choi Munseok">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 금융공학 실험실">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/" class="post-title-link" itemprop="url">[Asset Allocation] MVO(Mean-Variance Optimization)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2024-03-11 14:13:26" itemprop="dateCreated datePublished" datetime="2024-03-11T14:13:26+09:00">2024-03-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-13 20:57:55" itemprop="dateModified" datetime="2024-03-13T20:57:55+09:00">2024-03-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Quant/" itemprop="url" rel="index"><span itemprop="name">Quant</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="markowitz-and-mean-variance-framework">1. Markowitz and
-Mean-Variance framework</h1>
-<h2 id="model-description">1.1. Model description</h2>
-<img src="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/MVO_1_1.png" class title="MVO_1_1">
-<center>
-<small>source : Index Fund Advisors</small>
-</center>
-<ul>
-<li>1950년대에 최적화 기술의 개발이 이루어지기 전까지, 포트폴리오는
-Naive(순진한 천진난만한) 접근 방식을 사용하여 자산별로만 분석하여
-구성되었음. (다양화와 미래에 대한 직관의 전반적 개념을 지지하는 기준을
-따라 포트폴리오를 생성) 전형적인 Naive 전략은 “1/N” 자산 배분임.(N은
-자산의 수)</li>
-<li>포트폴리오 이론에 대한 몇 가지 기본적이고 일반적인 개념은 다음과
-같음. (1) <strong>기본 가정은 투자자가 주어진 위험 수준에 대해 전체 투자
-집합에서 수익을 극대화 하는 것.</strong> (2) <strong>투자자가 기본적으로
-위험 회피적(Risk averse)이라고 가정.</strong>(동일한 수익률을 가진 두
-자산 사이에서 선택할 때, 그들은 더 낮은 위험 수준의 자산을 선택할
-것)</li>
-<li>자산배분의 여러모델은 1952년 해리 마코위츠(Harry Markowitz)의 현대
-포트폴리오 이론(Mordern Portfolio Theory, MPT)를 기반으로 함. 해당
-이론은 투자자 행동에 대한 여러 가정을 바탕으로함. (1) 투자자는 각 투자
-대안을 일정 기간 동안의 기대 수익률의 확률 분포로 간주함. (2) 투자자는
-한 기간 동안의 기대 효용을 극대화하고, 효용 곡선은 부의 한계 효용 감소를
-보여줌. (3) 투자자는 기대 수익률의 변동성을 바탕으로 포트폴리오의 위험을
-평가함. (4) 투자자는 기대 수익률과 위험을 기반으로 결정을 내리므로 효용
-곡선은 오직 이들의 함수임. (5) 주어진 위험 수준에 대해 투자자는 낮은
-수익보다는 높은 수익을 선호하며, 마찬가지로 기대 수익률의 주어진 수준에
-대해 투자자는 더 많은 위험보다 적은 위험을 선호.</li>
-<li>일반적으로 MPT는 자산의 다각화를 통한 투자 위험의 동시 최소화와 기대
-수익률의 최대화를 바탕으로 투자 포트폴리오의 선택 및 구성을 위한 투자
-프레임워크임. 마코위츠는 MPT를 수행하기 위해 quantitative model인
-MVO(Mean-Variance-Optimization을 도입) 최적화 과정에서 고려된 요소는
-다음과 같음. (1)expected returns of the assets(for asset i, <span class="math inline">\(\mu_i\)</span>) (2)risk of assets, measured by the
-variance of the expected returns(for asset i, <span class="math inline">\(\sigma_i^2\)</span>)</li>
-<li>투자자는 위험이 높을 경우 더 높은 수익률을 요구함.(반대의 경우도
-마찬가지) 따라서 MPT 포트폴리오를 생성할 때 <strong>Risk-Return 상충
-관계(trade-off)</strong>에 직면하고 있음.</li>
-<li>자산의 기대 수익률(expected returns)을 구하는 것은 마코비츠 모델에서
-첫 번째 단계임. 이는 "가능한 수익의 확률 분포의 평균"으로 정의될 수
-있음. 간단히 말해서, 정해진 기간 동안 자산 수익의 역사적 평균임. 따라서
-포트폴리오의 기대 수익률은 개별 기대 수익률의 가중평균임. <span class="math display">\[
-E(R_p) = \sum_{i=1}^{n} w_i \cdot \mu_i
-\]</span></li>
-<li>두 번째 단계는 <strong>자산의 위험을 제거하는 것임.</strong> 증권의
-위험은 기본적으로 두 가지 요소, 즉 체계적 위험과 비체계적 위험으로 나눌
-수 있음. 전자는 모든 증권에 영향을 미치는 위험으로, 제거할 수
-없음(인플레이션, 이자율, 실업 수준). 후자는 특정 자산이나 좁은 범위의
-자산에만 영향을 미치는 위험 요소에 의해 결정되므로, 포트폴리오 내에서
-증권의 다양화를 통해 줄일수 있음(회사의 신용등급, 기업에 대한 부정적인
-보도 자료 등).</li>
-<li>위험을 측정하는 가장 흔한 두가지 방법은 분산과 표준편차임.분산은
-"자산 기대 수익률의 제곱편차"로 정의됩니다. 포트폴리에의 분산은 항상
-개별 자산 분산의 단순 가중 평균보다 낮다. 이는 포트폴리오에 많은 자산이
-함꼐 보유될 떄 가치가 감소하는 자산이 종종 가치가 증가하는 자산에 의해
-상쇄되어 위험이 줄어들기 떄문임. <span class="math display">\[
-\sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \rho_{ij} \sigma_i
-\sigma_j
-\]</span></li>
-<li>표준편차는 분산의 제곱근으로 정의됨. 위 식을 이해하기 위해서는
-공분산과 상관관계 개념에 대한 이해가 선행됨. 공분산은 두 변수가 시간에
-따라 각각의 평균값에 비해 함께 움직이는 절대적인 척도임. 두 자산<span class="math inline">\(i\)</span>와 <span class="math inline">\(j\)</span>에 대하여, 수익률의 공분산을 다음과 같이
-정의할 수 있음: <span class="math display">\[
-Cov_{ij} = E\{[R_i - E(R_i)][R_j - E(R_j)]\}
-\]</span> 공분산은 두 개별 수익률 지수의 변동성에 의해 영향을 받기
-때문에, 이를 다음과 같이 표준화해줌. <span class="math display">\[
-\rho_{ij} = \frac{Cov_ij}{\sigma_j \sigma_j}
-\]</span> 위 식은 상관계수이며, 이는 -1과 +1사이에서만 변할 수
-있음.</li>
-</ul>
-<h2 id="utility-functions-and-optimization-problem">1.2. Utility
-functions and optimization problem</h2>
-<h2 id="markowitzs-limitations-and-imporovement-possibilities">1.3.
-Markowitz's limitations and imporovement possibilities</h2>
-<h1 id="capital-market-theorycmt">2. Capital Market Theory(CMT)</h1>
-<p>(추후 추가)</p>
-<h1 id="capital-asset-pricing-modelcap">3. Capital Asset Pricing
-Model(CAP)</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/11/Asset-Allocation-MVO-Mean-Variance-Optimization/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
@@ -1173,7 +440,7 @@ Model(CAP)</h1>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-11 14:51:25" itemprop="dateModified" datetime="2024-03-11T14:51:25+09:00">2024-03-11</time>
+      <time title="Updated at: 2024-10-21 00:54:17" itemprop="dateModified" datetime="2024-10-21T00:54:17+09:00">2024-10-21</time>
     </span>
 
   
@@ -1200,64 +467,24 @@ Model(CAP)</h1>
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="abstract">Abstract</h1>
-<ul>
-<li>현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근
-방법.</li>
-<li>이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기
-때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의
-사용을 방해할 수 있습니다.</li>
-<li>본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인 XCM을
-소개함</li>
-<li>XCM은 입력 데이터에서 관찰된 변수와 시간에 대한 정보를 직접 추출하는
-새로운 컴팩트 컨볼루션 신경망임.(따라서 XCM 아키텍처는 대형 및 소형
-데이터셋 모두에서 좋은 일반화 능력을 가능하게함)</li>
-<li>(Gradient-Weighted Class Activation Mapping)을 통해 신뢰할 수 있는
-사후 모델 특정 설명 가능성 방법의 전체 활용을 허용함으로써 예측에 중요한
-입력 데이터의 관찰된 변수와 타임스탬프를 정확히 식별함.</li>
+          <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><ul>
+<li>현재 최고의 MTS(Multi Time Series) 분류기는 중량급 딥러닝 접근 방법.</li>
+<li>이 딥러닝 접근 방식은 사후 모델 비특정 설명 가능성 방법에 의존하기 때문에 신뢰할 수 있는 설명을 제공할 수 없으며, 여러 응용 프로그램에서의 사용을 방해할 수 있습니다.</li>
+<li>본 연구에서는 MTS 분류를 위한 설명 가능한 컨볼루션 신경망인 XCM을 소개함</li>
+<li>XCM은 입력 데이터에서 관찰된 변수와 시간에 대한 정보를 직접 추출하는 새로운 컴팩트 컨볼루션 신경망임.(따라서 XCM 아키텍처는 대형 및 소형 데이터셋 모두에서 좋은 일반화 능력을 가능하게함)</li>
+<li>(Gradient-Weighted Class Activation Mapping)을 통해 신뢰할 수 있는 사후 모델 특정 설명 가능성 방법의 전체 활용을 허용함으로써 예측에 중요한 입력 데이터의 관찰된 변수와 타임스탬프를 정확히 식별함.</li>
 </ul>
-<h1 id="introduction">1. Introduction</h1>
-<ul>
-<li>다변량 시계열 데이터의 주목할 만한 가용성에 따라, 다양한
-응용분야(금융, 건강 관리, 모빌리티, 자연 재해 등)에서 MTS 분석이 필수
-절차가 되어 있음.</li>
-<li>일련의 센서에 의해 동시에 기록되는 공진하는 시계열 집합이 있을때,
-이를 MTS라고 합니다. 본 논문에서는 MTS와 그 라벨 사이의 관계를 학습하는
-MTS 분류 문제를 다룹니다.</li>
-<li>평균적으로 가장 정확한 MTS 분류기는 딥러닝 접근법인 LSTM-FCN입니다.
-MLSTMFCN은 장단기 기억(LSTM) 블록과 세 개의 컨볼루션 서브 블록으로
-구성된 컨볼루션 신경망(CNN) 블록의 연결로 이루어져 있음.</li>
-<li>But, MLSTM-FCN은 큰 데이터셋에서만 두 번쨰로 좋은 MTS 분류기를
-능가함. 해당 딥러닝 접근법은 훈련 가능한 매개변수가 많아 소규모
-데이터셋에서의 성능 저하를 불러 일으키는 것으로 생각됨.</li>
-<li>또한 많은 응용 프로그램에서 기계 학습 방법의 채택은 그들의 예측
-성능에만 의존 불가능. 유럽 연학의 일반 데이터 보호 규정(GDPR)은 자동화된
-의사 결정이 개인에게 “법적 효과”를 가지거나 유사하게 “중대하게 영향”을
-미칠 때 “관련 로직의 의미 있는 설명”을 얻을 수 있는 권리를 모든 개인에게
-도입.</li>
-<li>MLSTM-FCN이나 WEASEL-MUSE는 사후 비특정 설명 가능성 방법에만
-의존하기 떄문에 완벽하게 신뢰할 수 있는 설명을 제공할 수 없음.</li>
-<li>따라서 본 연구에서는 대규모 및 소규모 데이터셋 모두에서 잘 수행되며
-신뢰할 수 있는 설명을 제공하는 새로운 컴팩트(매개변수 수 측면)하고 설명
-가능한 딥러닝 접근 방식을 MTS 분류를 위해 제안.</li>
-<li>CNN과 그래디언트 가중치 클래스 활성화 매핑 - Grad-CAM과 같은 사후
-모델 특정 중요도 방법은 컴팩트한 아키텍처를 유지하면서 신뢰할 수 있는
-설명을 가능하게 할 잠재력을 가짐.</li>
-<li>MTEX-CNN은 2D 및 1D Conv filter를 순차적으로 사용하여 관찰된 변수와
-시간에 대한 정보, 즉 핵심 MTS 정보를 추출하는 것을 제안함. But, 첫
-단계의 출력 기능에서 추출된 시간과 관련된 기능은 입력 데이터로부터의
-타이밍 정보를 완전히 통합 X(최신 MTS 분류기와 비교하여 성능이 떨어짐)
-또한 상당한 매개변수의 수는 소규모 데이터셋에서의 일반화 능력에 영향을
-미침. 마지막으로, MTEX-CNN은 Grad-CAM을 적용할 때 피쳐 맵에서 업샘플링
-과정을 요구하는데, 이는 예측에 중요한 입력 데이터 영역의 정확한 식별을
-이끌어내지 못할수도.</li>
-<li>따라서, 본 연구에서는 MTS 분류를 위한 새로운 신뢰 가능한 설명 가능한
-CNN 방법(XCM)을 제안함. 이는 MTEX-CNN을 세 가지 중요한 방법으로 개선함.
-(1) 관찰된 변수와 타임 스탬프에 대한 정보를 입력 데이터로부터 직접적이고
-병렬적으로 추출함으로써 기능을 생성함. (2) 매개변수 측면에서 컴팩트한
-아키텍처를 채택하여 일반화 능력을 향상시킴. (3) 업샘플링 과정을
-피함으로써 예측에 중요한 입력 데이터의 관찰된 변수와 타임 스탬프를
-정확하게 식별가능.</li>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><ul>
+<li>다변량 시계열 데이터의 주목할 만한 가용성에 따라, 다양한 응용분야(금융, 건강 관리, 모빌리티, 자연 재해 등)에서 MTS 분석이 필수 절차가 되어 있음.</li>
+<li>일련의 센서에 의해 동시에 기록되는 공진하는 시계열 집합이 있을때, 이를 MTS라고 합니다. 본 논문에서는 MTS와 그 라벨 사이의 관계를 학습하는 MTS 분류 문제를 다룹니다.</li>
+<li>평균적으로 가장 정확한 MTS 분류기는 딥러닝 접근법인 LSTM-FCN입니다. MLSTMFCN은 장단기 기억(LSTM) 블록과 세 개의 컨볼루션 서브 블록으로 구성된 컨볼루션 신경망(CNN) 블록의 연결로 이루어져 있음.</li>
+<li>But, MLSTM-FCN은 큰 데이터셋에서만 두 번쨰로 좋은 MTS 분류기를 능가함. 해당 딥러닝 접근법은 훈련 가능한 매개변수가 많아 소규모 데이터셋에서의 성능 저하를 불러 일으키는 것으로 생각됨.</li>
+<li>또한 많은 응용 프로그램에서 기계 학습 방법의 채택은 그들의 예측 성능에만 의존 불가능. 유럽 연학의 일반 데이터 보호 규정(GDPR)은 자동화된 의사 결정이 개인에게 “법적 효과”를 가지거나 유사하게 “중대하게 영향”을 미칠 때 “관련 로직의 의미 있는 설명”을 얻을 수 있는 권리를 모든 개인에게 도입.</li>
+<li>MLSTM-FCN이나 WEASEL-MUSE는 사후 비특정 설명 가능성 방법에만 의존하기 떄문에 완벽하게 신뢰할 수 있는 설명을 제공할 수 없음.</li>
+<li>따라서 본 연구에서는 대규모 및 소규모 데이터셋 모두에서 잘 수행되며 신뢰할 수 있는 설명을 제공하는 새로운 컴팩트(매개변수 수 측면)하고 설명 가능한 딥러닝 접근 방식을 MTS 분류를 위해 제안.</li>
+<li>CNN과 그래디언트 가중치 클래스 활성화 매핑 - Grad-CAM과 같은 사후 모델 특정 중요도 방법은 컴팩트한 아키텍처를 유지하면서 신뢰할 수 있는 설명을 가능하게 할 잠재력을 가짐.</li>
+<li>MTEX-CNN은 2D 및 1D Conv filter를 순차적으로 사용하여 관찰된 변수와 시간에 대한 정보, 즉 핵심 MTS 정보를 추출하는 것을 제안함. But, 첫 단계의 출력 기능에서 추출된 시간과 관련된 기능은 입력 데이터로부터의 타이밍 정보를 완전히 통합 X(최신 MTS 분류기와 비교하여 성능이 떨어짐) 또한 상당한 매개변수의 수는 소규모 데이터셋에서의 일반화 능력에 영향을 미침. 마지막으로, MTEX-CNN은 Grad-CAM을 적용할 때 피쳐 맵에서 업샘플링 과정을 요구하는데, 이는 예측에 중요한 입력 데이터 영역의 정확한 식별을 이끌어내지 못할수도.</li>
+<li>따라서, 본 연구에서는 MTS 분류를 위한 새로운 신뢰 가능한 설명 가능한 CNN 방법(XCM)을 제안함. 이는 MTEX-CNN을 세 가지 중요한 방법으로 개선함. (1) 관찰된 변수와 타임 스탬프에 대한 정보를 입력 데이터로부터 직접적이고 병렬적으로 추출함으로써 기능을 생성함. (2) 매개변수 측면에서 컴팩트한 아키텍처를 채택하여 일반화 능력을 향상시킴. (3) 업샘플링 과정을 피함으로써 예측에 중요한 입력 데이터의 관찰된 변수와 타임 스탬프를 정확하게 식별가능.</li>
 </ul>
 
           <!--noindex-->
@@ -1329,7 +556,7 @@ CNN 방법(XCM)을 제안함. 이는 MTEX-CNN을 세 가지 중요한 방법으�
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-11 14:51:24" itemprop="dateModified" datetime="2024-03-11T14:51:24+09:00">2024-03-11</time>
+      <time title="Updated at: 2024-10-21 00:54:18" itemprop="dateModified" datetime="2024-10-21T00:54:18+09:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1365,48 +592,16 @@ CNN 방법(XCM)을 제안함. 이는 MTEX-CNN을 세 가지 중요한 방법으�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="chapter-9.-convolutional-networks">Chapter 9. Convolutional
-Networks</h1>
-<h2 id="the-histroy-of-nnneural-network-cnnconvolutinoal-neural-network">9.1.
-The histroy of NN(Neural Network), CNN(Convolutinoal Neural
-Network)</h2>
-<p>(추후 추가 예정)</p>
-<h2 id="convolutional-layer">9.2. Convolutional Layer</h2>
-<p>Fully Connected Layer(이하 FC)를 사용하여 이미지를 처리하는 경우를
-살펴보겠습니다. 32x32x3 사이즈의 이미지가 있을때(3은 RGB chanel입니다.)
-이를 길게 늘려서 3072x1형태의 matrix로 만듭니다. 그리고 이를 10x3072
-size의 weights와 내적하여 10x1크기의 activation matrix를 도출하게
-됩니다. 이런식의 이미지 처리방식은 이미지의 공간적 구조를 보존하지
-못한다는 단점이 있습니다.</p>
-<p>Convolutional Layer(이하 conv)는 이미지의 공간적 구조를 보존한다는
-특징이 있습니다. 32x32x3 size의 image가 input으로 주어졌을 때, 5x5x3
-filter를 사용하여 합성곱 연산을 수행합니다. 필터를 가지고 이미지를
-슬라이딩 하면서 공간적으로 내적을 수행하게 됩니다. filter의 depth인 3은
-image의 depth와 같게되어 activation maps는 28x28x1 size가 됩니다.
-filter의 개수만큼 새로운 activation map을 도출할 수 있습니다. 각 필터를
-가지고 전체 이미지에 convolution 연산을 수행한다고 요약할 수 있습니다.
-이런식으로 간단한 linear layer로 된 nural network를 만들 수 있습니다.
-그림1에서 해당 과정을 시각적으로 나타내고 있습니다.</p>
+          <h1 id="Chapter-9-Convolutional-Networks"><a href="#Chapter-9-Convolutional-Networks" class="headerlink" title="Chapter 9. Convolutional Networks"></a>Chapter 9. Convolutional Networks</h1><h2 id="9-1-The-histroy-of-NN-Neural-Network-CNN-Convolutinoal-Neural-Network"><a href="#9-1-The-histroy-of-NN-Neural-Network-CNN-Convolutinoal-Neural-Network" class="headerlink" title="9.1. The histroy of NN(Neural Network), CNN(Convolutinoal Neural Network)"></a>9.1. The histroy of NN(Neural Network), CNN(Convolutinoal Neural Network)</h2><p>(추후 추가 예정)</p>
+<h2 id="9-2-Convolutional-Layer"><a href="#9-2-Convolutional-Layer" class="headerlink" title="9.2. Convolutional Layer"></a>9.2. Convolutional Layer</h2><p>Fully Connected Layer(이하 FC)를 사용하여 이미지를 처리하는 경우를 살펴보겠습니다. 32x32x3 사이즈의 이미지가 있을때(3은 RGB chanel입니다.) 이를 길게 늘려서 3072x1형태의 matrix로 만듭니다. 그리고 이를 10x3072 size의 weights와 내적하여 10x1크기의 activation matrix를 도출하게 됩니다. 이런식의 이미지 처리방식은 이미지의 공간적 구조를 보존하지 못한다는 단점이 있습니다.</p>
+<p>Convolutional Layer(이하 conv)는 이미지의 공간적 구조를 보존한다는 특징이 있습니다. 32x32x3 size의 image가 input으로 주어졌을 때, 5x5x3 filter를 사용하여 합성곱 연산을 수행합니다. 필터를 가지고 이미지를 슬라이딩 하면서 공간적으로 내적을 수행하게 됩니다. filter의 depth인 3은 image의 depth와 같게되어 activation maps는 28x28x1 size가 됩니다. filter의 개수만큼 새로운 activation map을 도출할 수 있습니다. 각 필터를 가지고 전체 이미지에 convolution 연산을 수행한다고 요약할 수 있습니다. 이런식으로 간단한 linear layer로 된 nural network를 만들 수 있습니다. 그림1에서 해당 과정을 시각적으로 나타내고 있습니다.</p>
 <img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-1.png" class title="DL-9-1">
-<center>
-<small>그림1, Source : CS231n; Deep Learning for Computer Vision,
-Lecture 5-33</small>
-</center>
-<p><em>image 하나의 특징을 추출하는 과정이기에 filter와 image의 depth는
-같습니다. </em>엄밀하게 여기서의 합성곱 연산은 신호처리 분야에서의
-합성곱 연산과는 다릅니다. CNN에서의 합성곱연산은 합성곱의 의미적 요소만
-가져온 것입니다. *필터와 필터 크기에 맞는 이미지를 내적하는 것은
-FC에서의 내적과정과 동일하다고 볼 수 있습니다.</p>
-<p>Conv Layer를 Brain Neuron의 관점에서 살펴보겠습니다. 뉴런과 Conv
-Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있다는
-것입니다. Conv Layer처럼 슬라이딩을 하는 것이 아니라 특정 부분에만
-연결되어 있습니다. 하나의 뉴런은 한 부분만 처리하고, 그런 뉴런들이
-모여서 전체 이미지를 처리하는 것입니다. 그래서 여러개의 필터를 사용하여
-해당 부분을 구현합니다. 각 필터가 하나의 뉴런과 비슷하게 작동하는
-것입니다. 다양한 필터들이 다른 종류의 특징을 감지할 수 있도록 학습되기
-때문입니다. 5x5 필터가 있다고 할 때, 한 뉴런의 "Receptive filed"가
-5x5라고 이해할 수 있는 것입니다. "Receptive filed"란 한 뉴런이 한 번에
-수용할 수 있는 영역을 의미합니다.</p>
+<center><small>그림1, Source : CS231n; Deep Learning for Computer Vision, Lecture 5-33</small></center>
+
+
+<p><em>image 하나의 특징을 추출하는 과정이기에 filter와 image의 depth는 같습니다.
+</em>엄밀하게 여기서의 합성곱 연산은 신호처리 분야에서의 합성곱 연산과는 다릅니다. CNN에서의 합성곱연산은 합성곱의 의미적 요소만 가져온 것입니다.<br>*필터와 필터 크기에 맞는 이미지를 내적하는 것은 FC에서의 내적과정과 동일하다고 볼 수 있습니다.</p>
+<p>Conv Layer를 Brain Neuron의 관점에서 살펴보겠습니다. 뉴런과 Conv Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있다는 것입니다. Conv Layer처럼 슬라이딩을 하는 것이 아니라 특정 부분에만 연결되어 있습니다. 하나의 뉴런은 한 부분만 처리하고, 그런 뉴런들이 모여서 전체 이미지를 처리하는 것입니다. 그래서 여러개의 필터를 사용하여 해당 부분을 구현합니다. 각 필터가 하나의 뉴런과 비슷하게 작동하는 것입니다. 다양한 필터들이 다른 종류의 특징을 감지할 수 있도록 학습되기 때문입니다. 5x5 필터가 있다고 할 때, 한 뉴런의 “Receptive filed”가 5x5라고 이해할 수 있는 것입니다. “Receptive filed”란 한 뉴런이 한 번에 수용할 수 있는 영역을 의미합니다.</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/#more" rel="contents">
@@ -1440,7 +635,7 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/XAI-Gradient-Based-Methods/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/[%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0]-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
@@ -1458,7 +653,7 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/25/XAI-Gradient-Based-Methods/" class="post-title-link" itemprop="url">[XAI] Gradient-Based Methods</a>
+          <a href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/" class="post-title-link" itemprop="url">[논문리뷰] Fully Convolutional Networks for Semantic Segmentation</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1476,7 +671,7 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-03-11 14:51:29" itemprop="dateModified" datetime="2024-03-11T14:51:29+09:00">2024-03-11</time>
+      <time title="Updated at: 2024-10-21 00:54:22" itemprop="dateModified" datetime="2024-10-21T00:54:22+09:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1505,8 +700,8 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2024/02/25/XAI-Gradient-Based-Methods/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/XAI-Gradient-Based-Methods/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/[논문리뷰]-Fully Convolutional Networks for Semantic-Segmentation/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1520,41 +715,17 @@ Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="fully-convolutional-networks">1. Fully Convolutional
-Networks</h1>
-<h2 id="fcn">1.1. FCN</h2>
-<p>FCN(Fully Convolutional Networks for Semantic Segmentation)은
-Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic
-Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당
-용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을
-뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서
-우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰
-변형시킨 것이다.</p>
-<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로
-구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가
-사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치
-고정 → 바로 앞 Feature Map 크기 고정 → …. → Input Image 크기 고정)</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-1.png" class title="XAI-2-1.png">
-<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체.
-마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로
-변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지
-내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력
-Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에
-가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지
-않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을
-처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는
-있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한
-이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게
-된다.</p>
-<h2 id="deconvolution">1.2 Deconvolution</h2>
-<p>Bilinear Interpolation(선형 보간)</p>
-<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에
-위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는
-방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
-<img src="/2024/02/25/XAI-Gradient-Based-Methods/XAI-2-2.png" class title="XAI-2-2.png">
+          <p>Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다.</p>
+<h1 id="1-FCN"><a href="#1-FCN" class="headerlink" title="1. FCN"></a>1. FCN</h1><p>FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을 뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서 우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.</p>
+<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로 구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가 사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치 고정 → 바로 앞 Feature Map 크기 고정 → … → Input Image 크기 고정)</p>
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png" class title="XAI-2-1.png">
+<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체. 마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로 변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지 내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력 Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에 가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지 않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을 처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는 있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한 이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게 된다.</p>
+<h1 id="2-Deconvolution"><a href="#2-Deconvolution" class="headerlink" title="2. Deconvolution"></a>2. Deconvolution</h1><p>Bilinear Interpolation(선형 보간)</p>
+<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에 위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는 방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
+<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png" class title="XAI-2-2.png">
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/02/25/XAI-Gradient-Based-Methods/#more" rel="contents">
+              <a class="btn" href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
@@ -1577,9 +748,118 @@ Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 �
 
 
 
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="다음 페이지" aria-label="다음 페이지" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/12/Deep-Learning-Chaper1-Introduction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
+      <meta itemprop="name" content="Choi Munseok">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/12/Deep-Learning-Chaper1-Introduction/" class="post-title-link" itemprop="url">[Deep Learning] Chapter1. Introduction</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2024-02-12 23:20:43" itemprop="dateCreated datePublished" datetime="2024-02-12T23:20:43+09:00">2024-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Updated at: 2024-10-21 00:54:18" itemprop="dateModified" datetime="2024-10-21T00:54:18+09:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Deep-Learning/" itemprop="url" rel="index"><span itemprop="name">Deep Learning</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/02/12/Deep-Learning-Chaper1-Introduction/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/12/Deep-Learning-Chaper1-Introduction/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Chapter1-Introduction"><a href="#Chapter1-Introduction" class="headerlink" title="Chapter1. Introduction"></a>Chapter1. Introduction</h1><h2 id="1-1-딥러닝의-의미"><a href="#1-1-딥러닝의-의미" class="headerlink" title="1.1 딥러닝의 의미"></a>1.1 딥러닝의 의미</h2><p>사람이 수행하기는 쉽지만 ‘설명하기는 어려운 작업’들이 있습니다. 우리가 직관적으로 해결하고 자동적이라고 느껴지는 것들인데요. 예를들어서 발화를 인식하거나 이미지의 얼굴을 인식하는 것들입니다. 이 책은 이러한 직관적인 문제에 대한 해결책을 다루고 있습니다. 이 해결책은 <strong>컴퓨터가 경험에서 배우고, 더 간단한 개념들과의 관계 측면에서 개념의 계층을 통해 세계를 이해하도록 하는 것입니다.</strong> 이 접근법은 컴퓨터가 필요로 하는 모든 지식을 인간이 명시할 필요없게 하며, 간단한 것들로부터 복잡한 개념을 구축함으로써 복잡한 개념을 배울 수 있게 합니다. 이러한 개념들이 서로 구축되는 방식을 그래프로 그려보면 그 그래프는 깊고 여러 층을 가지고 있습니다. 이러한 이유로 우리는 이러한 AI접근법을 <strong>딥러닝</strong>이라고 부릅니다.</p>
+<p>AI의 초기 성공들은 상대적으로 청정하고 형식적인 환경에서 이루어졌으며 컴퓨터가 세계에 대해 많은 지식을 가질 필요가 없었습니다. 예를들어서 체스 같은 경우에, 프로그래머가 미리 쉽게 제공할 수 있는 완전히 형식적인 규칙들의 간단한 목록으로 설명될 수 있습니다. 성공적인 체스 전략을 고안하는 것은 엄청난 성취이지만 말이죠. 이런식으로 아이러니하게 인간에게 가장 어려운 정신적 과제 중 하나인 추상적이고 형식적인 작업들이 컴퓨터에게는 가장 쉬운 것들 중 하나입니다.</p>
+<p>그러나 사람의 일상생활은 세계에 대한 엄청난 양의 지식을 요구합니다. 이 지식의 대부분은 주관적이고 직관적이라 형식적인 방식으로 표현하기 어렵습니다. 인공지능에서의 주요 도전 과제 중 하나는 이러한 지식을 컴퓨터에 어떻게 넣을 것인가 입니다. 처음 여러 인공지능 프로젝트들은 세계에 대한 지식을 형식적인 언어로 하드코딩하려고 시도했습니다. 세계를 정확하게 묘사할 수 있는 충분한 복잡성을 가진 공식적인 규칙을 고안하는데 어려움을 겪어 실패했습니다.</p>
+<p>하드 코딩된 정보를 시스템이 마주하는 것이 어렵기에 <strong>AI 시스템이 raw data에서 패턴을 추출해내서 시스템만의 지식을 취득해야 하는 능력이 필요해졌습니다.</strong> 이러한 능력을 <strong>머신러닝</strong>이라고 합니다. 머신러닝의 도입은 컴퓨터가 현실세계의 지식들을 포한하는 문제들을 해결하도록 합니다. 그리고 주관적으로 보이는 결정까지 하도록 합니다. 예를들어 logistic regression은 재왕절개 추천에 이용될 수 있습니다. naive Bayes는 스팸에일에서 합법적인 메일을 분리할 수 있습니다.</p>
+<h2 id="1-2-딥러닝과-특징-추출"><a href="#1-2-딥러닝과-특징-추출" class="headerlink" title="1.2 딥러닝과 특징 추출"></a>1.2 딥러닝과 특징 추출</h2><p>머신러닝 알고리즘의 성능은 알고리즘이 받는 데이터의 표현에 강하게 의존합니다. 예를들어 AI System은 환자를 직접 검사하지 않습니다.  대신 의사는 시스테에 관련 정보의 조각을 제공해줍니다. 환자의 표현이 포함된 각 정보 조각을 ‘특성’이라고 합니다. Logistic Regression은 이러한 환자의 특성과 다양한 결과와의 관계를 학습합니다. 그러나 Logistic Regression은 특성이 어떤식으로 정의되는지에 영향을 미칠수 없습니다.</p>
+<p>이러한 표현에 대한 의존은 컴퓨터과학과 심지어 우리 삶을 통해 보여지는 일반적인 현상입니다. 컴퓨터 과학에서는 데이터의 모음을 검색하는 것으로서의 기능이, 만약 모음이 구조적이라면 그리고 지능적으로 색인이 달아져있다면 지수적으로 빠를 것입니다. 사람들은 아랍 숫자로 산수를하면 빠를거지만 로마 숫자로 산수를 하면 굉장히 느릴 것입니다. 이러한 표현의 선택은 머신러닝 알고리즘의 성능에도 엄청난 영향을 미칩니다. 과업을 위해 추출해야하는 올바른 특징의 모음을 디자인하는 것 그리고 더 나아가 이러한 특징들을 간단한 머신러닝 알고리즘에 제공하는 것으로 많은 인공지능의 일은 해결될 수 있습니다. 하지만 많은 일에서 <strong>어떤 특징을 추출해야 하는지</strong>가 어려울 수 있습니다.</p>
+<img src="/2024/02/12/Deep-Learning-Chaper1-Introduction/DL_1_1.png" class title="DL_1_1">
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/12/Deep-Learning-Chaper1-Introduction/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 </div>
   </main>
