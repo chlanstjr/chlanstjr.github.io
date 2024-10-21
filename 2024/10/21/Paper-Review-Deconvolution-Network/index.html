@@ -21,7 +21,7 @@
 
     <meta name="description" content="Learning Deconvolution Network for Semantic Segmentation(Hyeonwoo Noh, Seunghoon Hong, Bohyung Han, 2015) 요약입니다. 1. Abstract Deconvolution Network 학습을 통한 새로운 semantic segmentation 알고리즘 제안함. VGG-16 lay">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Paper Review] Deconvolution-Network">
+<meta property="og:title" content="[Paper Review] Deconvolution Network">
 <meta property="og:url" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/index.html">
 <meta property="og:site_name" content="금융공학 실험실">
 <meta property="og:description" content="Learning Deconvolution Network for Semantic Segmentation(Hyeonwoo Noh, Seunghoon Hong, Bohyung Han, 2015) 요약입니다. 1. Abstract Deconvolution Network 학습을 통한 새로운 semantic segmentation 알고리즘 제안함. VGG-16 lay">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image6.png">
 <meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image7.png">
 <meta property="article:published_time" content="2024-10-21T04:28:01.000Z">
-<meta property="article:modified_time" content="2024-10-21T05:29:00.880Z">
+<meta property="article:modified_time" content="2024-10-21T05:47:57.886Z">
 <meta property="article:author" content="Choi Munseok">
 <meta property="article:tag" content="Paper Review">
 <meta property="article:tag" content="Computer Vision">
@@ -46,10 +46,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/","path":"2024/10/21/Paper-Review-Deconvolution-Network/","title":"[Paper Review] Deconvolution-Network"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/","path":"2024/10/21/Paper-Review-Deconvolution-Network/","title":"[Paper Review] Deconvolution Network"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[Paper Review] Deconvolution-Network | 금융공학 실험실</title>
+<title>[Paper Review] Deconvolution Network | 금융공학 실험실</title>
   
 
 
@@ -149,18 +149,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -211,12 +211,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[Paper Review] Deconvolution-Network | 금융공학 실험실">
+      <meta itemprop="name" content="[Paper Review] Deconvolution Network | 금융공학 실험실">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [Paper Review] Deconvolution-Network
+          [Paper Review] Deconvolution Network
         </h1>
 
         <div class="post-meta-container">
@@ -228,7 +228,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2024-10-21 13:28:01 / Updated at: 14:29:00" itemprop="dateCreated datePublished" datetime="2024-10-21T13:28:01+09:00">2024-10-21</time>
+      <time title="Post created: 2024-10-21 13:28:01 / Updated at: 14:47:57" itemprop="dateCreated datePublished" datetime="2024-10-21T13:28:01+09:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,13 +282,15 @@
 <li>이러한 한계를 극복하기 위해, 전혀 다른 전략을 사용 (1) Deconv, Unpooling, ReLU 계층으로 구성된 다층 Deconv Layer 학습. (2) 훈련된 네트워크는 개별 객체 Proposal에 적용되어 인스턴스별 분할을 얻으며, 이는 최종 semantic segmentation을 위해 결합됨. (3) PASCAL VOC 2012 데이터셋에서만 훈련된 Deconv 네트워크를 사용하여 뛰어난 성능을 달성함.</li>
 </ul>
 <h1 id="3-System-Architecture"><a href="#3-System-Architecture" class="headerlink" title="3. System Architecture"></a>3. System Architecture</h1><h2 id="3-1-Architecture"><a href="#3-1-Architecture" class="headerlink" title="3.1. Architecture"></a>3.1. Architecture</h2><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image1.png" class="" title="Deconv-image1.png">
+
 <ul>
 <li>Figure 2는 전체 네트워크의 자세한 구성을 보여줌. 우리가 훈련시킨 네트워크는 (1) 컨볼루션 (2) 디컨볼루션 네트워크로 구성됨.</li>
 <li>컨볼루션 네트워크는 입력 이미지를 다차원 특성 표현으로 변환하는 특성 추출기에 해당됨.</li>
 <li>디컨볼루션 네트워크는 컨볼루션 네트워크에서 추출한 특성으로부터 객체 분할을 생성하는 형태 생성기임.</li>
-<li>네트워크의 최종 출력은 입력 이미지와 같은 크기의 확률 맵으로, 각 픽셀이 사전 정의된 클래스중 하나에 속할 확률을 나타냄.<h2 id="3-2-Deconvolution-Network-for-Segmentation"><a href="#3-2-Deconvolution-Network-for-Segmentation" class="headerlink" title="3.2. Deconvolution Network for Segmentation"></a>3.2. Deconvolution Network for Segmentation</h2></li>
+<li>네트워크의 최종 출력은 입력 이미지와 같은 크기의 확률 맵으로, 각 픽셀이 사전 정의된 클래스중 하나에 속할 확률을 나타냄.</li>
 </ul>
-<h3 id="3-2-1-Unpooling"><a href="#3-2-1-Unpooling" class="headerlink" title="3.2.1. Unpooling"></a>3.2.1. Unpooling</h3><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image2.png" class="" title="Deconv-image2.png">
+<h2 id="3-2-Deconvolution-Network-for-Segmentation"><a href="#3-2-Deconvolution-Network-for-Segmentation" class="headerlink" title="3.2. Deconvolution Network for Segmentation"></a>3.2. Deconvolution Network for Segmentation</h2><h3 id="3-2-1-Unpooling"><a href="#3-2-1-Unpooling" class="headerlink" title="3.2.1. Unpooling"></a>3.2.1. Unpooling</h3><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image2.png" class="" title="Deconv-image2.png">
+
 <ul>
 <li>Figure 2는 전체 네트워크의 자세한 구성을 보여줌. 우리가 훈련시킨 네트워크는 (1) 컨볼루션 (2) 디컨볼루션 네트워크로 구성됨.</li>
 <li>컨볼루션 네트워크는 입력 이미지를 다차원 특성 표현으로 변환하는 특성 추출기에 해당됨.</li>
@@ -303,6 +305,7 @@
 <li>하위 레이어의 필터는 대체로 객체의 전체 형태를 포착하는 경향이 있음. 클래스별 세부사항은 상위 레이어의 필터에 인코딩 됨.</li>
 </ul>
 <h3 id="3-2-3-Analysis-of-Deconvolution-Network"><a href="#3-2-3-Analysis-of-Deconvolution-Network" class="headerlink" title="3.2.3. Analysis of Deconvolution Network"></a>3.2.3. Analysis of Deconvolution Network</h3><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image3.png" class="" title="Deconv-image3.png">
+
 <ul>
 <li>제안된 알고리즘에서, Deconvolution network는 정밀한 객체 분할을 위한 핵심 구성요소임. 여기서 밀집된 픽셀별 클래스 확률 맵은 연속적인 Unpooling, Deconvlution, 그리고 rectification을 통해 얻어짐.</li>
 <li>Figure 4는 네트워크의 레이어별 출력을 시각화하며, Deconv Net의 내부 작업을 이해할 수 있게 도움을 줌.(객체 구조가 세밀하게 재구성)</li>
@@ -311,6 +314,7 @@
 <li>Deconvolution layer → 학습된 필터는 클래스별 형태를 포착, 대상 클래스와 밀접하게 관련된 활성화는 증폭되며 다른 영역의 잡음 활성화는 효과적으로 억제</li>
 </ul>
 <h2 id="3-3-Systen-Overview"><a href="#3-3-Systen-Overview" class="headerlink" title="3.3. Systen Overview"></a>3.3. Systen Overview</h2><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image4.png" class="" title="Deconv-image4.png">
+
 <ul>
 <li>알고리즘은 semantic segmentation을 instance-wise segmentation problem문제로 제시함. 즉, 네트워크는 객체를 포함할 가능성이 있는 부분 이미지(인스턴스)를 입력으로 받아, 전체 이미지에 대한 semantic segmentation은 이미지에서 추출된 각 후보 proposal에 네트워크를 적용하고 모든 proposal을 원본 이미지 공간에 집계함으로써 얻어짐.</li>
 <li>인스턴스 분할은 이미지 수준예측에 비해 다음과 같은 장점 (1) 다양한 스케일의 객체를 효과적으로 처리하고 고정된 크기의 수용 필드를 가진 접근 방식의 문제를 해결. (2) 또한, 예측 과정에서 고려해야 할 가능한 입력 데이터의 범위를 좁 학습 복잡성을 완화하고 메모리 요구사항을 줄임</li>
@@ -332,6 +336,7 @@
 <li>선택적으로, 성능 추가 향상을 위해 FCN과의 앙상블을 사용</li>
 </ul>
 <h2 id="5-1-Aggregating-Instance-wise-Segmentation-Maps"><a href="#5-1-Aggregating-Instance-wise-Segmentation-Maps" class="headerlink" title="5.1. Aggregating Instance-wise Segmentation Maps"></a>5.1. Aggregating Instance-wise Segmentation Maps</h2><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image5.png" class="" title="Deconv-image5.png">
+
 <ul>
 <li>모든 클래스에 해당하는 점수 맵의 픽셀별 최대값 또는 평균을 취하는 것이 노이즈에 강인한 결과</li>
 <li>g_i를 이미지 공간에 넣고 g_i외부에는 제로 패딩, 원본 이미지 크기에 해당하는 g_i의 분할 맵을 G_i로 표기. 그다음 모든 proposal의 outputs를 집계해 이미지의 픽셀별 클래스 점수맵을 구성.</li>
@@ -348,6 +353,7 @@
 <li>또한, proposals의 수를 늘릴 수록 결과가 좋아지는 것을 볼 수 있음</li>
 </ul>
 <img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image6.png" class="" title="Deconv-image6.png">
+
 <ul>
 <li>아래는 제안된 네트워크의 구체적인 확인.</li>
 </ul>
@@ -410,6 +416,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2024/10/21/Research-%EA%B9%80/" rel="next" title="[Research] 김">
+                  [Research] 김 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
