@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Learning Deconvolution Network for Semantic Segmentation(Hyeonwoo Noh, Seunghoon Hong, Bohyung Han, 2015) 요약입니다. 1. Abstract Deconvolution Network 학습을 통한 새로운 semantic segmentation 알고리즘 제안함. VGG-16 lay">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Paper Review] Deconvolution-Network">
+<meta property="og:url" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/index.html">
+<meta property="og:site_name" content="금융공학 실험실">
+<meta property="og:description" content="Learning Deconvolution Network for Semantic Segmentation(Hyeonwoo Noh, Seunghoon Hong, Bohyung Han, 2015) 요약입니다. 1. Abstract Deconvolution Network 학습을 통한 새로운 semantic segmentation 알고리즘 제안함. VGG-16 lay">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image1.png">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image2.png">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image3.png">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image4.png">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image5.png">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image6.png">
+<meta property="og:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image7.png">
+<meta property="article:published_time" content="2024-10-21T04:28:01.000Z">
+<meta property="article:modified_time" content="2024-10-21T05:29:00.880Z">
+<meta property="article:author" content="Choi Munseok">
+<meta property="article:tag" content="Paper Review">
+<meta property="article:tag" content="Computer Vision">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image1.png">
+
+
+<link rel="canonical" href="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/","path":"2024/10/21/Paper-Review-Deconvolution-Network/","title":"[Paper Review] Deconvolution-Network"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[Paper Review] Deconvolution-Network | 금융공학 실험실</title>
+  
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8W6NCLCPLR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8W6NCLCPLR');
+</script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">금융공학 실험실</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Choi Munseok's Blog on Quantitative Investing and Machine Learning</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="검색" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>정보</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Abstract"><span class="nav-number">1.</span> <span class="nav-text">1. Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Introduction"><span class="nav-number">2.</span> <span class="nav-text">2. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-System-Architecture"><span class="nav-number">3.</span> <span class="nav-text">3. System Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Architecture"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Deconvolution-Network-for-Segmentation"><span class="nav-number">3.2.</span> <span class="nav-text">3.2. Deconvolution Network for Segmentation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-Unpooling"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1. Unpooling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-Deconvolution"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2. Deconvolution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-Analysis-of-Deconvolution-Network"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.2.3. Analysis of Deconvolution Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Systen-Overview"><span class="nav-number">3.3.</span> <span class="nav-text">3.3. Systen Overview</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Training"><span class="nav-number">4.</span> <span class="nav-text">4. Training</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Batch-Normalization"><span class="nav-number">4.1.</span> <span class="nav-text">4.1. Batch Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Two-stage-Training"><span class="nav-number">4.2.</span> <span class="nav-text">4.2. Two-stage Training</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Inference"><span class="nav-number">5.</span> <span class="nav-text">5. Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Aggregating-Instance-wise-Segmentation-Maps"><span class="nav-number">5.1.</span> <span class="nav-text">5.1. Aggregating Instance-wise Segmentation Maps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Ensemble-with-FCN"><span class="nav-number">5.2.</span> <span class="nav-text">5.2. Ensemble with FCN</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Experiments"><span class="nav-number">6.</span> <span class="nav-text">6. Experiments</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Choi Munseok"
+      src="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
+  <p class="site-author-name" itemprop="name">Choi Munseok</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/munseok" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;munseok" rel="noopener me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/chlanstjr" title="Github → https:&#x2F;&#x2F;github.com&#x2F;chlanstjr" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>Github</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:choicandoit0301@gmail.com" title="E-mail → mailto:choicandoit0301@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/21/Paper-Review-Deconvolution-Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
+      <meta itemprop="name" content="Choi Munseok">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[Paper Review] Deconvolution-Network | 금융공학 실험실">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Paper Review] Deconvolution-Network
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2024-10-21 13:28:01 / Updated at: 14:29:00" itemprop="dateCreated datePublished" datetime="2024-10-21T13:28:01+09:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Paper-Review/" itemprop="url" rel="index"><span itemprop="name">Paper Review</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Paper-Review/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/10/21/Paper-Review-Deconvolution-Network/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/10/21/Paper-Review-Deconvolution-Network/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Learning Deconvolution Network for Semantic Segmentation(Hyeonwoo Noh, Seunghoon Hong, Bohyung Han, 2015) 요약입니다.</p>
+<h1 id="1-Abstract"><a href="#1-Abstract" class="headerlink" title="1. Abstract"></a>1. Abstract</h1><ul>
+<li>Deconvolution Network 학습을 통한 새로운 semantic segmentation 알고리즘 제안함.</li>
+<li>VGG-16 layer에서 채택된 Conv layer위에 네트워크를 학습함.</li>
+<li>Deconv Net는 Deconv와 unpooling layer로 구성 → 픽셀별 레이블을 식별하고 segmentation mask를 예측.</li>
+<li>Proposals는 이미지 내에서 관심 있는 객체나 영역을 식별하기 위해 제안된 후보영역을 의미함.</li>
+<li>Trained network를 input image의 각 proposal에 적용함. 그리고 모든 proposal의 결과를 간단하게 결합하여 최종 semantic segmentation map을 구성.</li>
+<li>deep deconv net와 proposal-wise prediction을 결합함으로서 FC net 기반의 기존 방법의 한계를 완화.</li>
+</ul>
+<h1 id="2-Introduction"><a href="#2-Introduction" class="headerlink" title="2. Introduction"></a>2. Introduction</h1><ul>
+<li>FCN(fully convolutional network) : 구조화된 픽셀별 라벨링 문제를 해결하기 위해 고안됨. → 단순한 deconv는 이중 선형 보간으로 구현. CRF(Conditional Random Field)는 선택적으로 세밀한 분할을 위해 출력 맵에 적용됨.</li>
+<li>FCN기반의 semantic segmantation은 몇가지 한계를 가짐. (1) 고정된 크기의 수용필드 → 수용 필드보다 훨씬 크거나 작은 객체는 조각나거나 잘못 라벨이 뭍을 수도. (2) 객체의 세부구조를 잃거나 부드러워짐. Deconv layer의 input인 label map이 너무 coarse하고 Deconv 절차가 지나치게 단순하기 때문. But, 최근 방법들은 CRF를 통해 이 문제를 개선</li>
+<li>이러한 한계를 극복하기 위해, 전혀 다른 전략을 사용 (1) Deconv, Unpooling, ReLU 계층으로 구성된 다층 Deconv Layer 학습. (2) 훈련된 네트워크는 개별 객체 Proposal에 적용되어 인스턴스별 분할을 얻으며, 이는 최종 semantic segmentation을 위해 결합됨. (3) PASCAL VOC 2012 데이터셋에서만 훈련된 Deconv 네트워크를 사용하여 뛰어난 성능을 달성함.</li>
+</ul>
+<h1 id="3-System-Architecture"><a href="#3-System-Architecture" class="headerlink" title="3. System Architecture"></a>3. System Architecture</h1><h2 id="3-1-Architecture"><a href="#3-1-Architecture" class="headerlink" title="3.1. Architecture"></a>3.1. Architecture</h2><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image1.png" class="" title="Deconv-image1.png">
+<ul>
+<li>Figure 2는 전체 네트워크의 자세한 구성을 보여줌. 우리가 훈련시킨 네트워크는 (1) 컨볼루션 (2) 디컨볼루션 네트워크로 구성됨.</li>
+<li>컨볼루션 네트워크는 입력 이미지를 다차원 특성 표현으로 변환하는 특성 추출기에 해당됨.</li>
+<li>디컨볼루션 네트워크는 컨볼루션 네트워크에서 추출한 특성으로부터 객체 분할을 생성하는 형태 생성기임.</li>
+<li>네트워크의 최종 출력은 입력 이미지와 같은 크기의 확률 맵으로, 각 픽셀이 사전 정의된 클래스중 하나에 속할 확률을 나타냄.<h2 id="3-2-Deconvolution-Network-for-Segmentation"><a href="#3-2-Deconvolution-Network-for-Segmentation" class="headerlink" title="3.2. Deconvolution Network for Segmentation"></a>3.2. Deconvolution Network for Segmentation</h2></li>
+</ul>
+<h3 id="3-2-1-Unpooling"><a href="#3-2-1-Unpooling" class="headerlink" title="3.2.1. Unpooling"></a>3.2.1. Unpooling</h3><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image2.png" class="" title="Deconv-image2.png">
+<ul>
+<li>Figure 2는 전체 네트워크의 자세한 구성을 보여줌. 우리가 훈련시킨 네트워크는 (1) 컨볼루션 (2) 디컨볼루션 네트워크로 구성됨.</li>
+<li>컨볼루션 네트워크는 입력 이미지를 다차원 특성 표현으로 변환하는 특성 추출기에 해당됨.</li>
+<li>디컨볼루션 네트워크는 컨볼루션 네트워크에서 추출한 특성으로부터 객체 분할을 생성하는 형태 생성기임.</li>
+<li>네트워크의 최종 출력은 입력 이미지와 같은 크기의 확률 맵으로, 각 픽셀이 사전 정의된 클래스중 하나에 속할 확률을 나타냄.</li>
+</ul>
+<h3 id="3-2-2-Deconvolution"><a href="#3-2-2-Deconvolution" class="headerlink" title="3.2.2. Deconvolution"></a>3.2.2. Deconvolution</h3><ul>
+<li>Unpooling layer의 outout은 확대되었지만, 여전히 희소한 활성화 맵임.</li>
+<li>희소한 활성화 맵(sparse activation map)은 대부분의 요소가 비활성화 상태(즉, 중요하지 않거나 관련이 없는 정보를 나타내는 상태)인 것을 의미함.</li>
+<li>Deconvolution layer는 Unpooling을 통해 얻은 희소한 활성화를 여러 학습된 필터를 사용한 Convolution과 유사한 작업을 통해 밀집시킴.(단일 입력 활성화를 여러 출력과 연결)</li>
+<li>Deconvolution layer에서 학습된 필터는 입력 객체의 형태를 재구성하기 위한 기반에 해당됨.</li>
+<li>하위 레이어의 필터는 대체로 객체의 전체 형태를 포착하는 경향이 있음. 클래스별 세부사항은 상위 레이어의 필터에 인코딩 됨.</li>
+</ul>
+<h3 id="3-2-3-Analysis-of-Deconvolution-Network"><a href="#3-2-3-Analysis-of-Deconvolution-Network" class="headerlink" title="3.2.3. Analysis of Deconvolution Network"></a>3.2.3. Analysis of Deconvolution Network</h3><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image3.png" class="" title="Deconv-image3.png">
+<ul>
+<li>제안된 알고리즘에서, Deconvolution network는 정밀한 객체 분할을 위한 핵심 구성요소임. 여기서 밀집된 픽셀별 클래스 확률 맵은 연속적인 Unpooling, Deconvlution, 그리고 rectification을 통해 얻어짐.</li>
+<li>Figure 4는 네트워크의 레이어별 출력을 시각화하며, Deconv Net의 내부 작업을 이해할 수 있게 도움을 줌.(객체 구조가 세밀하게 재구성)</li>
+<li>Unpooling과 Deconvolution network는 segmentation mask 구성을 위해 다른역할.</li>
+<li>Unpooling → 강한 활성화를 가진 원래 위치를 이미지 공간으로 트레이싱하여 툭정 구조를 포착: 객체의 세밀한 구조를 더 세밀한 해상도로 효과적으로 재구성</li>
+<li>Deconvolution layer → 학습된 필터는 클래스별 형태를 포착, 대상 클래스와 밀접하게 관련된 활성화는 증폭되며 다른 영역의 잡음 활성화는 효과적으로 억제</li>
+</ul>
+<h2 id="3-3-Systen-Overview"><a href="#3-3-Systen-Overview" class="headerlink" title="3.3. Systen Overview"></a>3.3. Systen Overview</h2><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image4.png" class="" title="Deconv-image4.png">
+<ul>
+<li>알고리즘은 semantic segmentation을 instance-wise segmentation problem문제로 제시함. 즉, 네트워크는 객체를 포함할 가능성이 있는 부분 이미지(인스턴스)를 입력으로 받아, 전체 이미지에 대한 semantic segmentation은 이미지에서 추출된 각 후보 proposal에 네트워크를 적용하고 모든 proposal을 원본 이미지 공간에 집계함으로써 얻어짐.</li>
+<li>인스턴스 분할은 이미지 수준예측에 비해 다음과 같은 장점 (1) 다양한 스케일의 객체를 효과적으로 처리하고 고정된 크기의 수용 필드를 가진 접근 방식의 문제를 해결. (2) 또한, 예측 과정에서 고려해야 할 가능한 입력 데이터의 범위를 좁 학습 복잡성을 완화하고 메모리 요구사항을 줄임</li>
+</ul>
+<h1 id="4-Training"><a href="#4-Training" class="headerlink" title="4. Training"></a>4. Training</h1><h2 id="4-1-Batch-Normalization"><a href="#4-1-Batch-Normalization" class="headerlink" title="4.1. Batch Normalization"></a>4.1. Batch Normalization</h2><ul>
+<li>깊은 신경망을 최적화하는 것은 내부 공변량 이동 문제 때문에 매우 어려움.</li>
+<li>내부 공변량 이동(internal covariate shift) 문제는 딥러닝에서 학습 과정 동안 네크워크의 각 층을 통과하는 데이터의 분포가 지속적으로 변화하는 현상.</li>
+<li>따라서 모든 레이어의 입력 분포를 표준 가우시안 분포로 정규화하여 내부 공변량 이동을 줄이기 위해 배치 정규화를 수행함.</li>
+<li>배치 정규화 레이어는 모든 Conv layer 및 Deconv layer의 출력에 추가됨.</li>
+<li>배치정규화는 해당 네트워크를 최적화하는 데 결정적이며, 배치 정규화 없이는 국소 최적에 도달함.</li>
+</ul>
+<h2 id="4-2-Two-stage-Training"><a href="#4-2-Two-stage-Training" class="headerlink" title="4.2. Two-stage Training"></a>4.2. Two-stage Training</h2><ul>
+<li>배치 정규화가 국소 최적해를 탈출하는 데 도움을 주지만, 학습 예제의 수에 비해 의미 있는 분할의 공간은 여전히 매우 크며, 인스턴스별 분할을 위해 Deconv 네트워크를 사용하는 이점이 상쇄될 수 있음.</li>
+<li>해당 문제를 해결하기 위해 두 단계 학습 방법 채택(쉬운 예제로 네트워크 학습시킨 후 도전적인 예제로 훈련된 네트워크 미세 조정)</li>
+<li>첫번째 학습 : object가 가운데에 있는 쉬운 이미지 이용, 두번째 학습 : object가 잘리거나 가장자리에 걸쳐있는 어려운 이미지에 대한 학습</li>
+</ul>
+<h1 id="5-Inference"><a href="#5-Inference" class="headerlink" title="5. Inference"></a>5. Inference</h1><ul>
+<li>제안된 네트워크는 semantic segmentation을 수행하도록 훈련됨. 입력 이미지가 주어지면, 먼저 충분한 수의 후보 proposal을 생성하고, 훈련된 네트워크를 적용하여 개별 proposal의 semantc segmentation을 얻음. 그런 다음 모든 proposal의 ooutputs를 집계하여 전체 이미지에 대한 semantic segmentation을 생성.</li>
+<li>선택적으로, 성능 추가 향상을 위해 FCN과의 앙상블을 사용</li>
+</ul>
+<h2 id="5-1-Aggregating-Instance-wise-Segmentation-Maps"><a href="#5-1-Aggregating-Instance-wise-Segmentation-Maps" class="headerlink" title="5.1. Aggregating Instance-wise Segmentation Maps"></a>5.1. Aggregating Instance-wise Segmentation Maps</h2><img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image5.png" class="" title="Deconv-image5.png">
+<ul>
+<li>모든 클래스에 해당하는 점수 맵의 픽셀별 최대값 또는 평균을 취하는 것이 노이즈에 강인한 결과</li>
+<li>g_i를 이미지 공간에 넣고 g_i외부에는 제로 패딩, 원본 이미지 크기에 해당하는 g_i의 분할 맵을 G_i로 표기. 그다음 모든 proposal의 outputs를 집계해 이미지의 픽셀별 클래스 점수맵을 구성.</li>
+<li>원본 이지지 공간에서의 클래스 조건부 확률맵 식은 (1)또는 (2)에서 얻어진 맵에 소프트스 함수를 적용. 마지막으로 CRF를 적용</li>
+</ul>
+<h2 id="5-2-Ensemble-with-FCN"><a href="#5-2-Ensemble-with-FCN" class="headerlink" title="5.2. Ensemble with FCN"></a>5.2. Ensemble with FCN</h2><ul>
+<li>Deconvolution Network는 객체의 세부사항을 포착하는 데 적합한 반면, FCN은 일반적으로 객체의 전체 형태를 추출하는 데 뛰어남.</li>
+<li>앙상블을 통한 두 알고리즘의 이점 활용 → FCN와 제안된 방법에서 독립적으로 계산된 입력 이미지의 클래스 조건부 확률 맵 두 세트가 주어지면, 두 출력 맵의 평균을 계산하고 최종 의미 분할을 얻기 위해 CRF 적용</li>
+</ul>
+<h1 id="6-Experiments"><a href="#6-Experiments" class="headerlink" title="6. Experiments"></a>6. Experiments</h1><ul>
+<li>Optimization은 SGD사용, learning rate, momentum, weight decay는 각각 0.01, 0.9, 0.0005로 설정. ILSVRC 데이터셋으로 pre-trained된 모델을 사용.</li>
+<li>FCN-8와의 앙상블 및 CRF를 정용한 모델이 가장 높은 성능</li>
+<li>CRF는 약 1%의 성능향상</li>
+<li>또한, proposals의 수를 늘릴 수록 결과가 좋아지는 것을 볼 수 있음</li>
+</ul>
+<img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image6.png" class="" title="Deconv-image6.png">
+<ul>
+<li>아래는 제안된 네트워크의 구체적인 확인.</li>
+</ul>
+<img src="/2024/10/21/Paper-Review-Deconvolution-Network/Deconv-image7.png" class="" title="Deconv-image7.png">
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.linkedin.com/in/munseok">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+
+            <span class="label">Linkedin</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/chlanstjr">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">Github</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="mailto:choicandoit0301@gmail.com">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-mail</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Paper-Review/" rel="tag"><i class="fa fa-tag"></i> Paper Review</a>
+              <a href="/tags/Computer-Vision/" rel="tag"><i class="fa fa-tag"></i> Computer Vision</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/" rel="prev" title="MVO 이것저것 실험">
+                  <i class="fa fa-angle-left"></i> MVO 이것저것 실험
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Choi Munseok</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"chlanstjr","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
