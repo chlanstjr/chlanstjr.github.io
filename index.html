@@ -635,7 +635,7 @@ R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/[%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0]-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
@@ -653,7 +653,7 @@ R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/" class="post-title-link" itemprop="url">[논문리뷰] Fully Convolutional Networks for Semantic Segmentation</a>
+          <a href="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/" class="post-title-link" itemprop="url">[Paper Review] Fully Convolutional Networks for Semantic Segmentation</a>
         </h2>
 
         <div class="post-meta-container">
@@ -671,7 +671,7 @@ R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-10-21 00:54:22" itemprop="dateModified" datetime="2024-10-21T00:54:22+09:00">2024-10-21</time>
+      <time title="Updated at: 2024-10-21 10:57:57" itemprop="dateModified" datetime="2024-10-21T10:57:57+09:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -700,8 +700,8 @@ R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/[논문리뷰]-Fully Convolutional Networks for Semantic-Segmentation/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/Paper-Review-Fully Convolutional Networks for Semantic-Segmentation/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -718,14 +718,14 @@ R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가
           <p>Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다.</p>
 <h1 id="1-FCN"><a href="#1-FCN" class="headerlink" title="1. FCN"></a>1. FCN</h1><p>FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을 뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서 우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.</p>
 <p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로 구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가 사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치 고정 → 바로 앞 Feature Map 크기 고정 → … → Input Image 크기 고정)</p>
-<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png" class title="XAI-2-1.png">
+<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png" class title="XAI-2-1.png">
 <p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체. 마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로 변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지 내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력 Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에 가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지 않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을 처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는 있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한 이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게 된다.</p>
 <h1 id="2-Deconvolution"><a href="#2-Deconvolution" class="headerlink" title="2. Deconvolution"></a>2. Deconvolution</h1><p>Bilinear Interpolation(선형 보간)</p>
 <p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에 위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는 방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
-<img src="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png" class title="XAI-2-2.png">
+<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png" class title="XAI-2-2.png">
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/02/25/%5B%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0%5D-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#more" rel="contents">
+              <a class="btn" href="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
