@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="해당 게시물은 평균 분석 최적화(MVO) 공부하면서 제가 이것저것 실험해본 것들입니다. 평균 분산 최적화와 제약조건단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다. m개의 위험자산: i &#x3D; 1, 2, …, m 단일 기간 수익률: m-variate random vector$$\mathbf{R} &#x3D; \begin{bmatrix}">
+    <meta name="description" content="해당 게시물은 평균 분석 최적화(MVO) 공부하면서 제가 이것저것 실험해본 것들입니다. 평균 분산 최적화와 제약조건단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다. m개의 위험자산: i &#x3D; 1, 2, …, m 단일 기간 수익률: m-variate random vector  \mathbf{R} &#x3D; \begin{bmatrix} R_1 \\ R_2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVO 이것저것 실험">
 <meta property="og:url" content="http://example.com/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/index.html">
 <meta property="og:site_name" content="금융공학 실험실">
-<meta property="og:description" content="해당 게시물은 평균 분석 최적화(MVO) 공부하면서 제가 이것저것 실험해본 것들입니다. 평균 분산 최적화와 제약조건단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다. m개의 위험자산: i &#x3D; 1, 2, …, m 단일 기간 수익률: m-variate random vector$$\mathbf{R} &#x3D; \begin{bmatrix}">
+<meta property="og:description" content="해당 게시물은 평균 분석 최적화(MVO) 공부하면서 제가 이것저것 실험해본 것들입니다. 평균 분산 최적화와 제약조건단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다. m개의 위험자산: i &#x3D; 1, 2, …, m 단일 기간 수익률: m-variate random vector  \mathbf{R} &#x3D; \begin{bmatrix} R_1 \\ R_2">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="http://example.com/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/MVO_GEO_1.png">
 <meta property="og:image" content="http://example.com/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/MVO_GEO_2.png">
@@ -151,18 +151,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -264,18 +264,26 @@
     
     <div class="post-body" itemprop="articleBody"><p><strong>해당 게시물은 평균 분석 최적화(MVO) 공부하면서 제가 이것저것 실험해본 것들입니다.</strong></p>
 <h1 id="평균-분산-최적화와-제약조건"><a href="#평균-분산-최적화와-제약조건" class="headerlink" title="평균 분산 최적화와 제약조건"></a>평균 분산 최적화와 제약조건</h1><p>단일 기간 분석에서, 다음과 같이 최적화 문제를 정의하겠습니다.</p>
-<p><strong>m개의 위험자산</strong>: i &#x3D; 1, 2, …, m</p>
-<p><strong>단일 기간 수익률</strong>: m-variate random vector<br>$$<br>\mathbf{R} &#x3D; \begin{bmatrix} R_1 \ R_2 \ \vdots \ R_m \end{bmatrix}<br>$$</p>
-<p><strong>평균과 분산&#x2F;수익률의 공분산</strong>:<br>$$<br>\mathbb{E}[\mathbf{R}] &#x3D; \boldsymbol{\alpha} &#x3D; \begin{bmatrix} \alpha_1 \ \vdots \ \alpha_m \end{bmatrix}, \quad \text{Cov}[\mathbf{R}] &#x3D; \Sigma &#x3D; \begin{bmatrix} \Sigma_{1,1} &amp; \cdots &amp; \Sigma_{1,m} \ \vdots &amp; \ddots &amp; \vdots \ \Sigma_{m,1} &amp; \cdots &amp; \Sigma_{m,m} \end{bmatrix}<br>$$</p>
-<p><strong>포트폴리오</strong>: m-vector of weights indicating the fraction of portfolio wealth held in each asset<br>$$<br>\mathbf{w} &#x3D; (w_1, \ldots, w_m) \text{ with } \sum_{i&#x3D;1}^{m} w_i &#x3D; 1<br>$$</p>
-<p><strong>포트폴리오 수익률</strong>:<br>$$<br>R_w &#x3D; \mathbf{w}’\mathbf{R}<br>$$<br>는 다음과 같은 확률 변수를 가집니다:<br>$$<br>\alpha_w &#x3D; \mathbb{E}[R_w] &#x3D; \mathbf{w}’\boldsymbol{\alpha}<br>$$<br>$$<br>\sigma^2 &#x3D; \text{var}[R_w] &#x3D; \mathbf{w}’\Sigma\mathbf{w}<br>$$</p>
-<p>포트폴리오의 평균-분산 쌍인 $(\alpha_{\mathbf{w}}, \sigma_{\mathbf{w}}^2)$을 사용하여 다양한 포트폴리오 $\mathbf{w}$를 평가합니다. 이때 선호되는 것은:</p>
+<p><strong>m개의 위험자산</strong>: i = 1, 2, …, m</p>
+<p><strong>단일 기간 수익률</strong>: m-variate random vector</p>
+<script type="math/tex; mode=display">
+\mathbf{R} = \begin{bmatrix} R_1 \\ R_2 \\ \vdots \\ R_m \end{bmatrix}</script><p><strong>평균과 분산/수익률의 공분산</strong>:</p>
+<script type="math/tex; mode=display">
+\mathbb{E}[\mathbf{R}] = \boldsymbol{\alpha} = \begin{bmatrix} \alpha_1 \\ \vdots \\ \alpha_m \end{bmatrix}, \quad \text{Cov}[\mathbf{R}] = \Sigma = \begin{bmatrix} \Sigma_{1,1} & \cdots & \Sigma_{1,m} \\ \vdots & \ddots & \vdots \\ \Sigma_{m,1} & \cdots & \Sigma_{m,m} \end{bmatrix}</script><p><strong>포트폴리오</strong>: m-vector of weights indicating the fraction of portfolio wealth held in each asset</p>
+<script type="math/tex; mode=display">
+\mathbf{w} = (w_1, \ldots, w_m) \text{ with } \sum_{i=1}^{m} w_i = 1</script><p><strong>포트폴리오 수익률</strong>:</p>
+<script type="math/tex; mode=display">
+R_w = \mathbf{w}'\mathbf{R}</script><p>는 다음과 같은 확률 변수를 가집니다:</p>
+<script type="math/tex; mode=display">
+\alpha_w = \mathbb{E}[R_w] = \mathbf{w}'\boldsymbol{\alpha}</script><script type="math/tex; mode=display">
+\sigma^2 = \text{var}[R_w] = \mathbf{w}'\Sigma\mathbf{w}</script><p>포트폴리오의 평균-분산 쌍인 $(\alpha_{\mathbf{w}}, \sigma_{\mathbf{w}}^2)$을 사용하여 다양한 포트폴리오 $\mathbf{w}$를 평가합니다. 이때 선호되는 것은:</p>
 <ul>
 <li>더 높은 기대 수익률 $\alpha_{\mathbf{w}}$</li>
 <li>더 낮은 분산 $\text{var}_{\mathbf{w}}$</li>
 </ul>
-<p><strong>위험 최소화</strong>: 주어진 목표 평균 수익률 $\alpha_0$에 대해, 다음 조건을 만족시키는 포트폴리오 $\mathbf{w}$를 선택합니다.<br>Minimize:$\mathbf{w}’\Sigma\mathbf{w}$<br>Subject to:<br>$$\mathbf{w}’ \mathbf{1}_m &#x3D; 1$$<br>$$\mathbf{w}’ \boldsymbol{\alpha} &#x3D; \alpha_0$$</p>
-<h1 id="평균분산-최적화의-기하적-해석-2개-자산"><a href="#평균분산-최적화의-기하적-해석-2개-자산" class="headerlink" title="평균분산 최적화의 기하적 해석(2개 자산)"></a>평균분산 최적화의 기하적 해석(2개 자산)</h1><table>
+<p><strong>위험 최소화</strong>: 주어진 목표 평균 수익률 $\alpha_0$에 대해, 다음 조건을 만족시키는 포트폴리오 $\mathbf{w}$를 선택합니다.<br>Minimize:$\mathbf{w}’\Sigma\mathbf{w}$<br>Subject to:</p>
+<script type="math/tex; mode=display">\mathbf{w}' \mathbf{1}_m = 1</script><script type="math/tex; mode=display">\mathbf{w}' \boldsymbol{\alpha} = \alpha_0</script><h1 id="평균분산-최적화의-기하적-해석-2개-자산"><a href="#평균분산-최적화의-기하적-해석-2개-자산" class="headerlink" title="평균분산 최적화의 기하적 해석(2개 자산)"></a>평균분산 최적화의 기하적 해석(2개 자산)</h1><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
@@ -283,7 +291,8 @@
 <th>KIM ACE KRX Physical Gold ETF(411060.KS)</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>기대 수익률(평균 일일 로그수익률)</td>
 <td>0.000825</td>
 <td>0.000544</td>
@@ -294,7 +303,7 @@
 <td>0.007906</td>
 </tr>
 <tr>
-<td>샤프비율(무위험 수익률 &#x3D; 0)</td>
+<td>샤프비율(무위험 수익률 = 0)</td>
 <td>0.08524</td>
 <td>0.068851</td>
 </tr>
@@ -308,7 +317,9 @@
 <td>-0.000018</td>
 <td>0.000063</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <center><small>표1: 포트폴리오 편입 자산 정보</small></center>
 
 <img src="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/MVO_GEO_1.png" class="" title="MVO_GEO_1.png">
@@ -343,8 +354,8 @@
 <img src="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/MVO_GEO_8.png" class="" title="MVO_GEO_8.png">
 <center><small>그림8: 두 자산이 음의 상관관계일떄 상관계수에 따른 곡률변화</small></center>  
 
-<p>그림7은 두 자산간의 상관관계가 양(+)이고, 그 절댓값을 점점 키우는 경우의 모습입니다. 그림8은 두 자산간의 상관관계가 양(+)이고, 그 절댓값을 점점 키우는 경우의 모습입니다. 자산간의 상관관계에 따라 곡면의 곡률 그리고 상한 및 하한이 변하는 모습을 볼 수 있습니다. 이는 공분산 행렬의 추정에 있어 강건하게 추정하지 않으면 포트폴리오의 위험을 과대&#x2F;과소평가 할 수 있음을 의미합니다.</p>
-<h1 id="평균분산-최적화의-기하적-해석-3개-자산"><a href="#평균분산-최적화의-기하적-해석-3개-자산" class="headerlink" title="평균분산 최적화의 기하적 해석(3개 자산)"></a>평균분산 최적화의 기하적 해석(3개 자산)</h1><p>3개 자산에서 코너해가 발생하는 경우를 시각화 해보도록 하겠습니다. 그림9~11은 각 축이 w1, w2, w3이며, 삼각형 모양을 가진 2차원 공간은 w1 + w2 + w3 &#x3D; 1의 제약조건을 만족하는 공간입니다.</p>
+<p>그림7은 두 자산간의 상관관계가 양(+)이고, 그 절댓값을 점점 키우는 경우의 모습입니다. 그림8은 두 자산간의 상관관계가 양(+)이고, 그 절댓값을 점점 키우는 경우의 모습입니다. 자산간의 상관관계에 따라 곡면의 곡률 그리고 상한 및 하한이 변하는 모습을 볼 수 있습니다. 이는 공분산 행렬의 추정에 있어 강건하게 추정하지 않으면 포트폴리오의 위험을 과대/과소평가 할 수 있음을 의미합니다.</p>
+<h1 id="평균분산-최적화의-기하적-해석-3개-자산"><a href="#평균분산-최적화의-기하적-해석-3개-자산" class="headerlink" title="평균분산 최적화의 기하적 해석(3개 자산)"></a>평균분산 최적화의 기하적 해석(3개 자산)</h1><p>3개 자산에서 코너해가 발생하는 경우를 시각화 해보도록 하겠습니다. 그림9~11은 각 축이 w1, w2, w3이며, 삼각형 모양을 가진 2차원 공간은 w1 + w2 + w3 = 1의 제약조건을 만족하는 공간입니다.</p>
 <img src="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/MVO_GEO_9.png" class="" title="MVO_GEO_9.png">
 <center><small>그림9: 3개 자산에서 가중치 행렬의 변화에 따른 포트폴리오 변동성 시각화1 </small></center>  
 <center>$\Sigma = \begin{bmatrix} 1 & 0.2 & 0.1 \\ 0.2 & 1 & 0.1 \\ 0.1 & 0.1 & 1 \\ \end{bmatrix}$</center>  
@@ -354,14 +365,9 @@
 <center>$\Sigma = \begin{bmatrix} 1 & 0.9 & 0.1 \\ 0.9 & 1 & -0.1 \\ 0.1 & -0.1 & 1 \\ \end{bmatrix}$</center>  
 
 <img src="/2024/04/21/%ED%8F%89%EA%B7%A0-%EB%B6%84%EC%82%B0-%EC%B5%9C%EC%A0%81%ED%95%98%EC%9D%98-%EA%B8%B0%ED%95%98%EC%A0%81-%ED%95%B4%EC%84%9D/MVO_GEO_11.png" class="" title="MVO_GEO_11.png">
-<center><small>그림11: 3개 자산에서 가중치 행렬의 변화에 따른 포트폴리오 변동성 시각화3</small></center>  
-<center>$\Sigma = \begin{bmatrix} 1 & -0.9 & 0.1 \\ -0.9 & 1 & 0.1 \\ 0.1 & 0.1 & 1 \\ \end{bmatrix}$</center>  
-<br/>
-목표 수익률의 등식/부등식 제약조건을 어떻게 잡느냐에 따라 달라지겠지만, 최적점이 있을 확률이 높은 부분 즉, 어두운 부분이 실제로 코너로 이동하는 것을 확인할 수 있습니다. 이는 공분산 행렬의 추정에 있어 강건하게 추정하지 않으면 비효율적인 자산배분이나 코너해를 가질 수 있음을 의미합니다.
-
-
-
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] Portfolio Optimization: a comparison among Markowitz, Black - Litterman and<br>Robust Optimization approach(LUISS, 2019&#x2F;2020)</p>
+<p><center><small>그림11: 3개 자산에서 가중치 행렬의 변화에 따른 포트폴리오 변동성 시각화3</small></center>  </p>
+<p><center>$\Sigma = \begin{bmatrix} 1 & -0.9 & 0.1 \\ -0.9 & 1 & 0.1 \\ 0.1 & 0.1 & 1 \\ \end{bmatrix}$</center><br><br/><br>목표 수익률의 등식/부등식 제약조건을 어떻게 잡느냐에 따라 달라지겠지만, 최적점이 있을 확률이 높은 부분 즉, 어두운 부분이 실제로 코너로 이동하는 것을 확인할 수 있습니다. 이는 공분산 행렬의 추정에 있어 강건하게 추정하지 않으면 비효율적인 자산배분이나 코너해를 가질 수 있음을 의미합니다.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>[1] Portfolio Optimization: a comparison among Markowitz, Black - Litterman and<br>Robust Optimization approach(LUISS, 2019/2020)</p>
 
     </div>
 
@@ -444,7 +450,7 @@
 
   <div class="copyright">
     &copy; 
-    <span itemprop="copyrightYear">2024</span>
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

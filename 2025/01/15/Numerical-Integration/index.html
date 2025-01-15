@@ -19,36 +19,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다. 1. FCNFCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentat">
+    <meta name="description" content="수치적분관련 간단한 방법들의 시뮬레이션을 진행해봄.기본 내용은 James Stewart의 Calculus 참고했고, 더 자세한 내용은 Unified Proofs of the Error Estimates for the Midepoint, Trapezoidal, and Simpson’s Ruls 참고하였음. 12345678910111213141516171819">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Paper Review] Fully Convolutional Networks for Semantic Segmentation">
-<meta property="og:url" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/index.html">
+<meta property="og:title" content="Numerical Integration [1]">
+<meta property="og:url" content="http://example.com/2025/01/15/Numerical-Integration/index.html">
 <meta property="og:site_name" content="금융공학 실험실">
-<meta property="og:description" content="Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다. 1. FCNFCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentat">
+<meta property="og:description" content="수치적분관련 간단한 방법들의 시뮬레이션을 진행해봄.기본 내용은 James Stewart의 Calculus 참고했고, 더 자세한 내용은 Unified Proofs of the Error Estimates for the Midepoint, Trapezoidal, and Simpson’s Ruls 참고하였음. 12345678910111213141516171819">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png">
-<meta property="og:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png">
-<meta property="og:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-3.png">
-<meta property="og:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-4.png">
-<meta property="og:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-5.png">
-<meta property="article:published_time" content="2024-02-25T07:31:05.000Z">
-<meta property="article:modified_time" content="2024-10-21T01:57:57.159Z">
+<meta property="og:image" content="http://example.com/2025/01/15/Numerical-Integration/Numerical%20Integration_1.png">
+<meta property="article:published_time" content="2025-01-15T09:10:27.000Z">
+<meta property="article:modified_time" content="2025-01-15T09:28:14.376Z">
 <meta property="article:author" content="Choi Munseok">
-<meta property="article:tag" content="XAI">
-<meta property="article:tag" content="Paper Review">
-<meta property="article:tag" content="Computer Vision">
+<meta property="article:tag" content="Calculus">
+<meta property="article:tag" content="Numerical Analysis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png">
+<meta name="twitter:image" content="http://example.com/2025/01/15/Numerical-Integration/Numerical%20Integration_1.png">
 
 
-<link rel="canonical" href="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
+<link rel="canonical" href="http://example.com/2025/01/15/Numerical-Integration/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/","path":"2024/02/25/Paper-Review-Fully Convolutional Networks for Semantic-Segmentation/","title":"[Paper Review] Fully Convolutional Networks for Semantic Segmentation"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ko","comments":true,"permalink":"http://example.com/2025/01/15/Numerical-Integration/","path":"2025/01/15/Numerical-Integration/","title":"Numerical Integration [1]"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[Paper Review] Fully Convolutional Networks for Semantic Segmentation | 금융공학 실험실</title>
+<title>Numerical Integration [1] | 금융공학 실험실</title>
   
 
 
@@ -120,7 +115,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           목차
@@ -133,7 +128,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-FCN"><span class="nav-number">1.</span> <span class="nav-text">1. FCN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Deconvolution"><span class="nav-number">2.</span> <span class="nav-text">2. Deconvolution</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -197,7 +191,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/15/Numerical-Integration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpg">
@@ -210,12 +204,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[Paper Review] Fully Convolutional Networks for Semantic Segmentation | 금융공학 실험실">
+      <meta itemprop="name" content="Numerical Integration [1] | 금융공학 실험실">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [Paper Review] Fully Convolutional Networks for Semantic Segmentation
+          Numerical Integration [1]
         </h1>
 
         <div class="post-meta-container">
@@ -225,15 +219,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
+      
 
-      <time title="Post created: 2024-02-25 16:31:05" itemprop="dateCreated datePublished" datetime="2024-02-25T16:31:05+09:00">2024-02-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Updated at: 2024-10-21 10:57:57" itemprop="dateModified" datetime="2024-10-21T10:57:57+09:00">2024-10-21</time>
+      <time title="Post created: 2025-01-15 18:10:27 / Updated at: 18:28:14" itemprop="dateCreated datePublished" datetime="2025-01-15T18:10:27+09:00">2025-01-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,15 +229,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/" itemprop="url" rel="index"><span itemprop="name">XAI</span></a>
+          <a href="/categories/Calculus/" itemprop="url" rel="index"><span itemprop="name">Calculus</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/" itemprop="url" rel="index"><span itemprop="name">Paper Review</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/XAI/Paper-Review/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+          <a href="/categories/Calculus/Numerical-Analysis/" itemprop="url" rel="index"><span itemprop="name">Numerical Analysis</span></a>
         </span>
     </span>
 
@@ -262,8 +246,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/Paper-Review-Fully Convolutional Networks for Semantic-Segmentation/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2025/01/15/Numerical-Integration/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2025/01/15/Numerical-Integration/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,21 +260,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>Fully Convolutional Networks for Semantic Segmentation(Jonathan Long, Evan Shelhamer, Trevor Darrell, 2015) 요약입니다.</p>
-<h1 id="1-FCN"><a href="#1-FCN" class="headerlink" title="1. FCN"></a>1. FCN</h1><p>FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을 뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서 우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.</p>
-<p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로 구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가 사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치 고정 → 바로 앞 Feature Map 크기 고정 → … → Input Image 크기 고정)</p>
-<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png" class="" title="XAI-2-1.png">
-<p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체. 마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로 변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지 내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력 Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에 가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지 않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을 처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는 있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한 이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게 된다.</p>
-<h1 id="2-Deconvolution"><a href="#2-Deconvolution" class="headerlink" title="2. Deconvolution"></a>2. Deconvolution</h1><p>Bilinear Interpolation(선형 보간)</p>
-<p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에 위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는 방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
-<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png" class="" title="XAI-2-2.png">
-<p>이 외에도 Backwards convolution, Unpooling, Shift and stitch 등의 방법이 있다. FCN에서는 Bilinear interpolation과 Backwards convolution 두 가지 방법을 사용하여 Coarse Feature map으로부터 Dense prediction을 구했다. </p>
-<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-3.png" class="" title="XAI-2-3.png">
-<p>하지만, 근본적으로 feature map의 크기가 너무 작기 때문에 예측된 dense map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling 과정이다)</p>
-<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-4.png" class="" title="XAI-2-4.png">
-<img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-5.png" class="" title="XAI-2-5.png">
-<p>따라서 얕은층의 정보를 결합하는 방식으로 품질을 개선하였다. 실제 성능 지표에서도 FCN-32s &gt; FCN-16s &gt; FCN-8s 순으로 결과가 나아진다.</p>
-
+    <div class="post-body" itemprop="articleBody"><p>수치적분관련 간단한 방법들의 시뮬레이션을 진행해봄.<br>기본 내용은 James Stewart의 Calculus 참고했고, 더 자세한 내용은 <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/10.4169/math.mag.86.4.261?read-now=1&amp;seq=1#page_scan_tab_contents">Unified Proofs of the Error Estimates for the Midepoint, Trapezoidal, and Simpson’s Ruls</a> 참고하였음.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> tabulate <span class="keyword">import</span> tabulate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 정의역 설정</span></span><br><span class="line">a = <span class="number">0</span></span><br><span class="line">b = np.pi</span><br><span class="line"></span><br><span class="line">k = <span class="number">6</span>  <span class="comment"># 소수점 k번째 까지 잘라서 출력</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Simpson&#x27;s Rule 떄문에 n을 홀수로 설정해야됨.</span></span><br><span class="line">n_values = [<span class="number">5</span>, <span class="number">11</span>, <span class="number">21</span>, <span class="number">51</span>, <span class="number">101</span>]</span><br><span class="line">approximations = []</span><br><span class="line">errors = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> n_values:</span><br><span class="line">    h = (b - a) / (n - <span class="number">1</span>) </span><br><span class="line">    x = np.linspace(a, b, n)</span><br><span class="line">    f = np.sin(x)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Left Riemann sum</span></span><br><span class="line">    I_riemannL = h * <span class="built_in">sum</span>(f[:n-<span class="number">1</span>])</span><br><span class="line">    err_riemannL = <span class="number">2</span> - I_riemannL</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Right Riemann sum</span></span><br><span class="line">    I_riemannR = h * <span class="built_in">sum</span>(f[<span class="number">1</span>:])</span><br><span class="line">    err_riemannR = <span class="number">2</span> - I_riemannR</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Midpoint Rule</span></span><br><span class="line">    I_mid = h * <span class="built_in">sum</span>(np.sin((x[:n-<span class="number">1</span>] + x[<span class="number">1</span>:]) / <span class="number">2</span>))</span><br><span class="line">    err_mid = <span class="number">2</span> - I_mid</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Trapezoidal Rule</span></span><br><span class="line">    I_trap = (h / <span class="number">2</span>) * (f[<span class="number">0</span>] + <span class="number">2</span> * <span class="built_in">sum</span>(f[<span class="number">1</span>:n-<span class="number">1</span>]) + f[n-<span class="number">1</span>])</span><br><span class="line">    err_trap = <span class="number">2</span> - I_trap</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Simpson&#x27;s Rule</span></span><br><span class="line">    I_simp = (h / <span class="number">3</span>) * (f[<span class="number">0</span>] + <span class="number">2</span> * <span class="built_in">sum</span>(f[<span class="number">2</span>:n-<span class="number">2</span>:<span class="number">2</span>]) + <span class="number">4</span> * <span class="built_in">sum</span>(f[<span class="number">1</span>:n-<span class="number">1</span>:<span class="number">2</span>]) + f[n-<span class="number">1</span>])</span><br><span class="line">    err_simp = <span class="number">2</span> - I_simp</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 근사값이랑 에러 저장</span></span><br><span class="line">    approximations.append([</span><br><span class="line">        n, <span class="built_in">round</span>(I_riemannL, k), <span class="built_in">round</span>(I_riemannR, k),</span><br><span class="line">        <span class="built_in">round</span>(I_mid, k), <span class="built_in">round</span>(I_trap, k), <span class="built_in">round</span>(I_simp, k)</span><br><span class="line">    ])</span><br><span class="line">    errors.append([</span><br><span class="line">        n, <span class="built_in">round</span>(err_riemannL, k), <span class="built_in">round</span>(err_riemannR, k),</span><br><span class="line">        <span class="built_in">round</span>(err_mid, k), <span class="built_in">round</span>(err_trap, k), <span class="built_in">round</span>(err_simp, k)</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 표 헤더 저장</span></span><br><span class="line">approx_headers = [</span><br><span class="line">    <span class="string">&quot;n&quot;</span>, <span class="string">&quot;L Riemann&quot;</span>, <span class="string">&quot;R Riemann&quot;</span>, <span class="string">&quot;Midpoint&quot;</span>, <span class="string">&quot;Trapezoid&quot;</span>, <span class="string">&quot;Simpson&quot;</span></span><br><span class="line">]</span><br><span class="line">error_headers = [</span><br><span class="line">    <span class="string">&quot;n&quot;</span>, <span class="string">&quot;L Error&quot;</span>, <span class="string">&quot;R Error&quot;</span>, <span class="string">&quot;Mid Error&quot;</span>, <span class="string">&quot;Trap Error&quot;</span>, <span class="string">&quot;Simp Error&quot;</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 표 출력</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Approximations Table:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(tabulate(approximations, headers=approx_headers, tablefmt=<span class="string">&quot;grid&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nErrors Table:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(tabulate(errors, headers=error_headers, tablefmt=<span class="string">&quot;grid&quot;</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img src="/2025/01/15/Numerical-Integration/Numerical%20Integration_1.png" class="" title="Numerical Integration_1">
     </div>
 
     
@@ -336,23 +308,19 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/XAI/" rel="tag"><i class="fa fa-tag"></i> XAI</a>
-              <a href="/tags/Paper-Review/" rel="tag"><i class="fa fa-tag"></i> Paper Review</a>
-              <a href="/tags/Computer-Vision/" rel="tag"><i class="fa fa-tag"></i> Computer Vision</a>
+              <a href="/tags/Calculus/" rel="tag"><i class="fa fa-tag"></i> Calculus</a>
+              <a href="/tags/Numerical-Analysis/" rel="tag"><i class="fa fa-tag"></i> Numerical Analysis</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/02/12/Deep-Learning-Chaper1-Introduction/" rel="prev" title="[Deep Learning] Chapter1. Introduction">
-                  <i class="fa fa-angle-left"></i> [Deep Learning] Chapter1. Introduction
+                <a href="/2024/10/21/Research-%EA%B9%80/" rel="prev" title="[Research] 김">
+                  <i class="fa fa-angle-left"></i> [Research] 김
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/" rel="next" title="[Deep Learning] Chapter9. Convolutional Networks">
-                  [Deep Learning] Chapter9. Convolutional Networks <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

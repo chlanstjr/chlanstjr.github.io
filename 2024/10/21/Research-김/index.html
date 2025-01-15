@@ -152,18 +152,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -267,7 +267,6 @@
     
     
     <div class="post-body" itemprop="articleBody"><img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-01.png" class="" title="Research-Kim-01.png">
-
 <p>​<strong>2023년 우리나라가 수출한 농·축·임산물 합계는 91억 5700만 달러임.</strong></p>
 <p><strong>동기간 김 수출액은 7억 9000만 달러로 비중이 8.627%에 달함.</strong></p>
 <p><strong>세계 김 시장의 1위는 한국임(시장 점유율 약 70%)</strong></p>
@@ -275,7 +274,7 @@
 <p><strong>이는 김 가격과 수출의 폭발적인 성장 때문임.</strong></p>
 <h1 id="1-배경지식"><a href="#1-배경지식" class="headerlink" title="1. 배경지식"></a>1. 배경지식</h1><p>김 생산은 10월~5월까지 이루어지며, 특히 주 생산시기는 12월에서 4월까지로 전체 생산량의 90%이상을 차지함.</p>
 <p>예를들어 2023년 2월에서 9월까지 인공종묘를 하고 쭉쭉 길러서 2023년 10월에서 2024년 5월까지 채취한 김을 2024년 김 생산량<sup>(1)</sup>으로 잡음. </p>
-<p>김 가격은 중도매인 판매가격 기준으로 월별로 가격 차이가 상당하다고 할 수 있음. 예를들어 2024년 2월의 경우 7,809원&#x2F;속이였고 4월의 경우 10,413원&#x2F;속임. 따라서 생산가치(P*Q)와 생산량(Q)를 잘 구분하는게 중요하다고 생각함.(당연한 말이지만)</p>
+<p>김 가격은 중도매인 판매가격 기준으로 월별로 가격 차이가 상당하다고 할 수 있음. 예를들어 2024년 2월의 경우 7,809원/속이였고 4월의 경우 10,413원/속임. 따라서 생산가치(P*Q)와 생산량(Q)를 잘 구분하는게 중요하다고 생각함.(당연한 말이지만)</p>
 <p><small>(1) 일본과 한국에서 n년도 김생산량을 따지는 기간이 다름. 일본은 n년도 김 생산량을 n년 11월에서 n+1년 5월까지로 잡지만, 한국은 n-1년 10월에서 n년 5월까지로 잡음. 일본 김 생산량도 다룰건데 한국 기준으로 바꿔서 적겠음.</small></p>
 <h1 id="2-주요-수출시장"><a href="#2-주요-수출시장" class="headerlink" title="2. 주요 수출시장"></a>2. 주요 수출시장</h1><p><span style="color: #FF0000">김수출은 2014년부터 2023년까지 CAGR 12.51%를 기록하고 있음.(본인 계산)</span></p>
 <p>김 수출액(단위: 천불)은 23년도 기준 1위 미국(169,545), 2위 일본(143,524), 3위 중국(97,088), 4위 태국, 5위 러시아임.</p>
@@ -284,15 +283,8 @@
 <h1 id="2-1-레딧-크롤링"><a href="#2-1-레딧-크롤링" class="headerlink" title="2.1. 레딧 크롤링"></a>2.1. 레딧 크롤링</h1><p>미국인이 김에 대해 어떻게 생각하는지 알아보기 위해 미국판 디시인 레딧을 크롤링 해봄.</p>
 <p><strong>기간</strong>: 2018년 1월 1일부터 2024년 10월19일</p>
 <p><strong>크롤링 대상</strong>: 레딧(reddit)의 ‘Volumeeting’, ‘traderjoes’, ‘koreanfood’, ‘Costco’, ‘1200isplenty’서브레딧의 ‘seaweed’ 검색결과 글 및 댓글</p>
-<p><strong>전처리</strong>:</p>
-<ol>
-<li>nltk.corpus 모듈의 영어 불용어를 import해서 불용어 제거. </li>
-<li>특수 문자 및 유니코드 그리고 \s 제거</li>
-<li>단일 문자 제거</li>
-<li>18년도부터 20년도는 데이터의 수가 부족해 분석 대상에서 제외함.</li>
-</ol>
-<p><strong>분석결과</strong>:</p>
-<img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-02.png" class="" title="Research-Kim-02.png">
+<p><strong>전처리</strong>:<br>1) nltk.corpus 모듈의 영어 불용어를 import해서 불용어 제거.<br>2) 특수 문자 및 유니코드 그리고 \s 제거<br>3) 단일 문자 제거<br>4) 18년도부터 20년도는 데이터의 수가 부족해 분석 대상에서 제외함.</p>
+<p><strong>분석결과</strong>:<br><img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-02.png" class="" title="Research-Kim-02.png"></p>
 <center><small>그림1. 2021 워드클라우드</small></center>
 
 <img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-03.png" class="" title="Research-Kim-03.png">
@@ -304,60 +296,64 @@
 <img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-05.png" class="" title="Research-Kim-05.png">
 <center><small>그림4. 2024 워드클라우드</small></center>
 
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center"><strong>년도＼순위</strong></th>
-<th align="center"><strong>1위</strong></th>
-<th align="center"><strong>2위</strong></th>
-<th align="center"><strong>3위</strong></th>
-<th align="center"><strong>4위</strong></th>
-<th align="center"><strong>5위</strong></th>
-<th align="center"><strong>6위</strong></th>
-<th align="center"><strong>7위</strong></th>
+<th style="text-align:center"><strong>년도＼순위</strong></th>
+<th style="text-align:center"><strong>1위</strong></th>
+<th style="text-align:center"><strong>2위</strong></th>
+<th style="text-align:center"><strong>3위</strong></th>
+<th style="text-align:center"><strong>4위</strong></th>
+<th style="text-align:center"><strong>5위</strong></th>
+<th style="text-align:center"><strong>6위</strong></th>
+<th style="text-align:center"><strong>7위</strong></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center"><strong>2021</strong></td>
-<td align="center">snack(14)</td>
-<td align="center">like(13)</td>
-<td align="center">rice(12)</td>
-<td align="center">calories(10)</td>
-<td align="center">calorie(10)</td>
-<td align="center">good(10)</td>
-<td align="center">low(10)</td>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2021</strong></td>
+<td style="text-align:center">snack(14)</td>
+<td style="text-align:center">like(13)</td>
+<td style="text-align:center">rice(12)</td>
+<td style="text-align:center">calories(10)</td>
+<td style="text-align:center">calorie(10)</td>
+<td style="text-align:center">good(10)</td>
+<td style="text-align:center">low(10)</td>
 </tr>
 <tr>
-<td align="center"><strong>2022</strong></td>
-<td align="center">cal(19)</td>
-<td align="center">salad(13)</td>
-<td align="center">rice(13)</td>
-<td align="center">calories(12)</td>
-<td align="center">like(12)</td>
-<td align="center">snack(10)</td>
-<td align="center">soup(10)</td>
+<td style="text-align:center"><strong>2022</strong></td>
+<td style="text-align:center">cal(19)</td>
+<td style="text-align:center">salad(13)</td>
+<td style="text-align:center">rice(13)</td>
+<td style="text-align:center">calories(12)</td>
+<td style="text-align:center">like(12)</td>
+<td style="text-align:center">snack(10)</td>
+<td style="text-align:center">soup(10)</td>
 </tr>
 <tr>
-<td align="center"><strong>2023</strong></td>
-<td align="center">rice(60)</td>
-<td align="center">new(55)</td>
-<td align="center">korean(45)</td>
-<td align="center">like(42)</td>
-<td align="center">cheese(39)</td>
-<td align="center">soup(39)</td>
-<td align="center">sause(35)</td>
+<td style="text-align:center"><strong>2023</strong></td>
+<td style="text-align:center">rice(60)</td>
+<td style="text-align:center">new(55)</td>
+<td style="text-align:center">korean(45)</td>
+<td style="text-align:center">like(42)</td>
+<td style="text-align:center">cheese(39)</td>
+<td style="text-align:center">soup(39)</td>
+<td style="text-align:center">sause(35)</td>
 </tr>
 <tr>
-<td align="center"><strong>2024</strong></td>
-<td align="center">like(41)</td>
-<td align="center">cals(38)</td>
-<td align="center">korean(33)</td>
-<td align="center">soup(31)</td>
-<td align="center">kimbap(29)</td>
-<td align="center">rice(26)</td>
-<td align="center">food(25)</td>
+<td style="text-align:center"><strong>2024</strong></td>
+<td style="text-align:center">like(41)</td>
+<td style="text-align:center">cals(38)</td>
+<td style="text-align:center">korean(33)</td>
+<td style="text-align:center">soup(31)</td>
+<td style="text-align:center">kimbap(29)</td>
+<td style="text-align:center">rice(26)</td>
+<td style="text-align:center">food(25)</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <center><small>표1. 년도별 많이 언급된 단어<sup>(2)</sup>(언급수<sup>(3)</sup>)</small></center>
 
 <p><small>(2) ‘im’ 제외 모든 단어 언급수 카운트</small><br><small>(3) 양심고백: 원래 ‘cal’, ‘calorie’, ‘calories’를 같은 단어로 카운트 해야하지만 휴가나와서 코딩하는 관계로~ 귀찮아서 안했습니다! 대충 새봤더니 21년부터 24년까지 1위가 cal시리즈가 되야되네요!</small></p>
@@ -407,16 +403,14 @@
 <p>이전에 진행했던 <a target="_blank" rel="noopener" href="https://www.knudart.com/research/paper-projects/dart-2024-1-peurojegteu-many-to-many-pairs-trading">프로젝트</a>에서 수산물 관련주들이 모든 window에서 같은 군집으로 묶였었음.(KMeans, Kierarchical군집화 알고리즘 사용)</p>
 <p>그래서 페어트레이딩 하고 싶었는데, 수산물 군집에서 이것저것 해도 수익률이 시장을 못이겼음.</p>
 <img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-10.png" class="" title="Research-Kim-10.png">
-
 <p>기업들 규모가 작고, 또 사조 시리즈는 지배구조 문제도 있고해서</p>
 <p>도메인 지식을 넣어야 소형주 플레이가 가능하지 않을가 싶었다.<br>​<br>근데 이 군집 안에서 어찌어찌해서 페어트레이딩으로 시장 이기는 알고리즘 만들어도</p>
 <img src="/2024/10/21/Research-%EA%B9%80/Research-Kim-11.png" class="" title="Research-Kim-11.png">
-
 <p>숏을 칠 수 있는지가 문제라 현업과는 괴리가 있을 수 있음.</p>
 <h1 id="6-출처"><a href="#6-출처" class="headerlink" title="6. 출처"></a>6. 출처</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.joongang.co.kr/article/25275012">최경호, “‘검은 반도체’ 김 수출 사상 최대…’억대 버는’어가 2510곳”, 중앙일보, 2024.09.03,18면</a></li>
 <li><a target="_blank" rel="noopener" href="https://news.nissyoku.co.jp/special/940690">“海苔特集：歴史的な不作で値上げ　生産・流通の見直しを”, The Japan Food Journal, 2023.07.14</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.mof.go.kr/doc/ko/selectDoc.do?docSeq=57221&menuSeq=971&bbsSeq=10">허남기, “2024년산 김 생산량은 전년대비 6% 증가한 약 1.5억 속 달성”, 수산정책과, 2024.06.11</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.mof.go.kr/doc/ko/selectDoc.do?docSeq=57221&amp;menuSeq=971&amp;bbsSeq=10">허남기, “2024년산 김 생산량은 전년대비 6% 증가한 약 1.5억 속 달성”, 수산정책과, 2024.06.11</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.kati.net/product/basisInfo.do?lcdCode=MD178">농식품수출정보, 2024.10.20</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.hani.co.kr/arti/area/honam/1145022.html">김용희, “김 수출 1조, 마냥 기쁘지 않다…”기후위기, 일본 이어 올 수도”, 한겨례신문사, 2024.06.16</a></li>
 <li><a target="_blank" rel="noopener" href="http://www.fisheco.com/news/articleView.html?idxno=87555">한국수산경제일본의 김 시장 동향”, 한국수산경제, 2024.08.26</a></li>
@@ -485,6 +479,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2025/01/15/Numerical-Integration/" rel="next" title="Numerical Integration [1]">
+                  Numerical Integration [1] <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -509,7 +506,7 @@
 
   <div class="copyright">
     &copy; 
-    <span itemprop="copyrightYear">2024</span>
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

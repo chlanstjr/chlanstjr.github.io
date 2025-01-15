@@ -148,18 +148,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -275,7 +275,8 @@
 <center><small>그림1, Source : CS231n; Deep Learning for Computer Vision, Lecture 5-33</small></center>
 
 
-<p>*image 하나의 특징을 추출하는 과정이기에 filter와 image의 depth는 같습니다.<br>*엄밀하게 여기서의 합성곱 연산은 신호처리 분야에서의 합성곱 연산과는 다릅니다. CNN에서의 합성곱연산은 합성곱의 의미적 요소만 가져온 것입니다.<br>*필터와 필터 크기에 맞는 이미지를 내적하는 것은 FC에서의 내적과정과 동일하다고 볼 수 있습니다.</p>
+<p><em>image 하나의 특징을 추출하는 과정이기에 filter와 image의 depth는 같습니다.
+</em>엄밀하게 여기서의 합성곱 연산은 신호처리 분야에서의 합성곱 연산과는 다릅니다. CNN에서의 합성곱연산은 합성곱의 의미적 요소만 가져온 것입니다.<br>*필터와 필터 크기에 맞는 이미지를 내적하는 것은 FC에서의 내적과정과 동일하다고 볼 수 있습니다.</p>
 <p>Conv Layer를 Brain Neuron의 관점에서 살펴보겠습니다. 뉴런과 Conv Layer의 가장 큰 차이점은 뉴런은 Local Connectivity를 가지고 있다는 것입니다. Conv Layer처럼 슬라이딩을 하는 것이 아니라 특정 부분에만 연결되어 있습니다. 하나의 뉴런은 한 부분만 처리하고, 그런 뉴런들이 모여서 전체 이미지를 처리하는 것입니다. 그래서 여러개의 필터를 사용하여 해당 부분을 구현합니다. 각 필터가 하나의 뉴런과 비슷하게 작동하는 것입니다. 다양한 필터들이 다른 종류의 특징을 감지할 수 있도록 학습되기 때문입니다. 5x5 필터가 있다고 할 때, 한 뉴런의 “Receptive filed”가 5x5라고 이해할 수 있는 것입니다. “Receptive filed”란 한 뉴런이 한 번에 수용할 수 있는 영역을 의미합니다.</p>
 <p>Conv Layer를 계층적으로 쌓아서 단순한 특징들을 뽑고, 그것을 또 조합해서 더 복잡한 특징으로 활용하는 식으로 활용합니다. 계층적 구조를 설계하고 역전파로 학습시키는 과정으로 필터를 학습시킵니다. 그림2는 각 그리드의 요소가 하나의 필터인데 이를 시각화 시킨 것입니다. 시각화 시킨 필터의 모습은 바로 이미지가 어떻게 생겨야 해당 필터의 활성을 최대화 시킬 수 있는지를 나타내는 것입니다. 이미지가 필터와 비슷하게 생겼으면 출력 값은 큰 값을 가지게 됩니다. 시각화는 역전파를 통해 해볼수 있습니다.(이를 자세히 다루는 내용은 추후 업데이트 하겠습니다.)</p>
 <img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-2.png" class="" title="DL-9-2">
@@ -289,14 +290,14 @@
 <img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-4.png" class="" title="DL-9-4">
 <center><small>그림4, Source : CS231n; Deep Learning for Computer Vision, Lecture 5-51</small></center>
 
-<p>위의 과정을 수식적으로 나타내어 알맞은 stride값을 찾을 수 있습니다. N이 입력의 차원(그림3에서는 7), F가 필터 사이즈(그림3에서는 3)라고 한다면 Output size는 다음 식과 같이 정의될 수 있습니다. (N-F) &#x2F; stride +1</p>
-<p>이런식의 Conv layer는 층이 깊어질 수록 출력사이즈가 빠르게 줄어들기 때문에 padding을 사용하여 이를 해결할 수 있습니다. filter가 3x3일 때, zero padding을 그림3과 같이 적용할 수 있습니다. Output size를 정의하는 식에서 N이 N+2가 되었으므로, stride가 1일 때 (9-3) &#x2F; 1+1로 output size가 input size와 같아지게 됩니다.</p>
+<p>위의 과정을 수식적으로 나타내어 알맞은 stride값을 찾을 수 있습니다. N이 입력의 차원(그림3에서는 7), F가 필터 사이즈(그림3에서는 3)라고 한다면 Output size는 다음 식과 같이 정의될 수 있습니다. (N-F) / stride +1</p>
+<p>이런식의 Conv layer는 층이 깊어질 수록 출력사이즈가 빠르게 줄어들기 때문에 padding을 사용하여 이를 해결할 수 있습니다. filter가 3x3일 때, zero padding을 그림3과 같이 적용할 수 있습니다. Output size를 정의하는 식에서 N이 N+2가 되었으므로, stride가 1일 때 (9-3) / 1+1로 output size가 input size와 같아지게 됩니다.</p>
 <img src="/2024/02/26/Deep-Learning-Chapter9-Convolutional-Networks/DL-9-5.png" class="" title="DL-9-5">
 <center><small>그림5, Source : CS231n; Deep Learning for Computer Vision, Lecture 5-54</small></center>
 
 <p>*다만 이러한 과정을 거치는 것은 “필요 없는 특징을 추가하는 것은 아닌지?”와 같은 의문을 남길 수 있습니다. 물론 모서리 부분에 약간의 artifact가 생길 수도 있습니다. 하지만 우리의 목적은 모서리 부분에서도 값을 얻어 size를 유지하는 것이고 zero padding 말고도 다른 방법들도 있습니다. 보통 필터는 3x3, 5x5, 7x7을 많이 쓰고 stride는 보통 1,2,3을 주로 사용합니다. 필터의 크기가 왜 홀수인지에 대해서는 다음 링크에 자세히 나와 있으니 참고하시길 바랍니다.</p>
 <p><strong>Question.</strong><br>Input volume이 32x32x3이며 10개의 5x5 filters가 stride 1, pad2로 주어졌다고 할때, (1) Output size는 얼마인가? (2) 해당 layer에서 parameters의 개수는 얼마인가?</p>
-<p><strong>Answer.</strong><br>(1) filter size가 5이고 pad가 2이기 때문에 size는 보존됩니다. 다음 식으로 유도됩니다. (32+2<em>2-5) &#x2F; 1+1 그리고 필터가 10개이기 때문에 Output size는 32x32x10입니다.<br>(2) Depth와 bias를 고려하여 (5</em>5*5+1)*10의 parameter를 가집니다.</p>
+<p><strong>Answer.</strong><br>(1) filter size가 5이고 pad가 2이기 때문에 size는 보존됩니다. 다음 식으로 유도됩니다. (32+2<em>2-5) / 1+1 그리고 필터가 10개이기 때문에 Output size는 32x32x10입니다.<br>(2) Depth와 bias를 고려하여 (5</em>5<em>5+1)</em>10의 parameter를 가집니다.</p>
 <p>만약 filter size가 1x1xdepth라면 어떨까요? 이런식이라면 공간적 정보를 사용하지 않는 특징이 있습니다.</p>
 <p>stride를 크게 가져가면 어떨까요? 출력은 점점 작아지고, 이는 padding과 비슷합니다. 실제로 stride를 크게하는 것이 padding보다 모델의 성능이 좋다는 결과가 있습니다.</p>
 <p>Pooling에 대해서 알아보겠습니다. Pooling은 결과를 더 작고 관리하게 쉽게해줍니다. 작아지면 parameter 수가 줄어드는 동시에 공간적 구조를 유지하기 때문입니다. 보통 Max pooling이 일반적으로 쓰입니다. 우리가 다루는 값들은 이 뉴런이 활성화되었는지를 나타내는 값들입니다. Max pooling은 그 지역이 어디든, 어떤 신호에 “얼마나” 그 필터가 활성화되었는지를 알려줍니다.(현재 필터와 뉴런을 혼용해서 쓰고 있습니다.)</p>
@@ -397,7 +398,7 @@
 
   <div class="copyright">
     &copy; 
-    <span itemprop="copyrightYear">2024</span>
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
