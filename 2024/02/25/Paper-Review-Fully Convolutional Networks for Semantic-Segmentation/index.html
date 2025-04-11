@@ -34,9 +34,9 @@
 <meta property="article:published_time" content="2024-02-25T07:31:05.000Z">
 <meta property="article:modified_time" content="2025-02-25T16:24:42.768Z">
 <meta property="article:author" content="Choi Munseok">
-<meta property="article:tag" content="XAI">
 <meta property="article:tag" content="Paper Review">
 <meta property="article:tag" content="Computer Vision">
+<meta property="article:tag" content="XAI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png">
 
@@ -280,20 +280,15 @@
 <h1 id="1-FCN"><a href="#1-FCN" class="headerlink" title="1. FCN"></a>1. FCN</h1><p>FCN(Fully Convolutional Networks for Semantic Segmentation)은 Semantic Segmentation 문제를 위해 제안된 딥러닝 모델이다. Semantic Segmentation은 직역하자면 의미론적 분할이라는 뜻이다. 딥러닝에서 해당 용어는 이미지의 모든 픽셀들을 보여지는 객체에 해당시켜 레이블하는 것을 뜻한다. FCN은 Semantic Segmentation을 위해 기존 image classification에서 우수한 성능을 보인 CNN기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.</p>
 <p>Image classification 모델들은 목적에 맞게 출력층이 FC-layer로 구성되어 있다. 그런데, FC-layer를 사용하게 되면 이미지의 위치 정보가 사라지고, 입력 이미지 크기가 고정되는 문제가 있다. (Dense layer 가중치 고정 → 바로 앞 Feature Map 크기 고정 → … → Input Image 크기 고정)</p>
 <img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-1.png" class="" title="XAI-2-1.png">
-
 <p>이러한 FC-layer의 한계를 보완하기 위해 FC-layer를 Conv-layer로 대체. 마지막 FC-layer의 경우, 채널 차원을 클래스 수에 맞춘 1x1 Conv Layer로 변환한다. Convolutionalization을 통해 출력된 Feature map은 원본이미지 내포 가능. 그러나 최종 목적인 픽셀 단위 예측과 비교했을 때, FCN의 출력 Feature map은 너무 coarse하다. 따라서, coarse map을 원본 이미지 크기에 가까운 Dense map으로 변환해줄 필요가 있다. 물론 Pooling을 사용하지 않거나, Pooling의 stride를 줄임으로써 Feature map의 크기가 작아지는 것을 처음부터 피할 수도 있다. 그러나, 이 경우 필터가 더 세밀한 부분을 볼 수는 있지만 Receptive Field가 줄어들어 이미지의 컨텍스트를 놓치게 된다. 또한 이렇게 되면 파라미터수가 급격히 증가하고 더 많은 학습시간을 요구하게 된다.</p>
 <h1 id="2-Deconvolution"><a href="#2-Deconvolution" class="headerlink" title="2. Deconvolution"></a>2. Deconvolution</h1><p>Bilinear Interpolation(선형 보간)</p>
 <p>선형보간법(Linear interpolation)은 끝점의 값이 주어졌을 때 그 사이에 위치한 값을 추정하기 위하여 직선 거리에 따라 선형적으로 계산하는 방법이다. 다음과 같이 Feature map의 빈 영역을 추정한다.</p>
 <img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-2.png" class="" title="XAI-2-2.png">
-
 <p>이 외에도 Backwards convolution, Unpooling, Shift and stitch 등의 방법이 있다. FCN에서는 Bilinear interpolation과 Backwards convolution 두 가지 방법을 사용하여 Coarse Feature map으로부터 Dense prediction을 구했다. </p>
 <img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-3.png" class="" title="XAI-2-3.png">
-
 <p>하지만, 근본적으로 feature map의 크기가 너무 작기 때문에 예측된 dense map의 정보는 여전히 coarse하다.(무려 stride가 32인 Up-sampling 과정이다)</p>
 <img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-4.png" class="" title="XAI-2-4.png">
-
 <img src="/2024/02/25/Paper-Review-Fully%20Convolutional%20Networks%20for%20Semantic-Segmentation/XAI-2-5.png" class="" title="XAI-2-5.png">
-
 <p>따라서 얕은층의 정보를 결합하는 방식으로 품질을 개선하였다. 실제 성능 지표에서도 FCN-32s &gt; FCN-16s &gt; FCN-8s 순으로 결과가 나아진다.</p>
 
     </div>
@@ -341,9 +336,9 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/XAI/" rel="tag"><i class="fa fa-tag"></i> XAI</a>
               <a href="/tags/Paper-Review/" rel="tag"><i class="fa fa-tag"></i> Paper Review</a>
               <a href="/tags/Computer-Vision/" rel="tag"><i class="fa fa-tag"></i> Computer Vision</a>
+              <a href="/tags/XAI/" rel="tag"><i class="fa fa-tag"></i> XAI</a>
           </div>
 
         
