@@ -27,7 +27,7 @@
 <meta property="og:description" content="📎 MMPT GitHub 저장소 바로가기 Many-to-Many Pairs Trading(MMPT) 프로젝트 리뷰 참고: 보고서 디자인은 Qraft Technology 리서치 시리즈에서 영감을 받아 구성했습니다. 실전 운용기관 스타일의 포맷을 따르고 싶었습니다.   나름 입대 2일 전까지 신경 써서 진행한 프로젝트이지만 부족한 점이 많다고 생각되어 프로젝">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2025-04-12T14:50:00.000Z">
-<meta property="article:modified_time" content="2025-04-11T20:38:30.642Z">
+<meta property="article:modified_time" content="2025-04-11T20:48:39.690Z">
 <meta property="article:author" content="Choi Munseok">
 <meta property="article:tag" content="Quant">
 <meta property="article:tag" content="Pair Trading">
@@ -221,7 +221,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2025-04-12 23:50:00 / Updated at: 05:38:30" itemprop="dateCreated datePublished" datetime="2025-04-12T23:50:00+09:00">2025-04-12</time>
+      <time title="Post created: 2025-04-12 23:50:00 / Updated at: 05:48:39" itemprop="dateCreated datePublished" datetime="2025-04-12T23:50:00+09:00">2025-04-12</time>
     </span>
 
   
@@ -273,8 +273,8 @@
 </ul>
 <h3 id="2-페어-선택-및-포트폴리오-구성-방식"><a href="#2-페어-선택-및-포트폴리오-구성-방식" class="headerlink" title="2. 페어 선택 및 포트폴리오 구성 방식"></a>2. 페어 선택 및 포트폴리오 구성 방식</h3><ul>
 <li>각 군집 내 가능한 모든 자산 쌍에 대해 1:1 Engle-Granger 공적분 검정을 수행하고 ADF-test의 p-value를 수집  </li>
-<li>각 p-value에 대해 log(1 &#x2F; p_i)를 계산하고, 전체 합으로 나눈 값으로 soft-weighting 비중 계산:<br><code>weight_i = log(1/p_i) / Σ log(1/p_j)</code></li>
-<li>이를 통해 many-to-many 포트폴리오를 구성:<br><code>R_t = Σ_i weight_i * r_it</code><br>(r_it: 시점 t의 자산 i 수익률)</li>
+<li>각 p-value에 대해 $\log\left(\frac{1}{p_i}\right)$를 계산하고, 전체 합으로 나눈 값으로 soft-weighting 비중 계산:<br>$$<br>\text{weight}_i &#x3D; \frac{\log\left(\frac{1}{p_i}\right)}{\sum_j \log\left(\frac{1}{p_j}\right)}<br>$$</li>
+<li>이를 통해 many-to-many 포트폴리오를 구성:<br>$$<br>R_t &#x3D; \sum_i \text{weight}<em>i \cdot r</em>{it}<br>$$<br>($r_{it}$: 시점 $t$의 자산 $i$ 수익률)  </li>
 <li>포트폴리오에 대해 다시 ADF-test를 수행하여 정상성이 확인되면 거래 수행</li>
 </ul>
 <h3 id="3-Many-to-Many-분할-알고리즘"><a href="#3-Many-to-Many-분할-알고리즘" class="headerlink" title="3. Many-to-Many 분할 알고리즘"></a>3. Many-to-Many 분할 알고리즘</h3><ul>
